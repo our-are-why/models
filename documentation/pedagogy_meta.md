@@ -3,8 +3,10 @@
 **in short.** how the docs try to teach: plain words first, ideas in an order
 where nothing is used before it's explained, a short version before the long
 one, one running example, and every idea set against what it's easy to
-mistake it for. each is a choice about how a reader learns, with its reasons
-and its costs.
+mistake it for. then three bigger ideas about teaching: the meaning of a form,
+not only its mechanics; a subject as a vehicle for training thought; and
+showing the path, not only the result. each is a choice about how a reader
+learns, with its reasons and its costs.
 
 **builds on:** approach, semiotics.
 
@@ -75,6 +77,60 @@ a learner needs to know which parts are settled. the status labels (see
 "status labels", in "documents") tell them: what's checked, what's recalled,
 what's deferred. without them, everything reads as equally certain.
 
+## meaning, not only mechanics
+
+this is a framing of "reduce on purpose" (see [the approach](approach_meta.md)),
+from the side of teaching. learners are often taught to reduce an expression to
+its simplest form as soon as they can, and rarely to ask what each form means.
+`- 3` and `+ -3` become the same thing to them, though one takes three away and
+the other adds a debt. taught that way, mathematics looks purely mechanical,
+and the semantics it carries is left out, apart from attempts to show its use
+in an imagined real-world setting. teaching the meaning of a form, and when to
+reduce it, shows a side of mathematics that's easy to miss, and maybe its most
+valuable one.
+
+**the case against.** the mechanical view is valid too, and fluency with
+mechanics is what frees attention for meaning. the point is to teach both, not
+to swap one for the other.
+
+## the subject as a vehicle
+
+a subject can be taught for itself, or as a **vehicle**: a concrete, demanding
+place to exercise general mechanisms of thought, such as abstracting,
+analysing, organizing and holding structure in mind, that work beyond it. on
+this view, learning algebra isn't the point of learning algebra: the
+mechanisms it trains are. mathematics may be the clearest vehicle, but it isn't
+the only one. years of writing software seem to work the same way (see
+[personal](personal_meta.md)), and in these docs, strands have been the
+vehicle, and much of the meta domain is what they trained.
+
+**the case against.** this is where the idea is weakest, and it should be said
+plainly. _from memory_: the old view that a subject trains the mind the way
+exercise trains a muscle (formal discipline) has been tested since the early
+1900s. research on **transfer** has found that near transfer, to similar
+problems, holds up well, while far transfer, to reasoning in general, has
+weak evidence, and expertise tends to stay in its own field. what seems to
+help is making the mechanisms explicit and practising them as such, and long,
+deep practice rather than a short course. so the claim here is a hypothesis,
+about depth and explicitness, not a settled fact. talk of building "neurons"
+for critical thought is a metaphor for it, not a finding.
+
+## show the path
+
+good teaching and honesty about discovery are the same move: showing how an
+idea was reached, not only where it ended up. a result in its final, polished
+order hides the questions, the false starts and the reasons, and a learner who
+only sees the result learns the mechanics without the understanding.
+
+these docs try to keep the path visible: the life of an idea (see
+[process](process_meta.md)), former names in the concept index, the frozen
+first draft, and notes on where ideas came from, such as the strands' space
+chapter, written where the idea was found.
+
+**the case against.** the path can bury the result: a reader who wants the
+answer has to dig through the history. so the two are kept apart: the chapters
+say what holds now, and the path sits beside them.
+
 ## seen from elsewhere
 
 - pedagogy, from AI: in [ai](ai_meta.md)
@@ -83,4 +139,9 @@ what's deferred. without them, everything reads as equally certain.
 
 _from memory_: progressive disclosure, in design; prerequisite graphs and
 spiral curricula, in teaching; worked examples and contrasting cases, in the
-study of learning.
+study of learning; instrumental and relational understanding (Richard Skemp);
+the "deductivist" style that hides how mathematics is found, and the
+"heuristic" style that shows it (Imre Lakatos, *Proofs and Refutations*); Paul
+Lockhart's *A Mathematician's Lament*; George Pólya's *How to Solve It*;
+formal discipline and transfer of learning; habits of mind, as a way to
+organize what's taught.

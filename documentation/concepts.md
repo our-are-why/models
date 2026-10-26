@@ -31,6 +31,7 @@ from [`approach_meta.md`](approach_meta.md)
 | C002 | world |  | a semantic world: the setting something is used in, with its own semantics; it settles what the defaults leave open | C001 |
 | C003 | perspective |  | one of several valid ways of seeing the same thing, none the hidden truth behind the others |  |
 | C146 | basic level |  | the level where a thing is looked for and named; the docs organize there, and state the ancestry in words |  |
+| C152 | reduction |  | a simpler form taken on purpose, for a use, setting meaning aside; equal as a value, not as a meaning | C003 |
 
 ## meta: semiotics
 
@@ -49,6 +50,8 @@ from [`pedagogy_meta.md`](pedagogy_meta.md)
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
 | C135 | running example |  | one example the docs keep coming back to, so that each new idea is the only new thing |  |
+| C153 | vehicle |  | a subject taught as a place to exercise general mechanisms of thought, not only for itself |  |
+| C154 | transfer |  | learning in one field carrying over to another: near transfer holds up well, far transfer is contested | C153 |
 
 ## meta: documentation
 

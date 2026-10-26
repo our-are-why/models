@@ -287,6 +287,41 @@ a question for implementations, and doesn't change the model.
 **related.** immutability and persistent data structures, in functional
 programming.
 
+## reduce on purpose
+
+**what.** forms that are equal as values aren't interchangeable as meanings.
+`- 3`, taking three away, and `+ -3`, adding a debt of three, give the same
+result, but they say different things about what's happening. reducing an
+expression to its simplest form is a comparison that sets that meaning aside.
+it's useful on purpose: simple forms are easy to compare and to calculate
+with. done by default, and taken as the truth, it loses the reasons the form
+had. so the meaningful form is kept as the source, a reduced form is taken for
+a use, and what it sets aside is named. the noisiest form isn't the answer
+either: the aim is the form that matches the meaning.
+
+**why.** a reduced form can't be un-reduced: the meaning it dropped isn't in it
+anymore. in code, the same loss turns up later as a bug: a refactor that merges
+two things which only looked alike, or drops a check whose reason was never
+written down.
+
+**where.** identity, where every comparison says what it sets aside; the strand
+functions, where every loss has a name (detach, flatten, melt); and null, kept
+apart from false although the two could be reduced to one.
+
+**the case against.** keeping every form makes things heavier: more to read,
+more to carry. the meaningful form is a judgement, and people can disagree
+about what the meaning is. and sometimes the mechanics are the point: reduced
+forms are what make calculation possible, and a purely mechanical view of
+mathematics is valid too.
+
+**related.** canonical and normal forms, in mathematics; Chesterton's fence,
+don't remove what you don't understand; "the wrong abstraction" (Sandi Metz),
+since duplication is cheaper than merging things that only look alike;
+primitive obsession and value objects, in software design.
+
+**seen from elsewhere.** teaching the meaning, not only the mechanics, in
+[pedagogy](pedagogy_meta.md).
+
 ## naming
 
 **what.** plain words first. name a perspective after what it lets you do,

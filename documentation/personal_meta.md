@@ -57,6 +57,18 @@ effective communicator, especially of meaning that can be put to use. what
 documenting perspective means, apart from me, is in
 [documentation](documentation_meta.md).
 
+## where i'm coming from
+
+most of what i bring comes from software: well over 15,000 hours, across more
+than a decade, of thinking critically about it and writing ever more complex
+systems. i'm convinced that work has made me far more versatile outside it:
+able to take part, in a meaningful and useful way, in fields where i have no
+expertise. that's one person's experience, and i may be biased about my own
+case. but it's why i think of a subject as a vehicle for training thought (see
+"the subject as a vehicle", in [pedagogy](pedagogy_meta.md)), and why i
+suspect that how deep and how long the practice goes matters more than which
+subject it is.
+
 ## reading it, given all that
 
 - trust the structure where it's been checked, and the perspective only as far
