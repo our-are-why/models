@@ -14,12 +14,12 @@ the picture runs left to right, but that's only one way to draw it: a spacer
 isn't horizontal, or in time, or laid out in any particular way.
 
 a spacer is one kind of discrete space: one dimension, with each cell in one of
-two states. everything in this doc is worked out for one dimension, where much
-of it is close to self-evident. spaces can have more dimensions, and their cells
-can hold other kinds of values. but in more dimensions, things like neighbours,
-distance and "the next point" stop being obvious, and many ideas here may
-change shape. those paths are noted and deliberately left for later. one other
-kind of value comes up with weights.
+two states. everything in these chapters is worked out for one dimension, where
+much of it is close to self-evident. spaces can have more dimensions, and their
+cells can hold other kinds of values. but in more dimensions, things like
+neighbours, distance and "the next point" stop being obvious, and many ideas
+here may change shape. those paths are noted and deliberately left for later.
+one other kind of value comes up with weights (see "structures").
 
 ## circular and linear
 
@@ -41,8 +41,8 @@ what changes is which cells are neighbours, and what a cell's position means.
 a reading can also be left open: such a spacer is **fluid**, and can be read
 either way later. once a spacer is read circular or linear, though, that
 becomes part of what it is: it doesn't go back to fluid, or switch to the
-other reading, on its own. turning one into the other takes an operation (see
-"operations"): unwinding a circle from its cell 0 gives a line, and winding a
+other reading, on its own. turning one into the other takes a function (see
+"functions"): unwinding a circle from its cell 0 gives a line, and winding a
 line, so its ends join, gives a circle.
 
 ## filled and empty
@@ -70,7 +70,8 @@ are six:
 swap every cell's state and you get the spacer's **negative**: the same
 arrangement/distribution, seen from its empty space. the negative's density is
 the original's sparsity. one determines the other, but they aren't the same
-thing: a spacer and its negative are two different spacers.
+thing: a spacer and its negative are two different spacers. `Not(A)` gives A's
+negative (see "functions").
 
 ## any arrangement
 
@@ -108,9 +109,9 @@ they're where the general rules reach their limits.
 
 - **all empty** and **all filled**: every cell in the same state. both are
   spacers, and each is the other's negative
-- **one cell**: in the circular view the cell is its own neighbour, both ways
-  round; in the linear view it's both ends at once
-- **two cells**: in the circular view the two cells are neighbours twice, once
+- **one cell**: read circularly, the cell is its own neighbour, both ways
+  round; read linearly, it's both ends at once
+- **two cells**: read circularly, the two cells are neighbours twice, once
   each way round. from three cells on, every cell has two different neighbours
 
 ### zero

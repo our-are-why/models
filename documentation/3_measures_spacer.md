@@ -12,14 +12,14 @@ to step in:
 like the numbering itself, which way is + is a convention, and so are right
 and clockwise: they're just how + is usually drawn.
 
-the views differ at the ends:
+the readings differ at the ends:
 
 - **circular**: there are no ends, so stepping wraps round. one step − from
   cell 0 is the last cell; one step + from the last cell is cell 0
 - **linear**: the ends stop you. there's no step − from the first cell, and no
   step + from the last
 - **fluid**: stepping works between the ends; what happens past them is
-  left open until a view is chosen
+  left open until a reading is chosen
 
 as far as a linear spacer is concerned, nothing exists beyond its ends: it's
 **bounded**. sometimes, though, a linear spacer is **scoped**: a piece of
@@ -29,9 +29,9 @@ cells don't record what lies beyond them; the larger whole is context, like an
 origin.
 
 the **distance** from one cell to another is how many steps it takes, and it's
-never negative; a sign only says which way the steps go. in the linear view
-there's one way to go: from cell 0 to cell 5 is +5, and back is −5. in the
-circular view you can go either way round: at resolution 8, from cell 0 to
+never negative; a sign only says which way the steps go. read linearly, there's
+one way to go: from cell 0 to cell 5 is +5, and back is −5. read circularly,
+you can go either way round: at resolution 8, from cell 0 to
 cell 5 is +5 or −3, and the two distances, 5 and 3, add up to the resolution.
 unless a sign or the word "shortest" says otherwise, the distance means the +
 one: 5 here. the shorter of the two is just as valid, but it has to be asked
@@ -69,14 +69,14 @@ next point.
 (in number theory, a "prime gap" is the difference between neighbouring
 primes: here, that's an interval, not a gap.)
 
-### seams, bands and runs
+### joints, seams, bands and runs
 
 every place where two neighbouring cells meet is a **joint**: a line of n
 cells has n − 1 joints, and a circle of n cells has n, since its last cell and
 cell 0 meet too. a **seam** is a joint where the two cells are in different
-states. the seams cut a spacer into **bands**: stretches of cells in the same state, each
-as long as it goes. a band of two or more cells is a **run**. (**panel** would
-work as well as band: panels are what seams join.)
+states. the seams cut a spacer into **bands**: stretches of cells in the same
+state, each as long as it goes. a band of two or more cells is a **run**.
+(**panel** would work as well as band: panels are what seams join.)
 
     cell      0 1 2 3 4 5 6 7
               ■ ■ ◇ ◇ ◇ ■ ◇ ◇
@@ -99,6 +99,6 @@ everything counted or measured in a spacer is a whole number. counts and
 distances are never negative; a sign only gives a direction. resolution is at
 least 1, density and sparsity run from 0 to the resolution, and cells are
 numbered from 0 to one less than the resolution. a number outside that range
-doesn't name a new cell: in the circular view it wraps round (cell −1 is the
-last cell); in the linear view there's no cell there. proportions, like "half
-the cells", only come in with generators.
+doesn't name a new cell: read circularly, it wraps round (cell −1 is the last
+cell); read linearly, there's no cell there. proportions, like "half the
+cells", only come in with generators.

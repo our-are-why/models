@@ -9,15 +9,15 @@ the other way round, using other symbols. what they still agree on is
 essence/semantics; what they don't is convention.
 
 - **essence**: the resolution, the density and the sparsity; the distances
-  between cells; in the linear view, what sits at the ends. these are found in
+  between cells; read linearly, what sits at the ends. these are found in
   the spacer, not made up
 - **convention**: which cell is cell 0, counting from 0, which way the
   numbering runs, the symbols for the two states, and so the written form
   itself. these are chosen, so that everyone starts from the same place
 
-the two views show the difference clearly. a circle has no start, so cell 0 is
-pure convention. a line has two ends, so the ends are essence, but which end
-comes first is convention.
+the two readings show the difference clearly. a circle has no start, so cell
+0 is pure convention. a line has two ends, so the ends are essence, but which
+end comes first is convention.
 
 some things sit in between. which state is filled is written by convention
 (■ or `x` here, 1 elsewhere), but the difference it marks, between the things
@@ -98,11 +98,11 @@ is false, since setting the start aside is a separate loosening.
 same. being alike, matching in some respects and behaving similarly, is a
 looser question, and the overrides below are ways of asking it. a use can
 loosen the default by setting something aside, or tighten it by adding
-something. the usual loosenings have exact forms through
-the operations:
+something. the usual loosenings have exact forms through the functions:
 
-- **up to start**: the same when one is a rotation of the other
-- **up to direction**: the same when one is a reversal of the other
+- **up to start**: for circles, the same when one is a rotation of the other
+- **up to direction**: the same when one is a reversal of the other (lines),
+  or a mirror of the other (circles)
 - **up to reading**: `==`, the same cells whatever the reading
 
 tightening adds what the default leaves out, like where a spacer came from, or

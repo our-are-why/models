@@ -30,9 +30,9 @@ so it's hard to tell how many empty cells there are.
 
 rule 4 is the subtle one. 0 and 1 are also numbers, so `1 0 1 0 0 1 0 0` could
 be eight states, or eight amounts that happen to be 0 or 1, and the symbols
-alone can't say which. later chapters do produce rows of amounts like that, so
-here digits are a poor choice for states, and a row of digits always means
-amounts.
+alone can't say which. rows of amounts like that do come up (weights, in
+"structures"), so here digits are a poor choice for states, and a row of digits
+always means amounts.
 
 no pair of symbols is entirely free of other meanings: `x` is also a letter,
 and `.` a full stop. in a run they don't read as anything else, but a single
@@ -40,7 +40,7 @@ and `.` a full stop. in a run they don't read as anything else, but a single
 edges, so `|x|` is clearly a spacer of one filled cell. (in figures, where a
 spacer sits on its own line with labels, the layout marks its edges.)
 
-### edges show the view
+### edges show the reading
 
 in the typed form, the edges around a spacer say how it's read:
 
@@ -59,7 +59,7 @@ inward.
 
 ### the display form
 
-in the display form, the shapes of the cells carry the view, so no edges are
+in the display form, the shapes of the cells carry the reading, so no edges are
 needed. each shape is its typed edges closed up into every cell, and filled
 and empty always differ twice: in fill, and in size, direction or turn:
 
@@ -75,10 +75,10 @@ and empty always differ twice: in fill, and in size, direction or turn:
 
 a single ● can't be mistaken for anything else, so the shapes do the job the
 edges do in the typed form. the figures before this section use the fluid
-shapes: no view chosen yet. where no cells are drawn (in points, labels and scopes,
-below), the edges stay, with → and − in place of -> and -. square brackets
-around cells get a space inside them, like the cells do: `[ ▲ ▽ ▲ ]`. ranges
-and other numbers stay as they are: `[5→8]`.
+shapes: no reading chosen yet. where no cells are drawn (in points and labels,
+below, and in scopes, in "structures"), the edges stay, with → and − in place
+of -> and -. square brackets around cells get a space inside them, like the
+cells do: `[ ▲ ▽ ▲ ]`. ranges and other numbers stay as they are: `[5→8]`.
 
 the display form needs geometric shapes (● ⚬ ▲ ▽ ■ ◇), which most modern fonts
 include. some terminals give them two columns instead of one, which can upset
@@ -118,7 +118,8 @@ label stands for its cells: `)S(` is S read circularly. a reading can only be
 applied to a fluid label: if S is already circular, `)S(` just repeats its
 reading, and `<S>` isn't allowed. like the point form, a label can carry its
 resolution: `)6: S(`. a label is defined once: it names one value, and never
-changes to mean another.
+changes to mean another. in these chapters, each example's labels belong to
+that example: the same letter can name a different spacer in another one.
 
 ### descriptions
 
@@ -143,8 +144,8 @@ outside the edges is context. `~` says a spacer repeats, out there:
 
 it describes the surroundings and doesn't change the spacer: its resolution is
 still 5. the study of strings writes repetition as a power, w³ for w three
-times over, but that *builds* a new, longer string; here `^` would mean
-building it.
+times over, but that *builds* a new, longer string; here `^` means building it
+(see repeat, in "functions").
 
 ### inside other formats
 
@@ -156,10 +157,10 @@ vanish as an HTML tag. inside code formatting, most of this goes away.
 
 ### rotating
 
-a written spacer always has a first cell, even in the circular view, where
-it's simply cell 0. to start from another cell, rotate it so that cell comes
-first: starting `)xx...x..(` at cell 5 gives `)x..xx...(`; in points,
-`)8: 0,1,5(` gives `)8: 0,3,4(`.
+a written spacer always has a first cell, even when it's read circularly,
+where it's simply cell 0. to start from another cell, rotate it so that cell
+comes first: starting `)xx...x..(` at cell 5 gives `)x..xx...(`; in points,
+`)8: 0,1,5(` gives `)8: 0,3,4(` (see rotate, in "functions").
 
 ## why not "binary string"
 
@@ -169,8 +170,9 @@ string:
     ■ ■ ◇ ◇ ◇ ■ ◇ ◇   →   11000100
 
 it's a familiar way to write something like a spacer, and it follows the first
-three rules above, though not the fourth. we don't call a spacer a binary
-string, and we don't write it with digits, for three reasons.
+three rules above, though not the fourth, and with no edges, not the fifth
+either. we don't call a spacer a binary string, and we don't write it with
+digits, for three reasons.
 
 **the name should match the object's affordance.** an affordance is what an
 object lets you do, and a spacer lets you space things out: it's about where

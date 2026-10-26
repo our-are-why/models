@@ -32,7 +32,7 @@ case by case).
 
 as a shorthand, the values can go in round brackets, in a fixed order and
 without keys: `Primes(8) -> |..xx.x.x|`. the order comes from the generator's
-**signature**, which lists its keys in order, the same way each operation is
+**signature**, which lists its keys in order, the same way each function is
 introduced with its values in order (`Rotate(S, k)`):
 
     Primes(r)                    one value: the resolution
@@ -51,11 +51,11 @@ its own, and any combination can occur, with one exception noted below.
 **how spacers relate as n grows**
 
 - **growth/extension**: earlier cells never change; new ones are added. it
-  reads like time passing, and fits the linear view, where a line has an end
-  to grow from. filling the cells whose number is prime:
+  reads like time passing, and fits the linear reading, where a line has an
+  end to grow from. filling the cells whose number is prime:
   `|..xx.x.x|` → `|..xx.x.x...x|`
 - **refinement/subdivision**: each spacer describes the same whole at a finer
-  grain, in either view. filling cell j when 2j is less than n:
+  grain, in either reading. filling cell j when 2j is less than n:
   `|xx..|` → `|xxx..|` → `|xxx...|` → `|xxxx....|`. what counts as "the same
   whole" depends on the context; refinement is named here as one force in a
   spacer's dynamics, not pinned down

@@ -56,7 +56,7 @@ a piece of a piece follows a few rules:
    only works on a circular spacer
 3. **the edges stay square**: a piece is always read as `[…]`. joining its
    ends to read it circularly would make a new spacer, which is a change, not
-   a scope
+   a scope: `Wind(Detach(A))` (see "functions")
 4. **no repetition**: what lies beyond a piece is its parent, not copies of
    itself, so `~` doesn't apply
 5. **everything else works as usual**: relative and absolute ranges, as long
@@ -82,7 +82,7 @@ the chain starts in a circle: at resolution 8, −2 and 6 name the same cell, bu
 
 the chain records how a piece was made; written as a scope of the root, it
 records where it ends up. both show the same cells, but they're mounted on
-different parents (see lift and collapse, in "operations").
+different parents (see lift and collapse, in "functions").
 
 ## layers
 
@@ -111,7 +111,7 @@ further layer, and so on.
 - **flattening**: the deepest layer's choices can be shown on the root's
   cells: here, `|x....x..|`. the flattened spacer doesn't show it was chosen in
   steps; like any origin, the cascade lives outside the cells (see press and
-  flatten, in "operations")
+  flatten, in "functions")
 
 layers aren't scopes. a scope takes a stretch of neighbouring cells; a layer
 chooses among points, skipping the cells in between. both nest and both chain,
@@ -217,11 +217,9 @@ circularly one is the other started from a different cell.
   and count every repeat
 - the weights live in a space of their own: the same cells and reading as the
   stack, but each cell holds an amount instead of one of two states, so a row
-  of weights isn't a spacer. the reading carries through: circular members give
-  circular weights, linear members linear ones, and fluid members leave the
-  reading open, to be chosen by the use. writing the members circular or linear
-  says the reading is part of the structure; writing them fluid says it's a
-  perspective for later
+  of weights isn't a spacer. a circular or linear stack says the reading is
+  part of the structure; a fluid one leaves it open, as a perspective for
+  later, to be chosen by the use
 - the weights add up to the members' densities together (9 here), and no
   weight is more than the number of members
 - a member's **spacer weight** (or score) is the weights added up at its
@@ -236,20 +234,19 @@ circularly one is the other started from a different cell.
 
 weights are a derived result, and for most stacks they're just that: a count.
 but when the spacers going in are patterned, the weights can carry structure of
-their own, and become objects worth studying in their own right: a space of
-amounts, where the amount works almost like an extra dimension. that world is
-noted here, not explored. the weights are derived, but they can show structure
-of the whole that no member shows on its own: what's sometimes called weak
-emergence.
+their own: structure of the whole that no member shows on its own, which is
+what's sometimes called weak emergence. then they become objects worth studying
+in their own right: a space of amounts, where the amount works almost like an
+extra dimension. that world is noted here, not explored.
 
 weights are written as a row of numbers, which are amounts, not states (rule
 4): `|2 2 0 1 0 3 1 0|`. `Weights((A, B, C))` gives a stack's weights as such a
 row.
 
-the row takes the stack's reading, written with the same edges: circular
-members give `)2 2 0 1 0 3 1 0(`, linear ones `<2 2 0 1 0 3 1 0>`, and fluid ones
-`|2 2 0 1 0 3 1 0|`. the display form keeps the edges, since no cells are drawn.
-for example, `Weights( )(A, B, C)( )` gives `)2 2 0 1 0 3 1 0(`.
+the row takes the stack's reading, written with the same edges: a circular
+stack gives `)2 2 0 1 0 3 1 0(`, a linear one `<2 2 0 1 0 3 1 0>`, and a fluid
+one `|2 2 0 1 0 3 1 0|`. the display form keeps the edges, since no cells are
+drawn. for example, `Weights( )(A, B, C)( )` gives `)2 2 0 1 0 3 1 0(`.
 
 the stages are written as a sequence of rows, one per step: `Stages((A, B, C))`
 gives `(|1 1 0 0 0 1 0 0|, |2 1 0 1 0 2 0 0|, |2 2 0 1 0 3 1 0|)`. its last row
