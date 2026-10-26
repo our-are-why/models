@@ -1,12 +1,22 @@
 # identity
 
+**in short.** what about a spacer is essence and what is convention, and when
+two spacers count as the same. the default is strict (the same resolution,
+reading and cells), and the comparisons `=`, `~=`, `<->`, `==` and `===`
+loosen it in stated ways.
+
+**builds on:** all the chapters before it.
+
+the concepts here are listed, with stable IDs, in [concepts.md](concepts.md).
+
 ## essence and convention
 
 some things about a spacer belong to the spacer itself; others are choices we
 make to write it down or talk about it. to tell them apart, imagine two people
 drawing the same spacer differently: starting at a different cell, counting
 the other way round, using other symbols. what they still agree on is
-essence/semantics; what they don't is convention.
+essence/semantics; what they don't is convention. (the general idea, beyond
+spacers, is in [approach.md](approach.md).)
 
 - **essence**: the resolution, the density and the sparsity; the distances
   between cells; read linearly, what sits at the ends. these are found in
@@ -61,9 +71,12 @@ to keep apart.
 
 a fluid spacer **fits** a circular or linear spacer with the same resolution and
 cells: it could become it, just by committing to a reading. fitting isn't
-identity, and it runs one way only, from the open reading to a committed one:
+identity, and by default it runs one way only, from fluid to committed:
 `|x..|` fits both `)x..(` and `<x..>`, but those two are still different
 spacers. between them, unwind and wind convert either way, losing nothing.
+in a world with melt, fitting runs both ways too. the comparisons themselves
+don't depend on the world: they say how two spacers relate, not which moves a
+world allows.
 
 that gives five ways of comparing:
 

@@ -1,5 +1,14 @@
 # structures
 
+**in short.** ways of building with spacers. scopes take a piece of a spacer,
+and pieces can be scoped again. layers choose among a spacer's points, and form
+cascades. collections take several spacers together, stacks line them up cell
+by cell, and weights count across a stack.
+
+**builds on:** basics, notation, measures.
+
+the concepts here are listed, with stable IDs, in [concepts.md](concepts.md).
+
 ## scopes
 
 a **scope** takes a piece of a spacer. it's written after the spacer, in square
@@ -29,8 +38,8 @@ how a scope behaves depends on both:
   times, then 5 more steps: 23 steps in all, or `[2->25]` as an absolute range.
   `%` is the programmer's wrap-around (modulo), so read `3%` as "3 laps", not
   "3 percent"
-- **fluid**: in `|6: S|[…]`, what lies past the ends is undecided, so a
-  scope has to stay within them
+- **fluid**: in `|6: S|[…]`, what lies past the ends belongs to a shape,
+  which a fluid spacer doesn't have, so a scope has to stay within them
 - **the result** is a scoped piece, `[…]`, with its own numbering: its cell 0
   is where the scope started, and its + runs the way the scope walked
 
@@ -218,8 +227,7 @@ circularly one is the other started from a different cell.
 - the weights live in a space of their own: the same cells and reading as the
   stack, but each cell holds an amount instead of one of two states, so a row
   of weights isn't a spacer. a circular or linear stack says the reading is
-  part of the structure; a fluid one leaves it open, as a perspective for
-  later, to be chosen by the use
+  part of the structure; a fluid one has no shape, and a use can give it one
 - the weights add up to the members' densities together (9 here), and no
   weight is more than the number of members
 - a member's **spacer weight** (or score) is the weights added up at its
@@ -237,7 +245,7 @@ but when the spacers going in are patterned, the weights can carry structure of
 their own: structure of the whole that no member shows on its own, which is
 what's sometimes called weak emergence. then they become objects worth studying
 in their own right: a space of amounts, where the amount works almost like an
-extra dimension. that world is noted here, not explored.
+extra dimension. that space is noted here, not explored.
 
 weights are written as a row of numbers, which are amounts, not states (rule
 4): `|2 2 0 1 0 3 1 0|`. `Weights((A, B, C))` gives a stack's weights as such a

@@ -1,5 +1,15 @@
 # dynamics
 
+**in short.** generators are precise rules or processes that make a spacer at
+each resolution. following one without end goes towards infinity, which is
+never reached and isn't a spacer. generators are described by independent
+facets: how their spacers relate as they grow, how cells are decided, how clear
+the rule is, how the result looks, and where it comes from.
+
+**builds on:** basics, notation, functions.
+
+the concepts here are listed, with stable IDs, in [concepts.md](concepts.md).
+
 ## going to infinity
 
 every spacer has a finite number of cells. infinity comes in through a

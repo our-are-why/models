@@ -1,5 +1,15 @@
 # functions
 
+**in short.** functions take spacers, or things made from them, and give one
+back. primitives each do one basic thing, such as rotate, join, commit or
+threshold; named composites are built from them, such as repeat, splice or
+flatten. lines and circles get their own functions, and a fluid spacer can
+borrow a reading while a function works.
+
+**builds on:** basics, notation, measures, structures.
+
+the concepts here are listed, with stable IDs, in [concepts.md](concepts.md).
+
 a **function** takes spacers, or things made from them (pieces, cascades,
 stacks, rows of amounts), and gives one back. most are written with the
 function's name, then its values in round brackets, in a stated order, the way
@@ -14,10 +24,11 @@ a row of amounts and gives a spacer. so the general word here is function, and
 
 functions come in two kinds:
 
-- **primitives**, which each do one basic thing: commit, rotate, slide,
-  reverse, mirror, join, unwind, wind, detach, lift, press, weights and
-  threshold, along with taking a scope, layering (`>>`), and the cell-by-cell
-  `Not`, `And`, `Or`, `Xor` and `Without` (see "combining spacers", below)
+- **primitives**, which each do one basic thing: commit (and, in some worlds,
+  melt), rotate, slide, reverse, mirror, join, unwind, wind, detach, lift,
+  press, weights and threshold, along with taking a scope, layering (`>>`),
+  and the cell-by-cell `Not`, `And`, `Or`, `Xor` and `Without` (see
+  "combining spacers", below)
 - **named composites**, which are made of primitives and named because they're
   useful: repeat, insert, splice, collapse, flatten, stages, at most, exactly,
   levels and depths. each is defined by the primitives it's made of, so
@@ -37,7 +48,7 @@ are the bridges from a view, or a cascade, back to a spacer of its own.
 
 what's allowed depends on the readings going in, by the same idea as stacks:
 writing a spacer circular or linear says its reading is part of its structure;
-writing it fluid leaves the reading open, so it can take whichever part the
+writing it fluid leaves the shape out, so it can take whichever one the
 function needs.
 
 a function can borrow a reading while it works, as long as just one reading
@@ -119,7 +130,28 @@ there are two places to commit, and they say different things:
   `<x..xx...>`. this says the circle was only needed for the move
 
 both arrive at the same cells here. which to use depends on whether the reading
-is part of the structure, or a perspective decided later.
+is part of the structure, or a shape given later.
+
+commitment is one-way by default: nothing takes a committed spacer back to
+fluid. that fits a world where fluid is abstract, or hierarchical (see "what
+fluid is", in "basics").
+
+### melt, in some worlds
+
+in a world where fluid is a sibling of circles and lines, `Melt(S)` forgets a
+committed spacer's shape, and gives the fluid spacer with the same cells:
+
+    Melt( )xx...x..( )      →  |xx...x..|
+    Melt(<xx...x..>)        →  |xx...x..|
+
+- the triangle closes: unwinding is melting and committing as a line,
+  `Unwind(C)` is `<Melt(C)>`, and winding is `) Melt(L) (`
+- where the shape is essential, melting throws away meaning, and isn't valid:
+  a clock face is a circle in any world that cares about time
+- in a hierarchical world, melt usually doesn't fit, since the forms only come
+  from fluid. but if the hierarchy is read as "a circle is a fluid spacer with
+  a shape added", forgetting the shape is always possible. so even there, the
+  world decides
 
 ### rotate
 

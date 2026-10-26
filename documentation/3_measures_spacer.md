@@ -1,5 +1,14 @@
 # measures
 
+**in short.** how to measure inside a spacer: steps and their directions,
+distances (two of them round a circle), the intervals and gaps between
+points, the joints, seams, bands and runs, and why everything measured is
+a whole number.
+
+**builds on:** basics, notation.
+
+the concepts here are listed, with stable IDs, in [concepts.md](concepts.md).
+
 ## steps and distances
 
 a **step** moves from a cell to a neighbouring cell. there are two directions
@@ -18,8 +27,8 @@ the readings differ at the ends:
   cell 0 is the last cell; one step + from the last cell is cell 0
 - **linear**: the ends stop you. there's no step − from the first cell, and no
   step + from the last
-- **fluid**: stepping works between the ends; what happens past them is
-  left open until a reading is chosen
+- **fluid**: stepping works between the ends. going past them belongs to a
+  shape, and a fluid spacer has none until a use gives it one
 
 as far as a linear spacer is concerned, nothing exists beyond its ends: it's
 **bounded**. sometimes, though, a linear spacer is **scoped**: a piece of
@@ -39,8 +48,8 @@ for.
 
 ### intervals and gaps
 
-the **points** of a spacer are the positions of its true cells. between one
-point and the next, going +, there are two things to measure:
+a spacer's points are the positions of its true cells (see "basics"). between
+one point and the next, going +, there are two things to measure:
 
 - the **interval**: the distance from one point to the next
 - the **gap**: how many null cells lie between them

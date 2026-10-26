@@ -1,5 +1,18 @@
 # basics
 
+**in short.** a spacer is a one-dimensional space of cells, each true or null.
+it can be read as a circle or a line, or be fluid, with no shape. this chapter
+covers the two shapes and what fluid is, the two states and the two ways of
+seeing them, the counts (resolution, density and sparsity) and the points, the
+negative, why any arrangement is a spacer, and the smallest cases, down to
+zero, which isn't one. it ends with worlds: the settings that decide what the
+defaults leave open.
+
+**builds on:** nothing in this domain. the approach behind it is in
+[approach.md](approach.md).
+
+the concepts here are listed, with stable IDs, in [concepts.md](concepts.md).
+
 a **spacer** is a one-dimensional, discrete space made of cells, where each
 cell is in one of two states.
 
@@ -38,12 +51,36 @@ what changes is which cells are neighbours, and what a cell's position means.
 - **linear**: the first and last cells are the ends. a position is an amount:
   how far from the start. between two cells there is one distance
 
-a reading can also be left open: such a spacer is **fluid**, and can be read
-either way later. once a spacer is read circular or linear, though, that
-becomes part of what it is: it doesn't go back to fluid, or switch to the
-other reading, on its own. turning one into the other takes a function (see
-"functions"): unwinding a circle from its cell 0 gives a line, and winding a
-line, so its ends join, gives a circle.
+a spacer can also be **fluid**: it has everything the two shapes share, its
+cells in order, each next to the one before it, but no shape. whether its last
+cell meets its first isn't part of it, and a use that needs a shape gives it
+one.
+
+once a spacer is read circular or linear, that becomes part of what it is: it
+doesn't go back to fluid, or switch to the other reading, on its own. turning
+one into the other takes a function (see "functions"): unwinding a circle from
+its cell 0 gives a line, and winding a line, so its ends join, gives a circle.
+
+### what fluid is
+
+depending on the world (see "worlds", below), fluid is one of two things, and
+both are valid:
+
+- **abstract**: a placeholder for a shape that hasn't been chosen yet. the
+  fluid spacer stands in for a circle or a line
+- **concrete**: a form in its own right, adaptable, the way a liquid has a
+  definite volume but takes the shape of its container. nobody calls a liquid
+  a solid that hasn't decided yet
+
+a concrete fluid can stand in either of two relations to circles and lines:
+
+- **hierarchical**: fluid sits above them. circles and lines come from it, and
+  only that way, so committing is one-way
+- **sibling**: fluid is a third form beside them, and any of the three can
+  become any other, a triangle. a committed spacer can melt back into a fluid
+  one (see melt, in "functions")
+
+these are independent choices, and a world makes them.
 
 ## true and null
 
@@ -80,6 +117,10 @@ so many spacers share the same three. with 4 cells, 2 of them true, there are
 six:
 
     ■ ■ ◇ ◇    ■ ◇ ■ ◇    ■ ◇ ◇ ■    ◇ ■ ■ ◇    ◇ ■ ◇ ■    ◇ ◇ ■ ■
+
+what the counts leave out, the **points** give: the positions of a spacer's
+true cells. for `■ ■ ◇ ◇ ◇ ■ ◇ ◇` they're 0, 1 and 5, and the density is how
+many there are.
 
 swap every cell's state and you get the spacer's **negative**: the same
 arrangement/distribution, seen from its null space. the negative's density is
@@ -134,3 +175,13 @@ with no cells at all there's no space, and so no spacer. we still give it a
 name, **zero**, because it can come up as the result of a change that leaves
 no cells. zero isn't the all-null spacer: an all-null spacer is a space with
 nothing in it; zero is no space at all.
+
+## worlds
+
+a **world**, or semantic world, is the setting a spacer is used in, with its
+own semantics. it settles what these chapters leave open: the perspective on
+the states, what fluid is, whether melt is allowed, and what identity sets
+aside. by default, the running text takes the asymmetric perspective,
+commitment is one-way, and there's no melt. worlds aren't specific to spacers:
+they're part of the approach behind all these docs, in
+[approach.md](approach.md).

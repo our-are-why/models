@@ -1,5 +1,14 @@
 # notation
 
+**in short.** how spacers are written: a typed form for keyboards (`x` and
+`.`) and a display form for reading (shapes), the five rules any symbols
+follow, edges that show the reading, the point form, labels, descriptions and
+repetition, and why a spacer isn't called a binary string.
+
+**builds on:** basics.
+
+the concepts here are listed, with stable IDs, in [concepts.md](concepts.md).
+
 ## writing a spacer down
 
 a spacer is written in one of two forms, which map one to one:
@@ -49,7 +58,7 @@ in the typed form, the edges around a spacer say how it's read:
     <xx...x..>    linear        bounded: an end on each side, and nothing beyond
     [xx...x..]    scoped        a piece of a larger spacer: it has ends, but
                                 there's more beyond them
-    |xx...x..|    fluid         plain walls: just the spacer, no reading chosen
+    |xx...x..|    fluid         plain walls: just the spacer, with no shape
 
 **zero** is `|><|`: the walls pushed together, with no space left between them.
 it only takes the plain walls, since with no cells there's nothing to read as a
@@ -75,10 +84,11 @@ null always differ twice: solid or hollow, and in size, direction or turn:
 
 a single ● can't be mistaken for anything else, so the shapes do the job the
 edges do in the typed form. the figures before this section use the fluid
-shapes: no reading chosen yet. where no cells are drawn (in points and labels,
-below, and in scopes, in "structures"), the edges stay, with → and − in place
-of -> and -. square brackets around cells get a space inside them, like the
-cells do: `[ ▲ ▽ ▲ ]`. ranges and other numbers stay as they are: `[5→8]`.
+squares: they don't need a circle or a line. where no cells are drawn (in
+points and labels, below, and in scopes, in "structures"), the edges stay, with
+→ and − in place of -> and -. square brackets around cells get a space inside
+them, like the cells do: `[ ▲ ▽ ▲ ]`. ranges and other numbers stay as they
+are: `[5→8]`.
 
 the display form needs geometric shapes (● ⚬ ▲ ▽ ■ ◇), which most modern fonts
 include. some terminals give them two columns instead of one, which can upset
