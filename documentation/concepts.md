@@ -6,15 +6,36 @@ its ID, and a retired one leaves a gap. **was** gives former names, and **builds
 lists the concepts its definition uses. the words here are short reminders; each
 chapter has the full definition.
 
-## approach
+## meta: approach
 
-from [`approach.md`](approach.md)
+from [`1_approach_meta.md`](1_approach_meta.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
 | C001 | default |  | the choice the docs make where one has to be made, stated so that it can be overridden |  |
 | C002 | world |  | a semantic world: the setting something is used in, with its own semantics; it settles what the defaults leave open | C001 |
 | C003 | perspective |  | one of several valid ways of seeing the same thing, none the hidden truth behind the others |  |
+
+## meta: semiotics
+
+from [`2_semiotics_meta.md`](2_semiotics_meta.md)
+
+| id | concept | was | in plain words | builds on |
+| --- | --- | --- | --- | --- |
+| C127 | syntax |  | how signs relate to each other: what counts as well written, apart from meaning |  |
+| C128 | semantics |  | how signs relate to what they stand for: what a well-written thing means | C127 |
+| C129 | pragmatics |  | how meaning depends on who uses the signs, and where; worlds sit here | C128, C002 |
+
+## meta: documents
+
+from [`3_documents_meta.md`](3_documents_meta.md)
+
+| id | concept | was | in plain words | builds on |
+| --- | --- | --- | --- | --- |
+| C130 | domain |  | one subject the docs cover, such as spacers, or the meta domain itself |  |
+| C131 | stripe |  | a domain's chapters: numbered in reading order, sharing a suffix, like `_spacer` | C130 |
+| C132 | concept ID |  | C and a number, given in order, never reused or renumbered |  |
+| C133 | frozen version |  | a whole draft kept exactly as it was, as a record; never edited, and not part of the docs | C130 |
 
 ## spacer: basics
 

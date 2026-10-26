@@ -9,6 +9,10 @@ shows up, and the case against it.
 **builds on:** nothing. the domain chapters don't depend on agreeing with it,
 but much of their shape comes from it.
 
+this is the first chapter of the meta domain, which is about how every domain
+here is modelled and written down. the concepts here are listed, with stable
+IDs, in [concepts.md](concepts.md).
+
 ## how to read this
 
 each idea has the same five parts:
@@ -255,9 +259,10 @@ things on purpose, and say so.
 
 **why.** a reader can only debug what they can see the basis of.
 
-**where.** throughout: "from memory" notes, checks by computation (the
-threshold results, the pair of spacers with the same weights), and deferred
-topics (more dimensions).
+**where.** "from memory" notes, in these meta chapters and in the rough notes;
+checks by computation, in the rough notes (the threshold results, the pair of
+spacers with the same weights); deferred topics, in the spacer basics (more
+dimensions).
 
 **the case against.** labels add noise, and "from memory" can read as false
 modesty, or as an excuse. they should stay short, and be replaced as things

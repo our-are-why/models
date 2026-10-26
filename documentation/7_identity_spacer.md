@@ -16,7 +16,7 @@ make to write it down or talk about it. to tell them apart, imagine two people
 drawing the same spacer differently: starting at a different cell, counting
 the other way round, using other symbols. what they still agree on is
 essence/semantics; what they don't is convention. (the general idea, beyond
-spacers, is in [approach.md](approach.md).)
+spacers, is in [1_approach_meta.md](1_approach_meta.md).)
 
 - **essence**: the resolution, the density and the sparsity; the distances
   between cells; read linearly, what sits at the ends. these are found in

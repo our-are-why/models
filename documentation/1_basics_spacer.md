@@ -9,7 +9,7 @@ zero, which isn't one. it ends with worlds: the settings that decide what the
 defaults leave open.
 
 **builds on:** nothing in this domain. the approach behind it is in
-[approach.md](approach.md).
+[1_approach_meta.md](1_approach_meta.md).
 
 the concepts here are listed, with stable IDs, in [concepts.md](concepts.md).
 
@@ -184,4 +184,4 @@ the states, what fluid is, whether melt is allowed, and what identity sets
 aside. by default, the running text takes the asymmetric perspective,
 commitment is one-way, and there's no melt. worlds aren't specific to spacers:
 they're part of the approach behind all these docs, in
-[approach.md](approach.md).
+[1_approach_meta.md](1_approach_meta.md).
