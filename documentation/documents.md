@@ -5,7 +5,7 @@ and their stripes of chapters, topics that cut across them, the shape every
 chapter shares, the concept index and its IDs, frozen versions, the labels
 that say how something is known, and the writing conventions. it's the place
 to start. why the docs are written at all, and what documentation is for, is
-in [the meta domain](meta/documentation/1_foundations.md).
+in [the meta domain](documentation_meta.md).
 
 **builds on:** nothing; start here.
 
@@ -14,32 +14,45 @@ the concepts here are listed, with stable IDs, in
 
 ## domains and stripes
 
-a **domain** is one subject the docs cover, with a folder of its own. so far
-there are two: the meta domain, about how all of it is thought through and
-made, and spacers. a domain can
-have **subdomains**, folders of their own inside it. the chapters in a folder
-are numbered in reading order, and line up as its **stripe**:
+a **domain** is one subject the docs cover. so far there are two: the meta
+domain, about how all of it is thought through and made, and strands. a domain
+can have **subdomains**, parts with a subject of their own. a domain's files
+line up as its **stripe**:
 
     documentation/
-      documents.md    this file
+      documents.md            this file
       concepts.md
-      meta/
-        personal/     1_purpose.md
-        modelling/    1_approach.md
-        language/     1_semiotics.md
-        pedagogy/     1_foundations.md
-        documentation/  1_foundations.md
-        ai/           1_foundations.md
-        process/      1_foundations.md
-      spacer/         1_basics.md … 7_identity.md, spacer_v0.md
+      personal_meta.md        the meta domain: one file per subdomain
+      approach_meta.md
+      semiotics_meta.md
+      pedagogy_meta.md
+      documentation_meta.md
+      ai_meta.md
+      process_meta.md
+      strand/                 the strand domain: chapters in a folder
+        1_basics.md … 8_space.md
+        spacer_v0.md
+
+structure is added once it's earned (see "structure follows use", in
+[the approach](approach_meta.md)):
+
+- a domain or subdomain starts as **one file** at the top, named after it,
+  with its domain as a suffix: `process_meta.md`
+- once it grows chapters, it becomes **a folder**, with its chapters numbered
+  in reading order inside: `strand/1_basics.md`
+- nesting follows use, not taxonomy. a strand is a kind of discrete space,
+  which is a kind of space, but that ancestry is stated in words, in the
+  strand basics, not built into folders
+
+and the order:
 
 - each chapter builds only on the chapters before it in its stripe, or on
   other stripes it depends on
 - the meta domain comes first: other domains build on it, and it depends on
-  none of them. its subdomains are read in the order above: personal,
-  modelling, language, pedagogy, documentation, ai, process
-- a file that covers every domain sits at the top, outside the domain folders:
-  this one, and [concepts.md](concepts.md)
+  none of them. its files are read in the order above: personal, approach,
+  semiotics, pedagogy, documentation, ai, process
+- a file that covers every domain sits at the top with no suffix: this one,
+  and [concepts.md](concepts.md)
 
 ## cross-cutting topics
 
@@ -48,9 +61,9 @@ naming to everything. rather than file each topic in one place and nowhere
 else, a topic has one home and any number of framings:
 
 - **home**: the topic's foundational, abstract treatment lives in exactly one
-  place, its home subdomain. pedagogy's foundations are in `meta/pedagogy/`
+  place, its home subdomain. pedagogy's foundations are in `pedagogy_meta.md`
 - **framing**: another domain or subdomain can treat the topic from its own
-  side, such as "pedagogy, from AI", in `meta/ai/`. a framing builds on the
+  side, such as "pedagogy, from AI", in `ai_meta.md`. a framing builds on the
   home, and links to it rather than restating it
 - **no duplicate definitions**: a framing applies the home's concepts, or
   extends them. anything new it defines gets its own concept ID, where it's
@@ -90,8 +103,9 @@ a new concept gets the next free number, whichever chapter it's in.
 
 ## frozen versions
 
-a whole draft can be **frozen**: `spacer/spacer_v0.md` is the first draft of
-the spacer domain, kept exactly as it was when the chapters were split from it.
+a whole draft can be **frozen**: `strand/spacer_v0.md` is the first draft of
+the strand domain, from when it was called spacer, kept exactly as it was when
+the chapters were split from it.
 a frozen version is never edited. it's a record of how the ideas stood, not part
 of the docs.
 

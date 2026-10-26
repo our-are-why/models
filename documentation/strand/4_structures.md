@@ -1,8 +1,8 @@
 # structures
 
-**in short.** ways of building with spacers. scopes take a piece of a spacer,
-and pieces can be scoped again. layers choose among a spacer's points, and form
-cascades. collections take several spacers together, stacks line them up cell
+**in short.** ways of building with strands. scopes take a piece of a strand,
+and pieces can be scoped again. layers choose among a strand's points, and form
+cascades. collections take several strands together, stacks line them up cell
 by cell, and weights count across a stack.
 
 **builds on:** basics, notation, measures.
@@ -11,8 +11,8 @@ the concepts here are listed, with stable IDs, in [concepts.md](../concepts.md).
 
 ## scopes
 
-a **scope** takes a piece of a spacer. it's written after the spacer, in square
-brackets, and the spacer's edges and resolution always come with it, because
+a **scope** takes a piece of a strand. it's written after the strand, in square
+brackets, and the strand's edges and resolution always come with it, because
 how a scope behaves depends on both:
 
     S := |x.xx..|
@@ -33,13 +33,13 @@ how a scope behaves depends on both:
   sits outside the brackets, so a − inside them always means a position
   counted back from cell 0 (circular only): `)8: S([-2->2]` runs from two
   cells before cell 0 to two after it
-- **laps**: in a circular spacer, `~3%` means three full laps, without having
+- **laps**: in a circular strand, `~3%` means three full laps, without having
   to state the resolution. `)6: S([2~3%+5]` starts at cell 2, goes round 3
   times, then 5 more steps: 23 steps in all, or `[2->25]` as an absolute range.
   `%` is the programmer's wrap-around (modulo), so read `3%` as "3 laps", not
   "3 percent"
 - **fluid**: in `|6: S|[…]`, what lies past the ends belongs to a shape,
-  which a fluid spacer doesn't have, so a scope has to stay within them
+  which a fluid strand doesn't have, so a scope has to stay within them
 - **the result** is a scoped piece, `[…]`, with its own numbering: its cell 0
   is where the scope started, and its + runs the way the scope walked
 
@@ -62,9 +62,9 @@ a piece of a piece follows a few rules:
 1. **it stays inside its parent**: it can't reach past the parent's first or
    last cell. `[5: A][3+4]` runs past A's end, so there's no piece
 2. **no laps**: a scoped piece has ends, so there's no way round it. `~3%`
-   only works on a circular spacer
+   only works on a circular strand
 3. **the edges stay square**: a piece is always read as `[…]`. joining its
-   ends to read it circularly would make a new spacer, which is a change, not
+   ends to read it circularly would make a new strand, which is a change, not
    a scope: `Wind(Detach(A))` (see "functions")
 4. **no repetition**: what lies beyond a piece is its parent, not copies of
    itself, so `~` doesn't apply
@@ -72,8 +72,8 @@ a piece of a piece follows a few rules:
    as the end stays inside the piece, and `-` for walking the other way
 
 **back to the root.** because each piece stays inside its parent, any piece of
-a piece is one unbroken stretch of the spacer the chain was first taken from.
-usually that's the **root**: the spacer at the very top, which isn't a piece or
+a piece is one unbroken stretch of the strand the chain was first taken from.
+usually that's the **root**: the strand at the very top, which isn't a piece or
 a layer of anything. if it's a layer (see "layers"), the layer is the first
 piece's parent, and the chain can't look past it. to find where a piece sits,
 go up one parent at a time: add the parent's start to the piece's start. if the
@@ -95,9 +95,9 @@ different parents (see lift and collapse, in "functions").
 
 ## layers
 
-a spacer's true cells can become the cells of another spacer. that second
-spacer is a **layer**: it chooses among the first one's points. the first
-spacer is the **root**, as with scopes.
+a strand's true cells can become the cells of another strand. that second
+strand is a **layer**: it chooses among the first one's points. the first
+strand is the **root**, as with scopes.
 
     cell      0 1 2 3 4 5 6 7
     root      ■ ■ ◇ ◇ ◇ ■ ◇ ◇      points 0, 1, 5
@@ -114,11 +114,11 @@ further layer, and so on.
 - **one reading**: every layer is read the way its root is. points round a
   circle stay in circular order; points along a line stay in line order
 - **each layer's own conventions**: a layer has its own cell 0 and direction,
-  like any spacer
+  like any strand
 - **zero ends a cascade**: if a layer is all null, a layer below it would have
   no cells, which is zero. so a cascade stops at its first all-null layer
 - **flattening**: the deepest layer's choices can be shown on the root's
-  cells: here, `|x....x..|`. the flattened spacer doesn't show it was chosen in
+  cells: here, `|x....x..|`. the flattened strand doesn't show it was chosen in
   steps; like any origin, the cascade lives outside the cells (see press and
   flatten, in "functions")
 
@@ -143,7 +143,7 @@ layer:
     A >> B >> C                  labels, to any depth; C << B << A is the same cascade
 
 - top-down reads as choosing: start from the root and pick points layer by
-  layer. bottom-up reads as placing: start from a small spacer and fit it into
+  layer. bottom-up reads as placing: start from a small strand and fit it into
   larger ones
 - every layer repeats the root's edges, so a circular cascade is `)…( >> )…(`. a
   cascade can't mix readings
@@ -155,21 +155,21 @@ written, and each layer's cells sit under the points they stand for:
     ■ ■ ◇ ◇ ◇ ■ ◇ ◇
     ■ ◇       ■
 
-### cells that open into spacers
+### cells that open into strands
 
 a different kind of nesting, noted here as a concept only: each cell of a
-spacer opens into a spacer of its own, the way a tile can be divided into
+strand opens into a strand of its own, the way a tile can be divided into
 smaller tiles. it's close to refinement, and it's left for later.
 
 ## collections, stacks and weights
 
 ### collections
 
-a **collection** is several spacers taken together. two things about a
+a **collection** is several strands taken together. two things about a
 collection are independent of each other:
 
 - **order**: whether its members come in a set order
-- **repeats**: whether the same spacer can appear more than once
+- **repeats**: whether the same strand can appear more than once
 
 each combination has an established name:
 
@@ -181,22 +181,22 @@ each combination has an established name:
 an ordered set is written like a sequence whose members all differ. the display
 form can write a multiset with bag brackets: `⟅A, A, B⟆`.
 
-what counts as a repeat depends on what counts as the same spacer, so, like
+what counts as a repeat depends on what counts as the same strand, so, like
 identity, whether a collection has repeats is decided by the use. a description
-picks out spacers too, and what it gives can be any of these kinds:
-`{r: 8, d: 3}` gives every fitting spacer once, but other descriptions can give
+picks out strands too, and what it gives can be any of these kinds:
+`{r: 8, d: 3}` gives every fitting strand once, but other descriptions can give
 repeats, or an order.
 
 ### stacks
 
-to count across a collection, its spacers are **stacked**: lined up cell by
-cell. stacking is a device for working with spacers, not a new kind of spacer,
+to count across a collection, its strands are **stacked**: lined up cell by
+cell. stacking is a device for working with strands, not a new kind of strand,
 and it needs a few things settled:
 
 - every member has the same resolution
 - each member sits in a **frame**: the fixed choices that say how it lines up,
   meaning which of its cells is cell 0, which way it runs, and how it's read.
-  by default, a spacer is framed as written, with its cell 0 over the stack's
+  by default, a strand is framed as written, with its cell 0 over the stack's
   cell 0
 - all members share one reading, and the edges around a stack say which:
 
@@ -209,7 +209,7 @@ and it needs a few things settled:
   circularly, as long as what's inside is fluid or already reads that way.
   so the members inside are written bare. for now, a stack can't mix readings
 
-framing is where identity gets decided: a stack takes each spacer exactly as
+framing is where identity gets decided: a stack takes each strand exactly as
 framed, so `)x.x..(` and `)x..x.(` add to different columns, although read
 circularly one is the other started from a different cell.
 
@@ -226,11 +226,11 @@ circularly one is the other started from a different cell.
   and count every repeat
 - the weights live in a space of their own: the same cells and reading as the
   stack, but each cell holds an amount instead of one of two states, so a row
-  of weights isn't a spacer. a circular or linear stack says the reading is
+  of weights isn't a strand. a circular or linear stack says the reading is
   part of the structure; a fluid one has no shape, and a use can give it one
 - the weights add up to the members' densities together (9 here), and no
   weight is more than the number of members
-- a member's **spacer weight** (or score) is the weights added up at its
+- a member's **strand weight** (or score) is the weights added up at its
   points: how much it agrees with the whole, itself included. A's is
   2 + 2 + 3 = 7; B's and C's are 6
 - an ordered stack has **stages**: its running weights as each member goes
@@ -241,7 +241,7 @@ circularly one is the other started from a different cell.
       after C    2 2 0 1 0 3 1 0
 
 weights are a derived result, and for most stacks they're just that: a count.
-but when the spacers going in are patterned, the weights can carry structure of
+but when the strands going in are patterned, the weights can carry structure of
 their own: structure of the whole that no member shows on its own, which is
 what's sometimes called weak emergence. then they become objects worth studying
 in their own right: a space of amounts, where the amount works almost like an
@@ -262,4 +262,4 @@ is the stack's weights.
 
 ("weight" has another meaning in coding theory, where a string's weight is its
 number of 1s; here, that's density. here, weights are always taken across a
-stack: cell weights per cell, and a spacer weight per member.)
+stack: cell weights per cell, and a strand weight per member.)

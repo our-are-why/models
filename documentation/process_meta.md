@@ -1,4 +1,4 @@
-# foundations
+# process
 
 **in short.** how the work gets done: how an idea goes from noticed to
 documented, how drafts become chapters, how things get checked, and how
@@ -8,7 +8,7 @@ they're made.
 **builds on:** approach, documents.
 
 the concepts here are listed, with stable IDs, in
-[concepts.md](../../concepts.md).
+[concepts.md](concepts.md).
 
 ## the life of an idea
 
@@ -31,7 +31,8 @@ down. writing too early fixes a shape that hasn't been tested.
 
 ## drafts and revisions
 
-the docs grow in drafts. the spacer domain began as one rough draft; when it
+the docs grow in drafts. the strand domain, first called spacer, began as one
+rough draft; when it
 was ready to be shaped, it was frozen as a version, split into chapters with
 its text unchanged, and then revised in the chapters. each step was its own
 change, so each can be checked on its own: the split moved text and nothing
@@ -49,7 +50,7 @@ posed is restated, not forced to an answer.
 after a run of changes, the whole of a domain is read again, start to finish,
 looking for contradictions, leftovers from earlier versions, and rough joins.
 the findings are reported first, sorted into what needs a decision and what's
-mechanical, and only then fixed. the first pass over the spacer chapters found
+mechanical, and only then fixed. the first pass over the strand chapters found
 a word used for two things ("view"), a definition too narrow for what it
 covered ("operation"), and about a dozen leftovers.
 

@@ -1,17 +1,17 @@
 # notation
 
-**in short.** how spacers are written: a typed form for keyboards (`x` and
+**in short.** how strands are written: a typed form for keyboards (`x` and
 `.`) and a display form for reading (shapes), the five rules any symbols
 follow, edges that show the reading, the point form, labels, descriptions and
-repetition, and why a spacer isn't called a binary string.
+repetition, and why a strand isn't called a binary string.
 
 **builds on:** basics.
 
 the concepts here are listed, with stable IDs, in [concepts.md](../concepts.md).
 
-## writing a spacer down
+## writing a strand down
 
-a spacer is written in one of two forms, which map one to one:
+a strand is written in one of two forms, which map one to one:
 
 - **typed/keyboard**: `x` for true and `.` for null, with no spaces, in
   order from cell 0. easy to enter by hand
@@ -32,7 +32,7 @@ other symbols work just as well, as long as they follow five rules:
    the way. be pragmatic about it: what collides depends on the context the
    notation is read in, and no symbol is free of other meanings, so this is a
    judgement, not a ban
-5. **clear edges**: it's clear where a written spacer starts and ends
+5. **clear edges**: it's clear where a written strand starts and ends
 
 `|xx___x__|` breaks rule 3: in many fonts the underscores merge into one line,
 so it's hard to tell how many null cells there are.
@@ -45,25 +45,25 @@ always means amounts.
 
 no pair of symbols is entirely free of other meanings: `x` is also a letter,
 and `.` a full stop. in a run they don't read as anything else, but a single
-`x` could. that's what rule 5 is for: in the typed form a spacer always has its
-edges, so `|x|` is clearly a spacer of one true cell. (in figures, where a
-spacer sits on its own line with labels, the layout marks its edges.)
+`x` could. that's what rule 5 is for: in the typed form a strand always has its
+edges, so `|x|` is clearly a strand of one true cell. (in figures, where a
+strand sits on its own line with labels, the layout marks its edges.)
 
 ### edges show the reading
 
-in the typed form, the edges around a spacer say how it's read:
+in the typed form, the edges around a strand say how it's read:
 
     )xx...x..(    circular      round brackets turned outward: the edges open
                                 onto each other, as if the ends join round the back
     <xx...x..>    linear        bounded: an end on each side, and nothing beyond
-    [xx...x..]    scoped        a piece of a larger spacer: it has ends, but
+    [xx...x..]    scoped        a piece of a larger strand: it has ends, but
                                 there's more beyond them
-    |xx...x..|    fluid         plain walls: just the spacer, with no shape
+    |xx...x..|    fluid         plain walls: just the strand, with no shape
 
 **zero** is `|><|`: the walls pushed together, with no space left between them.
 it only takes the plain walls, since with no cells there's nothing to read as a
 circle or a line, and nothing inside could be a cell, so it doesn't read as a
-spacer. `>…<` isn't used, so zero's middle can't be mistaken for edges turned
+strand. `>…<` isn't used, so zero's middle can't be mistaken for edges turned
 inward.
 
 ### the display form
@@ -104,20 +104,20 @@ second difference is the first thing to give back.)
 
 ### points
 
-a spacer can also be written by its points, after its resolution:
+a strand can also be written by its points, after its resolution:
 
     |xx...x..|   →   |8: 0,1,5|
     )x..x.(      →   )5: 0,3(
 
 the resolution has to be there: without it, `|x..x.|` and `|x..x...|` would
-both come out as `0,3`. an all-null spacer has no points: `|4:|`. here the
+both come out as `0,3`. an all-null strand has no points: `|4:|`. here the
 digits are positions, which are numbers, so rule 4 holds. the point form is
 shorter when few cells are true; the cell form shows the arrangement at a
 glance.
 
 ### labels
 
-a spacer can be given a name, a **label**, to refer to it later:
+a strand can be given a name, a **label**, to refer to it later:
 
     S := |x.xx..|
 
@@ -129,17 +129,17 @@ applied to a fluid label: if S is already circular, `)S(` just repeats its
 reading, and `<S>` isn't allowed. like the point form, a label can carry its
 resolution: `)6: S(`. a label is defined once: it names one value, and never
 changes to mean another. in these chapters, each example's labels belong to
-that example: the same letter can name a different spacer in another one.
+that example: the same letter can name a different strand in another one.
 
 ### descriptions
 
-a **description** lists what's known about a spacer, in braces:
+a **description** lists what's known about a strand, in braces:
 
     {r: 12, d: 7}         resolution 12, density 7
-    S{r: 12, d: 7}        S: some spacer with resolution 12 and density 7
+    S{r: 12, d: 7}        S: some strand with resolution 12 and density 7
 
-on its own, a description picks out every spacer that fits it: `{r: 12, d: 7}`
-fits 792 different spacers, not one. keys can be full words (`resolution: 12`)
+on its own, a description picks out every strand that fits it: `{r: 12, d: 7}`
+fits 792 different strands, not one. keys can be full words (`resolution: 12`)
 or short ones, but a short key, like a short label, is only used once it's been
 mapped to its full name. so far: `r` for resolution, `d` for density and `s`
 for sparsity. every number comes with its key, so nothing has to be guessed
@@ -147,12 +147,12 @@ from its position.
 
 ### repetition
 
-outside the edges is context. `~` says a spacer repeats, out there:
+outside the edges is context. `~` says a strand repeats, out there:
 
     )x..x.(~       repeats without end
     )x..x.(~3      repeats 3 times
 
-it describes the surroundings and doesn't change the spacer: its resolution is
+it describes the surroundings and doesn't change the strand: its resolution is
 still 5. the study of strings writes repetition as a power, w³ for w three
 times over, but that *builds* a new, longer string; here `^` means building it
 (see repeat, in "functions").
@@ -167,7 +167,7 @@ vanish as an HTML tag. inside code formatting, most of this goes away.
 
 ### rotating
 
-a written spacer always has a first cell, even when it's read circularly,
+a written strand always has a first cell, even when it's read circularly,
 where it's simply cell 0. to start from another cell, rotate it so that cell
 comes first: starting `)xx...x..(` at cell 5 gives `)x..xx...(`; in points,
 `)8: 0,1,5(` gives `)8: 0,3,4(` (see rotate, in "functions").
@@ -179,18 +179,20 @@ string:
 
     ■ ■ ◇ ◇ ◇ ■ ◇ ◇   →   11000100
 
-it's a familiar way to write something like a spacer, and it follows the first
+it's a familiar way to write something like a strand, and it follows the first
 three rules above, though not the fourth, and with no edges, not the fifth
-either. we don't call a spacer a binary string, and we don't write it with
+either. we don't call a strand a binary string, and we don't write it with
 digits, for three reasons.
 
-**the name should match the object's affordance.** an affordance is what an
-object lets you do, and a spacer lets you space things out: it's about where
-things sit and how far apart they are. so it's named after that.
+**the name should say what the object is.** a strand is named for its shape:
+one dimension, separate cells, open or closed into a loop. it says nothing
+about what its cells mean, since that's the job of a perspective: read as
+things and the space between them, a strand is a spacer; read as truth values,
+it's logic. "binary string" isn't neutral: it brings in encoding.
 
-**this encoding is literal; most binary encodings aren't.** in a spacer's
+**this encoding is literal; most binary encodings aren't.** in a strand's
 string, each character is the cell at the same position: reading the string
-is looking at the spacer, with nothing to translate. binary encodings usually
+is looking at the strand, with nothing to translate. binary encodings usually
 have a step of translation in between:
 
 - in a **binary number**, position matters, so it's partly geometric. but
@@ -200,7 +202,7 @@ have a step of translation in between:
   **serialization**: chosen for storing or sending, with positions that mean
   nothing until a format decodes them
 
-so "binary string" suggests something to be decoded. a spacer is a discrete
+so "binary string" suggests something to be decoded. a strand is a discrete
 geometric object, and its written form is a literal picture of it. so we use
 the language of space (cells, positions, distances), not the language of
 encoding (bits, digits, codes).
@@ -213,8 +215,8 @@ numbers. a 0 would also read as zero (no cells at all).
 "cell" has established meanings elsewhere, and some come close to this one:
 
 - **cellular automata**: the simplest kind has cells along one dimension, each
-  in one of two states, the same picture as a spacer. but there the cells are
-  updated by a rule, step after step. a spacer has no rule and no steps; it's
+  in one of two states, the same picture as a strand. but there the cells are
+  updated by a rule, step after step. a strand has no rule and no steps; it's
   just the arrangement
 - **topology**: cells are the pieces a space is glued together from, in any
   number of dimensions. close in spirit, but none of that theory is assumed
@@ -222,5 +224,5 @@ numbers. a 0 would also read as zero (no cells at all).
 - **everyday uses** (spreadsheets, computer memory, biology): a cell holds or
   does something
 
-here a cell is only this: one piece/slot of a spacer's space, with a position
+here a cell is only this: one piece/slot of a strand's space, with a position
 and one of two states.

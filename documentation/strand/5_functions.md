@@ -1,25 +1,25 @@
 # functions
 
-**in short.** functions take spacers, or things made from them, and give one
+**in short.** functions take strands, or things made from them, and give one
 back. primitives each do one basic thing, such as rotate, join, commit or
 threshold; named composites are built from them, such as repeat, splice or
-flatten. lines and circles get their own functions, and a fluid spacer can
+flatten. lines and circles get their own functions, and a fluid strand can
 borrow a reading while a function works.
 
 **builds on:** basics, notation, measures, structures.
 
 the concepts here are listed, with stable IDs, in [concepts.md](../concepts.md).
 
-a **function** takes spacers, or things made from them (pieces, cascades,
+a **function** takes strands, or things made from them (pieces, cascades,
 stacks, rows of amounts), and gives one back. most are written with the
 function's name, then its values in round brackets, in a stated order, the way
-generators take their values. like stacking, a function works on spacers as
+generators take their values. like stacking, a function works on strands as
 written, by default.
 
 (in algebra, an **operation** on a set takes members of that set and gives back
 a member of the same set. many functions here are operations in that sense:
 rotate takes a circle and gives a circle. not all of them are: threshold takes
-a row of amounts and gives a spacer. so the general word here is function, and
+a row of amounts and gives a strand. so the general word here is function, and
 "operation" keeps its maths meaning.)
 
 functions come in two kinds:
@@ -28,7 +28,7 @@ functions come in two kinds:
   melt), rotate, slide, reverse, mirror, join, unwind, wind, detach, lift,
   press, weights and threshold, along with taking a scope, layering (`>>`),
   and the cell-by-cell `Not`, `And`, `Or`, `Xor` and `Without` (see
-  "combining spacers", below)
+  "combining strands", below)
 - **named composites**, which are made of primitives and named because they're
   useful: repeat, insert, splice, collapse, flatten, stages, at most, exactly,
   levels and depths. each is defined by the primitives it's made of, so
@@ -38,36 +38,36 @@ a primitive is one because it does one basic thing, not because nothing else
 could build it. some primitives can also be built from others; when they can,
 that's a cross-check, not a reason to make them composites.
 
-functions never change a spacer in place: they always give a new one, and what
+functions never change a strand in place: they always give a new one, and what
 went in stays as it was.
 
-most functions work on a spacer's cells. a few work on a **view** instead: a
-window onto a spacer, which changes what's looked at, not the spacer itself.
+most functions work on a strand's cells. a few work on a **view** instead: a
+window onto a strand, which changes what's looked at, not the strand itself.
 taking a scope, sliding it and lifting it are of this kind. detach and flatten
-are the bridges from a view, or a cascade, back to a spacer of its own.
+are the bridges from a view, or a cascade, back to a strand of its own.
 
 what's allowed depends on the readings going in, by the same idea as stacks:
-writing a spacer circular or linear says its reading is part of its structure;
+writing a strand circular or linear says its reading is part of its structure;
 writing it fluid leaves the shape out, so it can take whichever one the
 function needs.
 
 a function can borrow a reading while it works, as long as just one reading
 makes sense for it and its result doesn't depend on it afterwards, and **fluid
 in gives fluid out**: committing to a reading is left to whoever uses the
-result. a fluid spacer can be rotated as a circle and then read as a line: with
+result. a fluid strand can be rotated as a circle and then read as a line: with
 `N := |xx...x..|`, `Rotate(N, 5)` is `|x..xx...|`, and `<Rotate(N, 5)>` is
 `<x..xx...>`. the only exceptions are the functions whose job is to change a
 reading: unwind and wind.
 
-each function does one kind of thing to one kind of spacer. when the same idea
+each function does one kind of thing to one kind of strand. when the same idea
 means different things for lines and circles, they get different functions,
 rather than one function that behaves differently depending on what it's
 given.
 
-## combining spacers
+## combining strands
 
-two spacers with the same resolution can be combined cell by cell into a new
-spacer. like stacking, this frames both spacers, as written by default, and the
+two strands with the same resolution can be combined cell by cell into a new
+strand. like stacking, this frames both strands, as written by default, and the
 same reading rules apply: both circular, both linear or both fluid, and the
 result takes their reading.
 
@@ -78,7 +78,7 @@ result takes their reading.
     Xor(A, B)        ◇ ■ ◇ ■ ◇ ◇ ◇ ◇      true where exactly one is
     Without(A, B)    ◇ ■ ◇ ◇ ◇ ◇ ◇ ◇      true where A is and B isn't
 
-the negative is the same idea for one spacer: `Not(A)` is true wherever A
+the negative is the same idea for one strand: `Not(A)` is true wherever A
 isn't.
 
 each of these applies one rule to every cell, so all five are primitives. some
@@ -91,10 +91,10 @@ these functions take logic's symmetric perspective, where null reads as false
 
 they're also thresholds on weights: stack A and B, and `And(A, B)` is where the
 weight is 2, `Or(A, B)` where it's at least 1, and `Xor(A, B)` where it's
-exactly 1. with more spacers in a stack, any threshold works the same way, such
+exactly 1. with more strands in a stack, any threshold works the same way, such
 as "at least two of them" (see threshold, below).
 
-`And`, `Or` and `Xor` take any number of spacers, since grouping them
+`And`, `Or` and `Xor` take any number of strands, since grouping them
 differently doesn't change the result: `Or(A, B, C)` is true where at least
 one is, and `And(A, B, C)` where all are. but `Xor(A, B, C)` doesn't mean
 "exactly one": it's true where an odd number are. with the stack A, B, C from
@@ -105,9 +105,9 @@ one is, and `And(A, B, C)` where all are. but `Xor(A, B, C)` doesn't mean
 
 ### commit
 
-committing gives a fluid spacer a reading, by putting edges around it. it's
+committing gives a fluid strand a reading, by putting edges around it. it's
 more than a way of looking at it: the cells stay as they are, but the result is
-a new spacer, whose reading is part of what it is. the fluid one stays fluid.
+a new strand, whose reading is part of what it is. the fluid one stays fluid.
 in programming terms, it's a cast: turning a value into a more specific type.
 
     N := |xx...x..|
@@ -132,14 +132,14 @@ there are two places to commit, and they say different things:
 both arrive at the same cells here. which to use depends on whether the reading
 is part of the structure, or a shape given later.
 
-commitment is one-way by default: nothing takes a committed spacer back to
+commitment is one-way by default: nothing takes a committed strand back to
 fluid. that fits a world where fluid is abstract, or hierarchical (see "what
 fluid is", in "basics").
 
 ### melt, in some worlds
 
 in a world where fluid is a sibling of circles and lines, `Melt(S)` forgets a
-committed spacer's shape, and gives the fluid spacer with the same cells:
+committed strand's shape, and gives the fluid strand with the same cells:
 
     Melt( )xx...x..( )      →  |xx...x..|
     Melt(<xx...x..>)        →  |xx...x..|
@@ -149,7 +149,7 @@ committed spacer's shape, and gives the fluid spacer with the same cells:
 - where the shape is essential, melting throws away meaning, and isn't valid:
   a clock face is a circle in any world that cares about time
 - in a hierarchical world, melt usually doesn't fit, since the forms only come
-  from fluid. but if the hierarchy is read as "a circle is a fluid spacer with
+  from fluid. but if the hierarchy is read as "a circle is a fluid strand with
   a shape added", forgetting the shape is always possible. so even there, the
   world decides
 
@@ -163,7 +163,7 @@ two cells back from cell 0.
     Rotate(S, 5)       →  )x..xx...(
     Rotate(S, -2)      →  )..xx...x(
 
-- **circular**: yes. this is the rotating described in "writing a spacer
+- **circular**: yes. this is the rotating described in "writing a strand
   down", in "notation"
 - **fluid**: yes, read circularly for the move; the result stays fluid
 - **linear**: no. a line has no way round to rotate along. a scoped piece can
@@ -173,7 +173,7 @@ two cells back from cell 0.
 
 `Slide(A, k)` moves a scoped piece along its parent: the window keeps its
 length, and starts from what was its cell k, which can lie beyond its end. it
-works on the view, not on a spacer: the parent stays as it is, and only the
+works on the view, not on a strand: the parent stays as it is, and only the
 part the window shows changes.
 
     S := )xx...x..(
@@ -238,8 +238,8 @@ line.
 
     Join(<x.>, <.xx>)      →  <x..xx>
 
-- only something with free ends can be joined: a line, or a fluid spacer read
-  as one. joining two fluid spacers gives a fluid one; joining a fluid spacer
+- only something with free ends can be joined: a line, or a fluid strand read
+  as one. joining two fluid strands gives a fluid one; joining a fluid strand
   to a line gives a line
 - a circle written circular says it has no ends, so there's nothing to attach.
   if its circularity is only a perspective, it can be written fluid, and then
@@ -266,11 +266,11 @@ a circle into a line, or a line into a circle.
 - the round trip loses nothing: winding an unwound circle gives it back, and
   unwinding a wound line gives the line back, since both start at cell 0
 - unwind takes a circle and wind takes a line: they're the conversions between
-  the two committed shapes. a fluid spacer doesn't need them, since it commits
+  the two committed shapes. a fluid strand doesn't need them, since it commits
   directly, as `)N(` or `<N>`. this keeps the two moves apart, as the
   comparisons in "identity" do: committing is fitting (`~=`), and converting
   is unwind and wind (`<->`)
-- unwinding starts where the spacer's frame starts, its cell 0 as written;
+- unwinding starts where the strand's frame starts, its cell 0 as written;
   starting somewhere else means rotating first
 - a circular scope with laps walks the same cells as unwinding and repeating:
   `)3: C([0~2%+2]` gives `[x..x..x..]`, a scoped piece
@@ -292,10 +292,10 @@ their own: the window's edges become free ends.
 - the result is linear: a piece is already linear in its own terms, and a
   reading only goes one way. `Wind(Detach(A))` makes it a circle
 - detaching forgets the context: the parent, and where the piece sat in it. so
-  `Detach(A) === A`, the same cells, but they aren't the same spacer: one is
+  `Detach(A) === A`, the same cells, but they aren't the same strand: one is
   whole, the other a part. there's no way back, except taking the scope from
   the parent again
-- it's what lets a piece be used on its own: joined, or studied as a spacer in
+- it's what lets a piece be used on its own: joined, or studied as a strand in
   its own right
 
 ### lift
@@ -328,7 +328,7 @@ upper layer's resolution, and shows the deepest choices on its cells.
     Press(K)               →  |xx...x.x| >> |..xx|
     Press(Press(K))        →  |.....x.x|
 
-- a root with one layer presses to a single spacer, with the root's
+- a root with one layer presses to a single strand, with the root's
   resolution and reading
 - it forgets one layer, the way lift forgets one parent: the result doesn't
   show that it was chosen in two steps
@@ -344,7 +344,7 @@ of amounts, with the stack's reading (see "weights", in "structures"):
 
 ### threshold
 
-`Threshold(W, k)` turns a row of amounts back into a spacer: a cell is true
+`Threshold(W, k)` turns a row of amounts back into a strand: a cell is true
 where its amount is at least k, and the result keeps the row's reading. it's
 the bridge from amounts back to states, the way detach is the bridge from a
 view. with the stack A, B, C from "weights", in "structures":
@@ -354,7 +354,7 @@ view. with the stack A, B, C from "weights", in "structures":
     Threshold(W, 2)             →  |xx...x..|       at least two
     Threshold(W, 3)             →  |.....x..|       all three
 
-for two spacers, `Or` and `And` are the two simplest thresholds: `Or(A, B)` is
+for two strands, `Or` and `And` are the two simplest thresholds: `Or(A, B)` is
 `Threshold(Weights((A, B)), 1)`, and `And(A, B)` is
 `Threshold(Weights((A, B)), 2)`. that's a cross-check, not their definition.
 
@@ -382,8 +382,8 @@ the study of strings writes this as a power, and here `L^3` is shorthand for
   `Wind(Repeat(Unwind(C), m))`
 - **scoped**: no. its ends aren't free; detach it first
 
-this builds a new, longer spacer. `~` is different: it says a spacer repeats in
-its surroundings, and leaves the spacer as it is.
+this builds a new, longer strand. `~` is different: it says a strand repeats in
+its surroundings, and leaves the strand as it is.
 
 ### insert
 
@@ -419,22 +419,22 @@ scope of the top.
 
 ### flatten
 
-`Flatten(K)` presses a cascade until one spacer is left: its deepest choices,
+`Flatten(K)` presses a cascade until one strand is left: its deepest choices,
 shown on its root's cells.
 
-    Flatten(K)  :=  Press(K), again and again, until one spacer is left
+    Flatten(K)  :=  Press(K), again and again, until one strand is left
     Flatten(|xx...x..| >> |x.x|)              →  |x....x..|
     Flatten(|xx...x.x| >> |x.xx| >> |.xx|)    →  |.....x.x|
 
 - the result has the root's resolution and reading
 - flattening forgets the layers, the way detach forgets a context: the
-  flattened spacer doesn't show that it was chosen in steps (see "layers", in
+  flattened strand doesn't show that it was chosen in steps (see "layers", in
   "structures")
 - the order doesn't matter: any run of neighbouring layers, written out, is a
   cascade too, and flattening the top part first, `Flatten(R >> L1) >> L2`,
-  ends in the same spacer as pressing from the bottom. flattening a part is
+  ends in the same strand as pressing from the bottom. flattening a part is
   partial flattening: `Flatten(R >> L1) >> L2`, or `R >> Flatten(L1 >> L2)`
-- there's no way back: many cascades flatten to the same spacer
+- there's no way back: many cascades flatten to the same strand
 
 ### stages
 

@@ -1,4 +1,4 @@
-# foundations
+# documentation
 
 **in short.** what documentation is here, and what it's for: a record of
 perspective, written well enough to be checked, revised as the thinking
@@ -8,7 +8,7 @@ neighbours: tutorials, references, specifications and journals.
 **builds on:** purpose, approach, pedagogy.
 
 the concepts here are listed, with stable IDs, in
-[concepts.md](../../concepts.md).
+[concepts.md](concepts.md).
 
 ## a record of perspective
 
@@ -21,7 +21,7 @@ them: first a test set drawn from the docs, then implementations.
 someone who records perspective this way is a **documentarian** of it, the
 way a documentary records a subject: from somewhere, openly, without claiming
 to be the only view. (why this repository is written that way is personal,
-and in [purpose](../personal/1_purpose.md).)
+and in [personal](personal_meta.md).)
 
 ## writing as thinking
 
@@ -49,13 +49,12 @@ the docs are easiest to read when it's clear what kind of writing they are:
 the docs are never finished. each chapter says what it is now; the history of
 how it got there is kept, not deleted, but it isn't the docs. a frozen version
 marks a point worth keeping whole (see "frozen versions", in
-[documents](../../documents.md)).
+[documents](documents.md)).
 
 ## readers
 
-the docs are written for people first, and for AI too (see
-[AI's foundations](../ai/1_foundations.md)). a reader comes for one of three
-things:
+the docs are written for people first, and for AI too (see [ai](ai_meta.md)).
+a reader comes for one of three things:
 
 - **to use**: to apply a model, or build on it
 - **to learn**: to understand the ideas, in order

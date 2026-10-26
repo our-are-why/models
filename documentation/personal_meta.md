@@ -1,4 +1,4 @@
-# purpose
+# personal
 
 **in short.** why this repository exists, what it's trying to do, and what it
 isn't. like every personal chapter, it's written in the first person, because
@@ -7,7 +7,7 @@ it's about who's writing, and from where, so that a reader can weigh the rest.
 **builds on:** nothing.
 
 it defines no concepts of its own; the index of those is
-[concepts.md](../../concepts.md).
+[concepts.md](concepts.md).
 
 ## what this is
 
@@ -55,7 +55,7 @@ grounding it in what's already known.
 i'm trying to be a documentarian of perspective (not of video), and an
 effective communicator, especially of meaning that can be put to use. what
 documenting perspective means, apart from me, is in
-[documentation](../documentation/1_foundations.md).
+[documentation](documentation_meta.md).
 
 ## reading it, given all that
 

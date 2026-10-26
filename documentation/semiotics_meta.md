@@ -9,7 +9,7 @@ asked at the right one.
 **builds on:** approach.
 
 the concepts here are listed, with stable IDs, in
-[concepts.md](../../concepts.md).
+[concepts.md](concepts.md).
 
 ## three layers
 
@@ -28,16 +28,16 @@ meant in the general sense, for any system of signs, a notation included.
 
 ## where each layer lives
 
-| layer | in the spacer domain |
+| layer | in the strand domain |
 | --- | --- |
 | syntax | notation: the typed and display forms, edges, labels, descriptions, the spacing rule, escaping |
-| semantics | basics, measures, structures and functions: what a spacer, a scope, a layer or a function is |
+| semantics | basics, measures, structures and functions: what a strand, a scope, a layer or a function is |
 | pragmatics | worlds: which perspective on the states, what fluid is, whether melt exists, what identity sets aside |
 
 some parts sit across layers, on purpose:
 
 - **edges** are syntax, but they carry a semantic choice: `)…(` writes down
-  that a spacer is circular
+  that a strand is circular
 - **rule 4** of the symbol rules, minimize collisions, is pragmatic: what
   collides depends on where the notation is read
 - **identity** is semantic in its default, and pragmatic in which comparison a
@@ -50,7 +50,7 @@ a question asked at the wrong layer gets a confusing answer:
 - is `)x..(` the same as `<x..>`? as written, no: they're different strings. by
   meaning, not by default, since their readings differ, but one converts to
   the other. in use, it depends on the world, which may set the reading aside
-- can a circle melt back into a fluid spacer? that isn't a question of meaning
+- can a circle melt back into a fluid strand? that isn't a question of meaning
   in general. it's pragmatic, and a world settles it
 - a `|` that breaks a table in Markdown is a syntax problem, fixed by escaping,
   never by changing what the notation means

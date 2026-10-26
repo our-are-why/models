@@ -1,4 +1,4 @@
-# foundations
+# pedagogy
 
 **in short.** how the docs try to teach: plain words first, ideas in an order
 where nothing is used before it's explained, a short version before the long
@@ -9,7 +9,7 @@ and its costs.
 **builds on:** approach, semiotics.
 
 the concepts here are listed, with stable IDs, in
-[concepts.md](../../concepts.md).
+[concepts.md](concepts.md).
 
 ## plain words first
 
@@ -32,7 +32,7 @@ can be read, each says what it **builds on**, and the concept index checks
 that no concept builds on one defined after it.
 
 the reason is that a learner can't hold an undefined word open for long: they
-fill it with a guess, and the guess becomes what they learned. when the spacer
+fill it with a guess, and the guess becomes what they learned. when the strand
 chapters were first split, the check found one place where the points were
 used before they were defined, and the definition moved earlier.
 
@@ -52,14 +52,14 @@ even when they leave things out.
 
 ## one running example
 
-the spacer chapters keep coming back to one spacer, `■ ■ ◇ ◇ ◇ ■ ◇ ◇`, with
+the strand chapters keep coming back to one strand, `■ ■ ◇ ◇ ◇ ■ ◇ ◇`, with
 points 0, 1 and 5. it's counted, measured, scoped, stacked and rotated, so
 that each new idea is the only new thing on the page. new examples come in
 only when the running one can't show what's needed.
 
 **the case against.** one example can make an idea look narrower than it is:
 a reader may take what's true of it as true in general. the edge cases, such as
-the smallest spacers and zero, are there to push back.
+the smallest strands and zero, are there to push back.
 
 ## telling things apart, for a learner
 
@@ -77,7 +77,7 @@ what's deferred. without them, everything reads as equally certain.
 
 ## seen from elsewhere
 
-- pedagogy, from AI: in [AI's foundations](../ai/1_foundations.md)
+- pedagogy, from AI: in [ai](ai_meta.md)
 
 ## related
 

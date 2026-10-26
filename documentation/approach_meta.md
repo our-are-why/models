@@ -1,7 +1,7 @@
 # approach
 
 **in short.** the way of modelling behind these docs, written down so that a
-reader can load it, test it, and argue with it. it isn't specific to spacers:
+reader can load it, test it, and argue with it. it isn't specific to strands:
 it's meant to hold for every domain documented here. it's a stance, not a
 doctrine, and it's still forming: each idea comes with why it's chosen, where it
 shows up, and the case against it.
@@ -11,8 +11,8 @@ but much of their shape comes from it.
 
 this is the modelling part of the meta domain, which is about how every domain
 here is modelled and written down; why it's done at all is in
-[purpose](../personal/1_purpose.md). the concepts here are listed, with stable
-IDs, in [concepts.md](../../concepts.md).
+[personal](personal_meta.md). the concepts here are listed, with stable
+IDs, in [concepts.md](concepts.md).
 
 ## how to read this
 
@@ -20,7 +20,7 @@ each idea has the same five parts:
 
 - **what**: the idea itself
 - **why**: what it's for
-- **where**: where it shows up so far, mostly in the spacer chapters
+- **where**: where it shows up so far, mostly in the strand chapters
 - **the case against**: its tensions and trade-offs, and what the alternative
   would be
 - **related**: established ideas elsewhere that come close. they're noted from
@@ -39,25 +39,25 @@ own semantics: what its parts mean, which moves make sense, and what counts as
 the same. one structure can mean different things in different worlds, and a
 move that's sound in one can be meaningless in another.
 
-for spacers, a world settles:
+for strands, a world settles:
 
 - which perspective on the states it takes: true/null or true/false
 - whether fluid is abstract or concrete, and if concrete, hierarchical or a
   sibling
-- whether a committed spacer can melt back into a fluid one
+- whether a committed strand can melt back into a fluid one
 - what identity sets aside, or adds
 
-by default, the spacer chapters take the asymmetric perspective on the states,
+by default, the strand chapters take the asymmetric perspective on the states,
 keep commitment one-way, and have no melt.
 
 **why.** some questions have no answer in general. whether a circle can become
-a fluid spacer again depends on whether its shape matters, and that depends on
+a fluid strand again depends on whether its shape matters, and that depends on
 what it's used for: a clock face is a circle in any world that cares about
 time. rather than pick one answer and call it the truth, the docs name the
 choice, give a default, and leave the rest to the world. so whoever uses the
 model should know their world, and align with its semantics.
 
-**where.** "what fluid is", "true and null" and "worlds", in the spacer basics;
+**where.** "what fluid is", "true and null" and "worlds", in the strand basics;
 melt and commitment, in functions; the default and its overrides, in identity.
 
 **the case against.** worlds can become an escape hatch: if every conflict is
@@ -72,6 +72,38 @@ one world and false in another; model theory, where one set of axioms can have
 many models; and the bounded context of domain-driven design, where a model's
 terms keep their meaning within a stated boundary.
 
+## structure follows use
+
+**what.** organize for how things are used and made, not to mirror their
+taxonomy. a thing is placed at the level where it's looked for, its basic
+level, and its ancestry is stated in words rather than built into nesting: a
+strand is a kind of discrete space, which is a kind of space, but it sits at
+the top, not three folders down. structure is added once it's earned: a
+subdomain starts as one file, and becomes a folder when it grows chapters. and
+where it helps, one thing is reached from more than one place, the way a
+database denormalizes a record for access (see "cross-cutting topics", in
+[documents](documents.md)). the structure follows the use, not the other way
+round.
+
+**why.** a hierarchy mirrored exactly makes every path long, and fixes a
+taxonomy before it's understood. placing things where they're used keeps the
+common paths short, and leaves the taxonomy free to change.
+
+**where.** the layout of these docs: the strand domain at the top, and the
+meta subdomains as single files; a strand's ancestry, stated in its basics;
+and, in the strand functions, collapse and flatten, which do the same to
+chains of scopes and to cascades.
+
+**the case against.** a flat layout hides a hierarchy that's really there: a
+reader can't see how things relate by looking at the folders, so the ancestry
+has to be written down, or it's lost. and use changes: what's flat today may
+need structure tomorrow, and moving things has a cost.
+
+**related.** basic-level categories, in cognitive science (Eleanor Rosch);
+denormalization, in databases; the facade, in software; "pave the cowpaths", in
+design, which builds paths where people already walk; and, in software, adding
+structure only once it's needed (YAGNI, the rule of three).
+
 ## defaults and overrides
 
 **what.** where a choice has to be made, the docs make one, call it the
@@ -82,7 +114,7 @@ simplest option, so that an override loosens it on purpose, not by accident.
 model with fixed answers breaks in the worlds it didn't foresee.
 
 **where.** identity: the default is the strictest comparison, and a use that
-loosens it should say what it sets aside. stacks: a spacer is framed as
+loosens it should say what it sets aside. stacks: a strand is framed as
 written. worlds: the defaults for the states, fluid and melt.
 
 **the case against.** a default looks like the truth, whatever the docs say.
@@ -104,7 +136,7 @@ of the states is what makes spacing meaningful; the symmetric view is what
 makes logic work. both are needed.
 
 **where.** true/null and true/false, and fluid as abstract or concrete, in the
-spacer basics; cascades written top-down or bottom-up, in structures; a row of
+strand basics; cascades written top-down or bottom-up, in structures; a row of
 amounts and a cascade as two views of one structure, in functions (levels and
 depths).
 
@@ -144,10 +176,10 @@ mathematics and physics: what stays the same when the coordinates change.
 **what.** a structure carries no record of where it came from, or of what it
 means. meaning lives outside it, in what's known about its origin and its use.
 
-**why.** it keeps structures simple and general: the same spacer can come from
+**why.** it keeps structures simple and general: the same strand can come from
 a careful rule or a coin toss, and nothing in it shows which.
 
-**where.** any arrangement, in the spacer basics; generators, in dynamics; a
+**where.** any arrangement, in the strand basics; generators, in dynamics; a
 flattened cascade, which doesn't show that it was chosen in steps.
 
 **the case against.** some uses need the origin to travel with the object.
@@ -162,7 +194,7 @@ that's allowed, but as something a world adds, not as part of the structure.
 meaning (what a pattern of weights says). each can be talked about without the
 others.
 
-**why.** mixing them is how definitions go wrong: defining a family of spacers
+**why.** mixing them is how definitions go wrong: defining a family of strands
 by how they're framed confuses a mechanism with what it's used to show.
 
 **where.** collections, stacks and weights, in structures.
@@ -183,7 +215,7 @@ become.
 "null" read as "unknown", "fluid" as "undecided".
 
 **where.** null means absence, not unknown, and fluid has everything the two
-shapes share, in the spacer basics; zero is named, though it isn't a spacer.
+shapes share, in the strand basics; zero is named, though it isn't a strand.
 
 **the case against.** some things really are undecided, and calling them
 adaptable would hide that. where both readings are real, the docs keep both:
@@ -203,7 +235,7 @@ reader needs both, and a model that can't say what something isn't hasn't
 pinned it down.
 
 **where.** why not "binary string", in notation; layers aren't scopes, in
-structures; zero isn't the all-null spacer, in the spacer basics; fitting
+structures; zero isn't the all-null strand, in the strand basics; fitting
 isn't identity, in identity; functions rather than operations, in functions.
 
 **the case against.** contrasts can multiply without end, and a thing defined
@@ -245,8 +277,8 @@ defined once. when information is lost, a named function loses it, on purpose.
 (detach forgets the context, flatten the layers, melt the shape) keeps the
 losses visible.
 
-**where.** functions, which never change a spacer in place; labels, in
-notation; commitment, in the spacer basics.
+**where.** functions, which never change a strand in place; labels, in
+notation; commitment, in the strand basics.
 
 **the case against.** working this way makes many values where one changing
 value would do, which can be costly for large structures in software. that's
@@ -257,8 +289,11 @@ programming.
 
 ## naming
 
-**what.** plain words first. name a thing after what it lets you do. keep
-collisions with other meanings low, pragmatically: no word is free of them, so
+**what.** plain words first. name a perspective after what it lets you do,
+and a structure after what it is, neutrally, so that no perspective is built
+into it: a strand read as things and the space between them is a spacer, but
+the strand itself is named only for its shape. keep collisions with other
+meanings low, pragmatically: no word is free of them, so
 it's a judgement, not a ban. pair a term with an established or alternative
 name at first use (arrangement/distribution). don't take a precise term from
 another field and bend it.
@@ -266,14 +301,14 @@ another field and bend it.
 **why.** names are where readers bring in assumptions, and a name that collides
 brings in the wrong ones.
 
-**where.** why not "binary string", in notation; functions rather than
-operations, in functions; null, fluid and world; the notes on "cell" and
-"weight".
+**where.** why not "binary string", in notation; strand rather than spacer,
+for the structure; functions rather than operations, in functions; null, fluid
+and world; the notes on "cell" and "weight".
 
 **the case against.** plain words carry everyday meanings that technical words
-don't. and every renaming (slot to cell, filled to true, neutral to fluid)
-costs readers who learned the old name; [concepts.md](../../concepts.md) keeps
-former names for that reason.
+don't. and every renaming (slot to cell, filled to true, neutral to fluid,
+spacer to strand) costs readers who learned the old name;
+[concepts.md](concepts.md) keeps former names for that reason.
 
 **related.** the ubiquitous language of domain-driven design; affordance, in
 design and psychology.
@@ -288,7 +323,7 @@ things on purpose, and say so.
 
 **where.** "from memory" notes, in these meta chapters and in the rough notes;
 checks by computation, in the rough notes (the threshold results, the pair of
-spacers with the same weights); deferred topics, in the spacer basics (more
+strands with the same weights); deferred topics, in the strand basics (more
 dimensions).
 
 **the case against.** labels add noise, and "from memory" can read as false
@@ -302,7 +337,8 @@ get checked.
 where the approach is least sure of itself:
 
 - whether "it depends on the world" is used honestly, or as an escape hatch
-- whether the asymmetric default for the states is a bias, carried in by the
-  name "spacer"
+- whether the asymmetric default for the states is a bias. the structure was
+  renamed from spacer to strand partly for this reason, but the running text
+  still takes the asymmetric perspective by default
 - whether essence and convention need a third category, for perspectives
 - where the line between a primitive and a composite should fall
