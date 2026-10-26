@@ -9,8 +9,7 @@ negative, why any arrangement is a strand, and the smallest cases, down to
 zero, which isn't one. it ends with worlds: the settings that decide what the
 defaults leave open.
 
-**builds on:** nothing in this domain; the thinking behind it is in
-[the approach](../approach_meta.md).
+the thinking behind it is in [the approach](../meta/approach.md).
 
 the concepts here are listed, with stable IDs, in [concepts.md](../concepts.md).
 
@@ -31,7 +30,7 @@ a strand is one kind of discrete space, and a discrete space is one kind of
 space: one dimension, with each cell in one of two states. ("discrete" here
 means made of separate cells with neighbours. _from memory_: in topology, a
 discrete space is something else, and this is closer to a graph, a path or a
-cycle; more in "space", the last chapter.) everything in these chapters is
+cycle; more in "space".) everything in these chapters is
 worked out for one dimension, where much of it is close to self-evident. spaces
 can have more dimensions, and their cells can hold other kinds of values. but
 in more dimensions, things like neighbours, distance and "the next point" stop
@@ -68,6 +67,8 @@ its cell 0 gives a line, and winding a line, so its ends join, gives a circle.
 
 ### what fluid is
 
+**builds on:** world, in "approach".
+
 depending on the world (see "worlds", below), fluid is one of two things, and
 both are valid:
 
@@ -88,6 +89,8 @@ a concrete fluid can stand in either of two relations to circles and lines:
 these are independent choices, and a world makes them.
 
 ## true and null
+
+**builds on:** perspective, in "approach".
 
 a cell's two states are **true** (■) and **null** (◇). the pair can be seen in
 two ways, and both are valid:
@@ -199,5 +202,5 @@ own semantics. it settles what these chapters leave open: the perspective on
 the states, what fluid is, whether melt is allowed, and what identity sets
 aside. by default, the running text takes the asymmetric perspective,
 commitment is one-way, and there's no melt. worlds aren't specific to strands:
-they're part of [the approach](../approach_meta.md) behind all
+they're part of [the approach](../meta/approach.md) behind all
 these docs.

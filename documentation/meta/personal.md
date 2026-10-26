@@ -4,10 +4,8 @@
 isn't. like every personal chapter, it's written in the first person, because
 it's about who's writing, and from where, so that a reader can weigh the rest.
 
-**builds on:** nothing.
-
 it defines no concepts of its own; the index of those is
-[concepts.md](concepts.md).
+[concepts.md](../concepts.md).
 
 ## what this is
 
@@ -55,7 +53,7 @@ grounding it in what's already known.
 i'm trying to be a documentarian of perspective (not of video), and an
 effective communicator, especially of meaning that can be put to use. what
 documenting perspective means, apart from me, is in
-[documentation](documentation_meta.md).
+[documentation](documentation.md).
 
 ## where i'm coming from
 
@@ -65,7 +63,7 @@ systems. i'm convinced that work has made me far more versatile outside it:
 able to take part, in a meaningful and useful way, in fields where i have no
 expertise. that's one person's experience, and i may be biased about my own
 case. but it's why i think of a subject as a vehicle for training thought (see
-"the subject as a vehicle", in [pedagogy](pedagogy_meta.md)), and why i
+"the subject as a vehicle", in [pedagogy](pedagogy.md)), and why i
 suspect that how deep and how long the practice goes matters more than which
 subject it is.
 

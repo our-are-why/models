@@ -12,9 +12,9 @@ from [`documents.md`](documents.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
-| C130 | domain |  | one subject the docs cover, such as strands, or the meta domain itself: a file to start with, a folder once it has chapters |  |
-| C134 | subdomain |  | a part of a domain with a subject of its own, such as meta's personal or process: a file, `<name>_<domain>.md`, until it grows chapters | C130 |
-| C131 | stripe |  | a domain's files: single files sharing its suffix, or numbered chapters in its folder | C130, C134 |
+| C130 | domain |  | one subject the docs cover, such as strands, or the meta domain itself: a file to start with, a folder once it has several |  |
+| C134 | subdomain |  | a part of a domain with a subject of its own, such as meta's personal or process: one file in the domain's folder, until it grows | C130 |
+| C131 | stripe |  | a domain's files, named for their subjects; their order is shown in a map, not in numbers | C130, C134 |
 | C136 | cross-cutting topic |  | a topic that matters to several domains, given one home and any number of framings | C130 |
 | C137 | home |  | where a cross-cutting topic's foundational treatment lives, in exactly one subdomain | C136, C134 |
 | C138 | framing |  | a treatment of a topic from another domain's side, building on its home and linking to it | C137 |
@@ -23,7 +23,7 @@ from [`documents.md`](documents.md)
 
 ## meta: approach
 
-from [`approach_meta.md`](approach_meta.md)
+from [`meta/approach.md`](meta/approach.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
@@ -35,7 +35,7 @@ from [`approach_meta.md`](approach_meta.md)
 
 ## meta: semiotics
 
-from [`semiotics_meta.md`](semiotics_meta.md)
+from [`meta/semiotics.md`](meta/semiotics.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
@@ -45,7 +45,7 @@ from [`semiotics_meta.md`](semiotics_meta.md)
 
 ## meta: pedagogy
 
-from [`pedagogy_meta.md`](pedagogy_meta.md)
+from [`meta/pedagogy.md`](meta/pedagogy.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
@@ -55,7 +55,7 @@ from [`pedagogy_meta.md`](pedagogy_meta.md)
 
 ## meta: documentation
 
-from [`documentation_meta.md`](documentation_meta.md)
+from [`meta/documentation.md`](meta/documentation.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
@@ -64,7 +64,7 @@ from [`documentation_meta.md`](documentation_meta.md)
 
 ## meta: process
 
-from [`process_meta.md`](process_meta.md)
+from [`meta/process.md`](meta/process.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
@@ -73,7 +73,7 @@ from [`process_meta.md`](process_meta.md)
 
 ## strand: basics
 
-from [`strand/1_basics.md`](strand/1_basics.md)
+from [`strand/basics.md`](strand/basics.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
@@ -108,7 +108,7 @@ from [`strand/1_basics.md`](strand/1_basics.md)
 
 ## strand: notation
 
-from [`strand/2_notation.md`](strand/2_notation.md)
+from [`strand/notation.md`](strand/notation.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
@@ -124,7 +124,7 @@ from [`strand/2_notation.md`](strand/2_notation.md)
 
 ## strand: measures
 
-from [`strand/3_measures.md`](strand/3_measures.md)
+from [`strand/measures.md`](strand/measures.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
@@ -144,7 +144,7 @@ from [`strand/3_measures.md`](strand/3_measures.md)
 
 ## strand: structures
 
-from [`strand/4_structures.md`](strand/4_structures.md)
+from [`strand/structures.md`](strand/structures.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
@@ -172,7 +172,7 @@ from [`strand/4_structures.md`](strand/4_structures.md)
 
 ## strand: functions
 
-from [`strand/5_functions.md`](strand/5_functions.md)
+from [`strand/functions.md`](strand/functions.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
@@ -215,7 +215,7 @@ from [`strand/5_functions.md`](strand/5_functions.md)
 
 ## strand: dynamics
 
-from [`strand/6_dynamics.md`](strand/6_dynamics.md)
+from [`strand/dynamics.md`](strand/dynamics.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
@@ -232,7 +232,7 @@ from [`strand/6_dynamics.md`](strand/6_dynamics.md)
 
 ## strand: identity
 
-from [`strand/7_identity.md`](strand/7_identity.md)
+from [`strand/identity.md`](strand/identity.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
@@ -248,12 +248,12 @@ from [`strand/7_identity.md`](strand/7_identity.md)
 
 ## strand: space
 
-from [`strand/8_space.md`](strand/8_space.md)
+from [`strand/space.md`](strand/space.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
-| C147 | discrete space |  | cells, a neighbour relation, and a value in each cell; a strand is its simplest case | C004, C005 |
+| C147 | discrete space |  | cells, a neighbour relation, and a value in each cell; strands and rows of amounts are its cases so far | C004, C005, C068 |
 | C148 | neighbour relation |  | which cells are next to which; in a strand, one step either way | C005, C046 |
-| C149 | value |  | what a cell of a discrete space holds, from a set of values; a strand's states are two of them | C006 |
+| C149 | value |  | what a cell of a discrete space holds, from a set of values: two states in a strand, whole numbers in a row of amounts | C006, C068 |
 | C150 | dimension |  | the shape of the neighbour relation: a row, a grid, or more | C148 |
 | C151 | boundary condition |  | what happens at a space's edges: periodic (circular) or open (linear), one per dimension | C007, C008, C009, C150 |

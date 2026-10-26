@@ -6,13 +6,13 @@ it's meant to hold for every domain documented here. it's a stance, not a
 doctrine, and it's still forming: each idea comes with why it's chosen, where it
 shows up, and the case against it.
 
-**builds on:** nothing. the domain chapters don't depend on agreeing with it,
-but much of their shape comes from it.
+the domain chapters don't depend on agreeing with it, but much of their shape
+comes from it.
 
 this is the modelling part of the meta domain, which is about how every domain
 here is modelled and written down; why it's done at all is in
-[personal](personal_meta.md). the concepts here are listed, with stable
-IDs, in [concepts.md](concepts.md).
+[personal](personal.md). the concepts here are listed, with stable
+IDs, in [concepts.md](../concepts.md).
 
 ## how to read this
 
@@ -82,17 +82,17 @@ the top, not three folders down. structure is added once it's earned: a
 subdomain starts as one file, and becomes a folder when it grows chapters. and
 where it helps, one thing is reached from more than one place, the way a
 database denormalizes a record for access (see "cross-cutting topics", in
-[documents](documents.md)). the structure follows the use, not the other way
+[documents](../documents.md)). the structure follows the use, not the other way
 round.
 
 **why.** a hierarchy mirrored exactly makes every path long, and fixes a
 taxonomy before it's understood. placing things where they're used keeps the
 common paths short, and leaves the taxonomy free to change.
 
-**where.** the layout of these docs: the strand domain at the top, and the
-meta subdomains as single files; a strand's ancestry, stated in its basics;
-and, in the strand functions, collapse and flatten, which do the same to
-chains of scopes and to cascades.
+**where.** the layout of these docs: the strand domain at the top, and the meta
+subdomains as single files in one folder; a strand's ancestry, stated in its
+basics; and, in the strand functions, collapse and flatten, which do the same
+to chains of scopes and to cascades.
 
 **the case against.** a flat layout hides a hierarchy that's really there: a
 reader can't see how things relate by looking at the folders, so the ancestry
@@ -320,7 +320,7 @@ since duplication is cheaper than merging things that only look alike;
 primitive obsession and value objects, in software design.
 
 **seen from elsewhere.** teaching the meaning, not only the mechanics, in
-[pedagogy](pedagogy_meta.md).
+[pedagogy](pedagogy.md).
 
 ## naming
 
@@ -343,7 +343,7 @@ and world; the notes on "cell" and "weight".
 **the case against.** plain words carry everyday meanings that technical words
 don't. and every renaming (slot to cell, filled to true, neutral to fluid,
 spacer to strand) costs readers who learned the old name;
-[concepts.md](concepts.md) keeps former names for that reason.
+[concepts.md](../concepts.md) keeps former names for that reason.
 
 **related.** the ubiquitous language of domain-driven design; affordance, in
 design and psychology.

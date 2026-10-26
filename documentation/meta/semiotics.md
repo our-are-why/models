@@ -6,12 +6,12 @@ pragmatics, how meaning depends on where and how they're used. this chapter
 says which parts of the docs sit at which layer, so that a question can be
 asked at the right one.
 
-**builds on:** approach.
-
 the concepts here are listed, with stable IDs, in
-[concepts.md](concepts.md).
+[concepts.md](../concepts.md).
 
 ## three layers
+
+**builds on:** world, in "approach".
 
 the split comes from semiotics (_from memory_: Charles Morris named the three
 in the 1930s):

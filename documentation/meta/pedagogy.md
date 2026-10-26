@@ -8,10 +8,8 @@ not only its mechanics; a subject as a vehicle for training thought; and
 showing the path, not only the result. each is a choice about how a reader
 learns, with its reasons and its costs.
 
-**builds on:** approach, semiotics.
-
 the concepts here are listed, with stable IDs, in
-[concepts.md](concepts.md).
+[concepts.md](../concepts.md).
 
 ## plain words first
 
@@ -29,14 +27,21 @@ approach weighs this (see "naming", in "approach").
 
 ## dependency order
 
-nothing is used before it's explained. chapters are numbered in the order they
-can be read, each says what it **builds on**, and the concept index checks
-that no concept builds on one defined after it.
+nothing is used before it's explained. a section that uses an idea from
+elsewhere says so, in a **builds on** line, and the concept index checks that
+definitions bottom out: no chain of "builds on" comes back to where it
+started. order between chapters is shown in a map rather than fixed by
+numbers, since some chapters lean on each other (see "the map", in
+[documents](../documents.md)).
 
 the reason is that a learner can't hold an undefined word open for long: they
 fill it with a guess, and the guess becomes what they learned. when the strand
 chapters were first split, the check found one place where the points were
 used before they were defined, and the definition moved earlier.
+
+understanding can go round where definitions can't: a reader may need a
+later chapter to see why an earlier one matters, and that's fine, as long as
+nothing is defined in terms of itself.
 
 **the case against.** strict order can push the interesting part far back,
 behind definitions a reader doesn't yet care about. a short summary at the top
@@ -79,7 +84,7 @@ what's deferred. without them, everything reads as equally certain.
 
 ## meaning, not only mechanics
 
-this is a framing of "reduce on purpose" (see [the approach](approach_meta.md)),
+this is a framing of "reduce on purpose" (see [the approach](approach.md)),
 from the side of teaching. learners are often taught to reduce an expression to
 its simplest form as soon as they can, and rarely to ask what each form means.
 `- 3` and `+ -3` become the same thing to them, though one takes three away and
@@ -101,7 +106,7 @@ analysing, organizing and holding structure in mind, that work beyond it. on
 this view, learning algebra isn't the point of learning algebra: the
 mechanisms it trains are. mathematics may be the clearest vehicle, but it isn't
 the only one. years of writing software seem to work the same way (see
-[personal](personal_meta.md)), and in these docs, strands have been the
+[personal](personal.md)), and in these docs, strands have been the
 vehicle, and much of the meta domain is what they trained.
 
 **the case against.** this is where the idea is weakest, and it should be said
@@ -123,7 +128,7 @@ order hides the questions, the false starts and the reasons, and a learner who
 only sees the result learns the mechanics without the understanding.
 
 these docs try to keep the path visible: the life of an idea (see
-[process](process_meta.md)), former names in the concept index, the frozen
+[process](process.md)), former names in the concept index, the frozen
 first draft, and notes on where ideas came from, such as the strands' space
 chapter, written where the idea was found.
 
@@ -133,7 +138,7 @@ say what holds now, and the path sits beside them.
 
 ## seen from elsewhere
 
-- pedagogy, from AI: in [ai](ai_meta.md)
+- pedagogy, from AI: in [ai](ai.md)
 
 ## related
 

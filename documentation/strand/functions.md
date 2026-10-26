@@ -6,7 +6,8 @@ threshold; named composites are built from them, such as repeat, splice or
 flatten. lines and circles get their own functions, and a fluid strand can
 borrow a reading while a function works.
 
-**builds on:** basics, notation, measures, structures.
+**builds on:** strand, circular, linear, fluid, in "basics"; scope, in
+"structures".
 
 the concepts here are listed, with stable IDs, in [concepts.md](../concepts.md).
 
@@ -66,6 +67,8 @@ given.
 
 ## combining strands
 
+**builds on:** symmetric perspective, negative, in "basics".
+
 two strands with the same resolution can be combined cell by cell into a new
 strand. like stacking, this frames both strands, as written by default, and the
 same reading rules apply: both circular, both linear or both fluid, and the
@@ -105,6 +108,8 @@ one is, and `And(A, B, C)` where all are. but `Xor(A, B, C)` doesn't mean
 
 ### commit
 
+**builds on:** fluid, commitment, in "basics"; edges, in "notation".
+
 committing gives a fluid strand a reading, by putting edges around it. it's
 more than a way of looking at it: the cells stay as they are, but the result is
 a new strand, whose reading is part of what it is. the fluid one stays fluid.
@@ -138,6 +143,8 @@ fluid is", in "basics").
 
 ### melt, in some worlds
 
+**builds on:** world, in "approach"; sibling fluid, in "basics".
+
 in a world where fluid is a sibling of circles and lines, `Melt(S)` forgets a
 committed strand's shape, and gives the fluid strand with the same cells:
 
@@ -155,6 +162,8 @@ committed strand's shape, and gives the fluid strand with the same cells:
 
 ### rotate
 
+**builds on:** circular, in "basics".
+
 `Rotate(S, k)`, a **rotation/phase**, starts S from its cell k: the cells come
 round in the same order, and cell k becomes cell 0. k can be negative: −2 is
 two cells back from cell 0.
@@ -170,6 +179,8 @@ two cells back from cell 0.
   slide along its parent instead
 
 ### slide
+
+**builds on:** scoped piece, parent, in "structures".
 
 `Slide(A, k)` moves a scoped piece along its parent: the window keeps its
 length, and starts from what was its cell k, which can lie beyond its end. it
@@ -202,6 +213,8 @@ part the window shows changes.
 
 ### reverse
 
+**builds on:** linear, in "basics".
+
 `Reverse(L)` runs a line's numbering the other way: its ends swap, so
 `<xx...x..>` becomes `<..x...xx>`.
 
@@ -212,6 +225,8 @@ part the window shows changes.
   `|x..x...x|`: two different functions, so nothing is left ambiguous
 
 ### mirror
+
+**builds on:** circular, in "basics".
 
 `Mirror(C)` mirrors a circle, pivoting on cell 0: cell 0 stays where it is, and
 cell j goes to cell −j, so the other cells come round the other way.
@@ -233,6 +248,8 @@ cell j goes to cell −j, so the other cells come round the other way.
 
 ### join
 
+**builds on:** linear, in "basics".
+
 `Join(A, B)` puts B after A's last cell: two lines, end to end, make a longer
 line.
 
@@ -249,6 +266,8 @@ line.
   parent. detach it first
 
 ### unwind and wind
+
+**builds on:** circular, linear, commitment, in "basics".
 
 these two change a committed reading, so they're the only functions that turn
 a circle into a line, or a line into a circle.
@@ -282,6 +301,8 @@ as needed. earlier cells never change, so it grows: `|x|` → `|x.|` → `|x..|`
 
 ### detach
 
+**builds on:** scoped piece, in "structures".
+
 `Detach(A)` takes a scoped piece's cells out of their context, as a line of
 their own: the window's edges become free ends.
 
@@ -299,6 +320,8 @@ their own: the window's edges become free ends.
   its own right
 
 ### lift
+
+**builds on:** parent, chain, in "structures".
 
 `Lift(B)` takes one step up a chain of scopes: it gives B as a scope of its
 parent's parent, by the rule in "back to the root" (in "structures").
@@ -320,6 +343,8 @@ parent's parent, by the rule in "back to the root" (in "structures").
 
 ### press
 
+**builds on:** cascade, in "structures".
+
 `Press(K)` takes one step up a cascade: it presses the deepest layer onto the
 layer above, so the cascade has one layer fewer. the pressed layer keeps the
 upper layer's resolution, and shows the deepest choices on its cells.
@@ -336,6 +361,8 @@ upper layer's resolution, and shows the deepest choices on its cells.
 
 ### weights
 
+**builds on:** cell weights, row of amounts, in "structures".
+
 `Weights(S)` counts a stack's true cells, column by column, and gives the row
 of amounts, with the stack's reading (see "weights", in "structures"):
 
@@ -343,6 +370,8 @@ of amounts, with the stack's reading (see "weights", in "structures"):
     Weights( )(A, B, C)( )      →  )2 2 0 1 0 3 1 0(
 
 ### threshold
+
+**builds on:** row of amounts, in "structures".
 
 `Threshold(W, k)` turns a row of amounts back into a strand: a cell is true
 where its amount is at least k, and the result keeps the row's reading. it's
@@ -387,6 +416,8 @@ its surroundings, and leaves the strand as it is.
 
 ### insert
 
+**builds on:** joint, in "measures".
+
 `Insert(H, k, G)` puts a line G into a line H at the joint before H's cell k, k
 from 1 to n − 1: H's cells before cell k, then G, then the rest.
 
@@ -396,6 +427,8 @@ from 1 to n − 1: H's cells before cell k, then G, then the rest.
 at either end, it's simply a join.
 
 ### splice
+
+**builds on:** joint, in "measures".
 
 `Splice(C, k, G)` puts a line G into a circle C at the joint before C's cell k,
 k from 1 to n, where k = n is the joint between the last cell and cell 0. C
@@ -411,6 +444,8 @@ back afterwards.
 
 ### collapse
 
+**builds on:** root, in "structures".
+
 `Collapse(B)` lifts a scope until its parent is the root, or a layer it can't
 look past. the whole chain of scopes in between collapses, and B ends up as one
 scope of the top.
@@ -418,6 +453,8 @@ scope of the top.
     Collapse(B)  :=  Lift(B), again and again, until its parent is a root or a layer
 
 ### flatten
+
+**builds on:** root, in "structures".
 
 `Flatten(K)` presses a cascade until one strand is left: its deepest choices,
 shown on its root's cells.
@@ -438,6 +475,8 @@ shown on its root's cells.
 
 ### stages
 
+**builds on:** stages, in "structures".
+
     Stages((A, B, C))  :=  (Weights((A)), Weights((A, B)), Weights((A, B, C)))
 
 the running weights of an ordered stack, one row per member as it goes on (see
@@ -450,6 +489,8 @@ the running weights of an ordered stack, one row per member as it goes on (see
     Exactly(W, 1)               →  |...x..x.|
 
 ### levels and depths
+
+**builds on:** cascade, row of amounts, in "structures".
 
 one threshold loses information, but thresholding at every level loses
 nothing. `Levels(W)` thresholds W at every amount from 1 up to its largest, and

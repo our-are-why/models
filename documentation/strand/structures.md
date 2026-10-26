@@ -5,11 +5,12 @@ and pieces can be scoped again. layers choose among a strand's points, and form
 cascades. collections take several strands together, stacks line them up cell
 by cell, and weights count across a stack.
 
-**builds on:** basics, notation, measures.
-
 the concepts here are listed, with stable IDs, in [concepts.md](../concepts.md).
 
 ## scopes
+
+**builds on:** circular, in "basics"; edges, label, in "notation"; step,
+scoped, in "measures".
 
 a **scope** takes a piece of a strand. it's written after the strand, in square
 brackets, and the strand's edges and resolution always come with it, because
@@ -95,6 +96,8 @@ different parents (see lift and collapse, in "functions").
 
 ## layers
 
+**builds on:** density, points, in "basics".
+
 a strand's true cells can become the cells of another strand. that second
 strand is a **layer**: it chooses among the first one's points. the first
 strand is the **root**, as with scopes.
@@ -165,6 +168,8 @@ smaller tiles. it's close to refinement, and it's left for later.
 
 ### collections
 
+**builds on:** strand, in "basics".
+
 a **collection** is several strands taken together. two things about a
 collection are independent of each other:
 
@@ -188,6 +193,8 @@ picks out strands too, and what it gives can be any of these kinds:
 repeats, or an order.
 
 ### stacks
+
+**builds on:** reading, in "basics".
 
 to count across a collection, its strands are **stacked**: lined up cell by
 cell. stacking is a device for working with strands, not a new kind of strand,
@@ -215,6 +222,8 @@ circularly one is the other started from a different cell.
 
 ### weights
 
+**builds on:** true, points, in "basics".
+
     cell      0 1 2 3 4 5 6 7
     A         ■ ■ ◇ ◇ ◇ ■ ◇ ◇
     B         ■ ◇ ◇ ■ ◇ ■ ◇ ◇
@@ -226,8 +235,9 @@ circularly one is the other started from a different cell.
   and count every repeat
 - the weights live in a space of their own: the same cells and reading as the
   stack, but each cell holds an amount instead of one of two states, so a row
-  of weights isn't a strand. a circular or linear stack says the reading is
-  part of the structure; a fluid one has no shape, and a use can give it one
+  of weights isn't a strand. it's another kind of discrete space (see
+  "space"). a circular or linear stack says the reading is part of the
+  structure; a fluid one has no shape, and a use can give it one
 - the weights add up to the members' densities together (9 here), and no
   weight is more than the number of members
 - a member's **strand weight** (or score) is the weights added up at its

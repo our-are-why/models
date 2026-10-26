@@ -6,11 +6,12 @@ never reached and isn't a strand. generators are described by independent
 facets: how their strands relate as they grow, how cells are decided, how clear
 the rule is, how the result looks, and where it comes from.
 
-**builds on:** basics, notation, functions.
-
 the concepts here are listed, with stable IDs, in [concepts.md](../concepts.md).
 
 ## going to infinity
+
+**builds on:** strand, resolution, zero, in "basics"; description, in
+"notation".
 
 every strand has a finite number of cells. infinity comes in through a
 **generator**: a precise rule or process that makes a strand at each

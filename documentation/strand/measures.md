@@ -5,11 +5,11 @@ distances (two of them round a circle), the intervals and gaps between
 points, the joints, seams, bands and runs, and why everything measured is
 a whole number.
 
-**builds on:** basics, notation.
-
 the concepts here are listed, with stable IDs, in [concepts.md](../concepts.md).
 
 ## steps and distances
+
+**builds on:** cell, linear, in "basics".
 
 a **step** moves from a cell to a neighbouring cell. there are two directions
 to step in:
@@ -48,6 +48,8 @@ for.
 
 ### intervals and gaps
 
+**builds on:** linear, null, points, in "basics".
+
 a strand's points are the positions of its true cells (see "basics"). the
 measures here read the strand as a spacer: its true cells as things, and its
 null cells as the space between them. between one point and the next, going +,
@@ -82,6 +84,8 @@ primes: here, that's an interval, not a gap.)
 
 ### joints, seams, bands and runs
 
+**builds on:** cell, state, in "basics".
+
 every place where two neighbouring cells meet is a **joint**: a line of n
 cells has n − 1 joints, and a circle of n cells has n, since its last cell and
 cell 0 meet too. a **seam** is a joint where the two cells are in different
@@ -105,6 +109,8 @@ bands follow from the gaps: a gap of 0 joins two points into the same true
 band, and any other gap is a null band.
 
 ### whole numbers
+
+**builds on:** strand, in "basics".
 
 everything counted or measured in a strand is a whole number. counts and
 distances are never negative; a sign only gives a direction. resolution is at

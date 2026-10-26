@@ -5,11 +5,11 @@
 follow, edges that show the reading, the point form, labels, descriptions and
 repetition, and why a strand isn't called a binary string.
 
-**builds on:** basics.
-
 the concepts here are listed, with stable IDs, in [concepts.md](../concepts.md).
 
 ## writing a strand down
+
+**builds on:** true, null, in "basics".
 
 a strand is written in one of two forms, which map one to one:
 
@@ -51,6 +51,8 @@ strand sits on its own line with labels, the layout marks its edges.)
 
 ### edges show the reading
 
+**builds on:** reading, zero, in "basics".
+
 in the typed form, the edges around a strand say how it's read:
 
     )xx...x..(    circular      round brackets turned outward: the edges open
@@ -67,6 +69,8 @@ strand. `>…<` isn't used, so zero's middle can't be mistaken for edges turned
 inward.
 
 ### the display form
+
+**builds on:** reading, in "basics".
 
 in the display form, the shapes of the cells carry the reading, so no edges are
 needed. each shape is its typed edges closed up into every cell, and true and
@@ -104,6 +108,8 @@ second difference is the first thing to give back.)
 
 ### points
 
+**builds on:** resolution, points, in "basics".
+
 a strand can also be written by its points, after its resolution:
 
     |xx...x..|   →   |8: 0,1,5|
@@ -116,6 +122,8 @@ shorter when few cells are true; the cell form shows the arrangement at a
 glance.
 
 ### labels
+
+**builds on:** strand, in "basics".
 
 a strand can be given a name, a **label**, to refer to it later:
 
@@ -132,6 +140,8 @@ changes to mean another. in these chapters, each example's labels belong to
 that example: the same letter can name a different strand in another one.
 
 ### descriptions
+
+**builds on:** resolution, density, in "basics".
 
 a **description** lists what's known about a strand, in braces:
 

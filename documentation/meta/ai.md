@@ -5,10 +5,8 @@ them: what makes the docs loadable by a model, how to ask one for help, what
 to trust in what it says back, and what teaching looks like when the reader
 is an AI.
 
-**builds on:** approach, semiotics, pedagogy.
-
 the concepts here are listed, with stable IDs, in
-[concepts.md](concepts.md).
+[concepts.md](../concepts.md).
 
 ## AI as a reader
 
@@ -29,7 +27,7 @@ model load the perspective, and some of it matters more for a model:
 ## AI as a debugger
 
 part of the purpose of the docs is to have the thinking in them checked (see
-[personal](personal_meta.md)). a model can help with that:
+[personal](personal.md)). a model can help with that:
 
 - point it at the "case against" sections and "open to challenge", in the
   approach, and ask where the reasoning fails
@@ -45,7 +43,7 @@ calculations are checked by running them, not by trusting the answer.
 
 ## pedagogy, from AI
 
-this is a framing of pedagogy (see [pedagogy](pedagogy_meta.md)), from the
+this is a framing of pedagogy (see [pedagogy](pedagogy.md)), from the
 side of a reader that's a model.
 
 - **collisions matter more.** a model brings in every meaning a word has in

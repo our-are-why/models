@@ -5,10 +5,8 @@ documented, how drafts become chapters, how things get checked, and how
 changes are kept and explained. the docs are the product; this is the way
 they're made.
 
-**builds on:** approach, documents.
-
 the concepts here are listed, with stable IDs, in
-[concepts.md](concepts.md).
+[concepts.md](../concepts.md).
 
 ## the life of an idea
 
@@ -46,6 +44,8 @@ recorded, or deferred, with the reason. a question that turns out to be badly
 posed is restated, not forced to an answer.
 
 ## consistency passes
+
+**builds on:** domain, in "documents".
 
 after a run of changes, the whole of a domain is read again, start to finish,
 looking for contradictions, leftovers from earlier versions, and rough joins.

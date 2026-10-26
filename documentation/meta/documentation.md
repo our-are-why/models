@@ -5,12 +5,12 @@ perspective, written well enough to be checked, revised as the thinking
 moves, and read to use, to learn or to challenge. it's set apart from its
 neighbours: tutorials, references, specifications and journals.
 
-**builds on:** purpose, approach, pedagogy.
-
 the concepts here are listed, with stable IDs, in
-[concepts.md](concepts.md).
+[concepts.md](../concepts.md).
 
 ## a record of perspective
+
+**builds on:** perspective, in "approach".
 
 documentation is usually a description of a product: here's what it does, and
 how to use it. here it's more than that. the docs record how a set of ideas
@@ -21,7 +21,7 @@ them: first a test set drawn from the docs, then implementations.
 someone who records perspective this way is a **documentarian** of it, the
 way a documentary records a subject: from somewhere, openly, without claiming
 to be the only view. (why this repository is written that way is personal,
-and in [personal](personal_meta.md).)
+and in [personal](personal.md).)
 
 ## writing as thinking
 
@@ -46,14 +46,16 @@ the docs are easiest to read when it's clear what kind of writing they are:
 
 ## living documents
 
+**builds on:** frozen version, in "documents".
+
 the docs are never finished. each chapter says what it is now; the history of
 how it got there is kept, not deleted, but it isn't the docs. a frozen version
 marks a point worth keeping whole (see "frozen versions", in
-[documents](documents.md)).
+[documents](../documents.md)).
 
 ## readers
 
-the docs are written for people first, and for AI too (see [ai](ai_meta.md)).
+the docs are written for people first, and for AI too (see [ai](ai.md)).
 a reader comes for one of three things:
 
 - **to use**: to apply a model, or build on it
