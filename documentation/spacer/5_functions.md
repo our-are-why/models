@@ -8,7 +8,7 @@ borrow a reading while a function works.
 
 **builds on:** basics, notation, measures, structures.
 
-the concepts here are listed, with stable IDs, in [concepts.md](concepts.md).
+the concepts here are listed, with stable IDs, in [concepts.md](../concepts.md).
 
 a **function** takes spacers, or things made from them (pieces, cascades,
 stacks, rows of amounts), and gives one back. most are written with the

@@ -8,7 +8,7 @@ the rule is, how the result looks, and where it comes from.
 
 **builds on:** basics, notation, functions.
 
-the concepts here are listed, with stable IDs, in [concepts.md](concepts.md).
+the concepts here are listed, with stable IDs, in [concepts.md](../concepts.md).
 
 ## going to infinity
 

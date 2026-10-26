@@ -8,10 +8,10 @@ negative, why any arrangement is a spacer, and the smallest cases, down to
 zero, which isn't one. it ends with worlds: the settings that decide what the
 defaults leave open.
 
-**builds on:** nothing in this domain. the approach behind it is in
-[1_approach_meta.md](1_approach_meta.md).
+**builds on:** nothing in this domain; the thinking behind it is in
+[the approach](../meta/modelling/1_approach.md).
 
-the concepts here are listed, with stable IDs, in [concepts.md](concepts.md).
+the concepts here are listed, with stable IDs, in [concepts.md](../concepts.md).
 
 a **spacer** is a one-dimensional, discrete space made of cells, where each
 cell is in one of two states.
@@ -183,5 +183,5 @@ own semantics. it settles what these chapters leave open: the perspective on
 the states, what fluid is, whether melt is allowed, and what identity sets
 aside. by default, the running text takes the asymmetric perspective,
 commitment is one-way, and there's no melt. worlds aren't specific to spacers:
-they're part of the approach behind all these docs, in
-[1_approach_meta.md](1_approach_meta.md).
+they're part of [the approach](../meta/modelling/1_approach.md) behind all
+these docs.

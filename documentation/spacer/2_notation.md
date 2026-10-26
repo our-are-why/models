@@ -7,7 +7,7 @@ repetition, and why a spacer isn't called a binary string.
 
 **builds on:** basics.
 
-the concepts here are listed, with stable IDs, in [concepts.md](concepts.md).
+the concepts here are listed, with stable IDs, in [concepts.md](../concepts.md).
 
 ## writing a spacer down
 

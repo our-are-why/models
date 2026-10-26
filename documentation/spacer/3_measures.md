@@ -7,7 +7,7 @@ a whole number.
 
 **builds on:** basics, notation.
 
-the concepts here are listed, with stable IDs, in [concepts.md](concepts.md).
+the concepts here are listed, with stable IDs, in [concepts.md](../concepts.md).
 
 ## steps and distances
 

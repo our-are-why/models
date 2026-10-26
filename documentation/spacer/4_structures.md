@@ -7,7 +7,7 @@ by cell, and weights count across a stack.
 
 **builds on:** basics, notation, measures.
 
-the concepts here are listed, with stable IDs, in [concepts.md](concepts.md).
+the concepts here are listed, with stable IDs, in [concepts.md](../concepts.md).
 
 ## scopes
 

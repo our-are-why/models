@@ -8,7 +8,8 @@ asked at the right one.
 
 **builds on:** approach.
 
-the concepts here are listed, with stable IDs, in [concepts.md](concepts.md).
+the concepts here are listed, with stable IDs, in
+[concepts.md](../../concepts.md).
 
 ## three layers
 

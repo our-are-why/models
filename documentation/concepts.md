@@ -6,9 +6,24 @@ its ID, and a retired one leaves a gap. **was** gives former names, and **builds
 lists the concepts its definition uses. the words here are short reminders; each
 chapter has the full definition.
 
-## meta: approach
+## documents
 
-from [`1_approach_meta.md`](1_approach_meta.md)
+from [`documents.md`](documents.md)
+
+| id | concept | was | in plain words | builds on |
+| --- | --- | --- | --- | --- |
+| C130 | domain |  | one subject the docs cover, with a folder of its own, such as spacers, or the meta domain itself |  |
+| C134 | subdomain |  | a part of a domain, with a folder of its own inside the domain's, such as meta's personal and modelling | C130 |
+| C131 | stripe |  | the chapters in one domain or subdomain folder, numbered in reading order | C130, C134 |
+| C136 | cross-cutting topic |  | a topic that matters to several domains, given one home and any number of framings | C130 |
+| C137 | home |  | where a cross-cutting topic's foundational treatment lives, in exactly one subdomain | C136, C134 |
+| C138 | framing |  | a treatment of a topic from another domain's side, building on its home and linking to it | C137 |
+| C132 | concept ID |  | C and a number, given in order, never reused or renumbered |  |
+| C133 | frozen version |  | a whole draft kept exactly as it was, as a record; never edited, and not part of the docs | C130 |
+
+## meta, modelling: approach
+
+from [`meta/modelling/1_approach.md`](meta/modelling/1_approach.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
@@ -16,9 +31,9 @@ from [`1_approach_meta.md`](1_approach_meta.md)
 | C002 | world |  | a semantic world: the setting something is used in, with its own semantics; it settles what the defaults leave open | C001 |
 | C003 | perspective |  | one of several valid ways of seeing the same thing, none the hidden truth behind the others |  |
 
-## meta: semiotics
+## meta, language: semiotics
 
-from [`2_semiotics_meta.md`](2_semiotics_meta.md)
+from [`meta/language/1_semiotics.md`](meta/language/1_semiotics.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
@@ -26,20 +41,35 @@ from [`2_semiotics_meta.md`](2_semiotics_meta.md)
 | C128 | semantics |  | how signs relate to what they stand for: what a well-written thing means | C127 |
 | C129 | pragmatics |  | how meaning depends on who uses the signs, and where; worlds sit here | C128, C002 |
 
-## meta: documents
+## meta, pedagogy: foundations
 
-from [`3_documents_meta.md`](3_documents_meta.md)
+from [`meta/pedagogy/1_foundations.md`](meta/pedagogy/1_foundations.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
-| C130 | domain |  | one subject the docs cover, such as spacers, or the meta domain itself |  |
-| C131 | stripe |  | a domain's chapters: numbered in reading order, sharing a suffix, like `_spacer` | C130 |
-| C132 | concept ID |  | C and a number, given in order, never reused or renumbered |  |
-| C133 | frozen version |  | a whole draft kept exactly as it was, as a record; never edited, and not part of the docs | C130 |
+| C135 | running example |  | one example the docs keep coming back to, so that each new idea is the only new thing |  |
+
+## meta, documentation: foundations
+
+from [`meta/documentation/1_foundations.md`](meta/documentation/1_foundations.md)
+
+| id | concept | was | in plain words | builds on |
+| --- | --- | --- | --- | --- |
+| C141 | documentarian |  | someone who records how ideas look from a particular place, openly, without claiming the only view | C003 |
+| C142 | living document |  | a document revised as the thinking moves, with its history kept but not part of it | C133 |
+
+## meta, process: foundations
+
+from [`meta/process/1_foundations.md`](meta/process/1_foundations.md)
+
+| id | concept | was | in plain words | builds on |
+| --- | --- | --- | --- | --- |
+| C139 | open question |  | a question that can't be settled straight away: listed, then resolved or deferred, with the reason |  |
+| C140 | consistency pass |  | reading a whole domain again for contradictions and leftovers, reporting first, then fixing | C130 |
 
 ## spacer: basics
 
-from [`1_basics_spacer.md`](1_basics_spacer.md)
+from [`spacer/1_basics.md`](spacer/1_basics.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
@@ -71,7 +101,7 @@ from [`1_basics_spacer.md`](1_basics_spacer.md)
 
 ## spacer: notation
 
-from [`2_notation_spacer.md`](2_notation_spacer.md)
+from [`spacer/2_notation.md`](spacer/2_notation.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
@@ -87,7 +117,7 @@ from [`2_notation_spacer.md`](2_notation_spacer.md)
 
 ## spacer: measures
 
-from [`3_measures_spacer.md`](3_measures_spacer.md)
+from [`spacer/3_measures.md`](spacer/3_measures.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
@@ -107,7 +137,7 @@ from [`3_measures_spacer.md`](3_measures_spacer.md)
 
 ## spacer: structures
 
-from [`4_structures_spacer.md`](4_structures_spacer.md)
+from [`spacer/4_structures.md`](spacer/4_structures.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
@@ -135,7 +165,7 @@ from [`4_structures_spacer.md`](4_structures_spacer.md)
 
 ## spacer: functions
 
-from [`5_functions_spacer.md`](5_functions_spacer.md)
+from [`spacer/5_functions.md`](spacer/5_functions.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
@@ -178,7 +208,7 @@ from [`5_functions_spacer.md`](5_functions_spacer.md)
 
 ## spacer: dynamics
 
-from [`6_dynamics_spacer.md`](6_dynamics_spacer.md)
+from [`spacer/6_dynamics.md`](spacer/6_dynamics.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
@@ -195,7 +225,7 @@ from [`6_dynamics_spacer.md`](6_dynamics_spacer.md)
 
 ## spacer: identity
 
-from [`7_identity_spacer.md`](7_identity_spacer.md)
+from [`spacer/7_identity.md`](spacer/7_identity.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |

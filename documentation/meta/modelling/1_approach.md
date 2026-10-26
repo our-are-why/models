@@ -9,9 +9,10 @@ shows up, and the case against it.
 **builds on:** nothing. the domain chapters don't depend on agreeing with it,
 but much of their shape comes from it.
 
-this is the first chapter of the meta domain, which is about how every domain
-here is modelled and written down. the concepts here are listed, with stable
-IDs, in [concepts.md](concepts.md).
+this is the modelling part of the meta domain, which is about how every domain
+here is modelled and written down; why it's done at all is in
+[purpose](../personal/1_purpose.md). the concepts here are listed, with stable
+IDs, in [concepts.md](../../concepts.md).
 
 ## how to read this
 
@@ -111,6 +112,10 @@ depths).
 can't tell what's being claimed. so each perspective gets a name, and one of
 them is used by default.
 
+the docs apply the same idea to themselves: a topic that cuts across domains
+has one home and several framings (see "cross-cutting topics", in
+"documents").
+
 **related.** figure and ground, in perception; duality, in mathematics, where
 one structure has two descriptions that carry the same information.
 
@@ -187,6 +192,28 @@ fluid can be abstract or concrete.
 **related.** nothing close comes to mind as an established principle; it's
 near the writing advice to say what is, rather than what isn't.
 
+## telling things apart
+
+**what.** define a thing, then mark its boundary: say what it's easy to mistake
+it for, and how it differs. the nearest neighbours matter most, since they're
+the likeliest mistakes.
+
+**why.** a definition says what's inside; a boundary says what's outside. a
+reader needs both, and a model that can't say what something isn't hasn't
+pinned it down.
+
+**where.** why not "binary string", in notation; layers aren't scopes, in
+structures; zero isn't the all-null spacer, in the spacer basics; fitting
+isn't identity, in identity; functions rather than operations, in functions.
+
+**the case against.** contrasts can multiply without end, and a thing defined
+mostly by what it isn't stays vague. so a contrast comes after a positive
+definition, never instead of one (see "positive definitions", above), and only
+with the neighbours a reader is likely to confuse it with.
+
+**related.** definition by genus and difference, in classical logic: name the
+kind, then what sets this one apart; contrast sets, in teaching.
+
 ## tailoring and primitives
 
 **what.** each function does one kind of thing to one kind of thing. when an
@@ -245,7 +272,7 @@ operations, in functions; null, fluid and world; the notes on "cell" and
 
 **the case against.** plain words carry everyday meanings that technical words
 don't. and every renaming (slot to cell, filled to true, neutral to fluid)
-costs readers who learned the old name; [concepts.md](concepts.md) keeps
+costs readers who learned the old name; [concepts.md](../../concepts.md) keeps
 former names for that reason.
 
 **related.** the ubiquitous language of domain-driven design; affordance, in
