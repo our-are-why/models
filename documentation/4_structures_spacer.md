@@ -86,7 +86,7 @@ different parents (see lift and collapse, in "functions").
 
 ## layers
 
-a spacer's filled cells can become the cells of another spacer. that second
+a spacer's true cells can become the cells of another spacer. that second
 spacer is a **layer**: it chooses among the first one's points. the first
 spacer is the **root**, as with scopes.
 
@@ -106,8 +106,8 @@ further layer, and so on.
   circle stay in circular order; points along a line stay in line order
 - **each layer's own conventions**: a layer has its own cell 0 and direction,
   like any spacer
-- **zero ends a cascade**: if a layer is all empty, a layer below it would have
-  no cells, which is zero. so a cascade stops at its first all-empty layer
+- **zero ends a cascade**: if a layer is all null, a layer below it would have
+  no cells, which is zero. so a cascade stops at its first all-null layer
 - **flattening**: the deepest layer's choices can be shown on the root's
   cells: here, `|x....x..|`. the flattened spacer doesn't show it was chosen in
   steps; like any origin, the cascade lives outside the cells (see press and
@@ -213,7 +213,7 @@ circularly one is the other started from a different cell.
               ---------------
     weights   2 2 0 1 0 3 1 0
 
-- the **cell weights** count the filled cells in each column. they ignore order
+- the **cell weights** count the true cells in each column. they ignore order
   and count every repeat
 - the weights live in a space of their own: the same cells and reading as the
   stack, but each cell holds an amount instead of one of two states, so a row

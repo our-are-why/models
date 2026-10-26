@@ -39,11 +39,11 @@ for.
 
 ### intervals and gaps
 
-the **points** of a spacer are the positions of its filled cells. between one
+the **points** of a spacer are the positions of its true cells. between one
 point and the next, going +, there are two things to measure:
 
 - the **interval**: the distance from one point to the next
-- the **gap**: how many empty cells lie between them
+- the **gap**: how many null cells lie between them
 
 an interval is always one more than its gap: the gap, plus the step onto the
 next point.
@@ -60,11 +60,11 @@ next point.
 - **circular**: one interval and one gap per point. with a single point, the
   interval goes all the way round, the whole resolution
 - **linear**: one interval and one gap fewer than there are points, plus an
-  **end gap** at each end: the empty cells before the first point and after
-  the last. in a scoped spacer, the end gaps may be cut short: the empty cells
+  **end gap** at each end: the null cells before the first point and after
+  the last. in a scoped spacer, the end gaps may be cut short: the null cells
   can carry on past the ends
-- an all-empty spacer has no points, so no intervals and no gaps. in an
-  all-filled spacer every interval is 1 and every gap is 0
+- an all-null spacer has no points, so no intervals and no gaps. in an
+  all-true spacer every interval is 1 and every gap is 0
 
 (in number theory, a "prime gap" is the difference between neighbouring
 primes: here, that's an interval, not a gap.)
@@ -87,11 +87,11 @@ state, each as long as it goes. a band of two or more cells is a **run**.
   seam between them: `)xx...x..(` has 4 seams and 4 bands. a band can also
   carry on past the last cell into the first: `)x...xx(` has 2 seams and 2
   bands, `[xxx]` (cells 4, 5, 0) and `[...]`, both runs
-- an all-empty or all-filled spacer has no seams: one band covering
+- an all-null or all-true spacer has no seams: one band covering
   everything
 
-bands follow from the gaps: a gap of 0 joins two points into the same filled
-band, and any other gap is an empty band.
+bands follow from the gaps: a gap of 0 joins two points into the same true
+band, and any other gap is a null band.
 
 ### whole numbers
 

@@ -62,12 +62,12 @@ result takes their reading.
 
     A                ■ ■ ◇ ◇ ◇ ■ ◇ ◇
     B                ■ ◇ ◇ ■ ◇ ■ ◇ ◇
-    And(A, B)        ■ ◇ ◇ ◇ ◇ ■ ◇ ◇      filled where both are
-    Or(A, B)         ■ ■ ◇ ■ ◇ ■ ◇ ◇      filled where at least one is
-    Xor(A, B)        ◇ ■ ◇ ■ ◇ ◇ ◇ ◇      filled where exactly one is
-    Without(A, B)    ◇ ■ ◇ ◇ ◇ ◇ ◇ ◇      filled where A is and B isn't
+    And(A, B)        ■ ◇ ◇ ◇ ◇ ■ ◇ ◇      true where both are
+    Or(A, B)         ■ ■ ◇ ■ ◇ ■ ◇ ◇      true where at least one is
+    Xor(A, B)        ◇ ■ ◇ ■ ◇ ◇ ◇ ◇      true where exactly one is
+    Without(A, B)    ◇ ■ ◇ ◇ ◇ ◇ ◇ ◇      true where A is and B isn't
 
-the negative is the same idea for one spacer: `Not(A)` is filled wherever A
+the negative is the same idea for one spacer: `Not(A)` is true wherever A
 isn't.
 
 each of these applies one rule to every cell, so all five are primitives. some
@@ -75,6 +75,8 @@ could be built from others, `Without(A, B)` is `And(A, Not(B))`, but each does
 one basic thing. they're the familiar operations of logic, and of sets read on
 the points: `And` is intersection (∩), `Or` is union (∪), `Xor` is symmetric
 difference (△), `Without` is difference (∖), and `Not` is the complement.
+these functions take logic's symmetric perspective, where null reads as false
+(see "true and null", in "basics").
 
 they're also thresholds on weights: stack A and B, and `And(A, B)` is where the
 weight is 2, `Or(A, B)` where it's at least 1, and `Xor(A, B)` where it's
@@ -82,10 +84,11 @@ exactly 1. with more spacers in a stack, any threshold works the same way, such
 as "at least two of them" (see threshold, below).
 
 `And`, `Or` and `Xor` take any number of spacers, since grouping them
-differently doesn't change the result: `Or(A, B, C)` is filled where at least
+differently doesn't change the result: `Or(A, B, C)` is true where at least
 one is, and `And(A, B, C)` where all are. but `Xor(A, B, C)` doesn't mean
-"exactly one": it's filled where an odd number are. with the stack A, B, C from "weights", in
-"structures", that's `|...x.xx.|`, while "exactly one" is `|...x..x.|`.
+"exactly one": it's true where an odd number are. with the stack A, B, C from
+"weights", in "structures", that's `|...x.xx.|`, while "exactly one" is
+`|...x..x.|`.
 
 ## primitives
 
@@ -301,7 +304,7 @@ upper layer's resolution, and shows the deepest choices on its cells.
 
 ### weights
 
-`Weights(S)` counts a stack's filled cells, column by column, and gives the row
+`Weights(S)` counts a stack's true cells, column by column, and gives the row
 of amounts, with the stack's reading (see "weights", in "structures"):
 
     Weights((A, B, C))          →  |2 2 0 1 0 3 1 0|
@@ -309,7 +312,7 @@ of amounts, with the stack's reading (see "weights", in "structures"):
 
 ### threshold
 
-`Threshold(W, k)` turns a row of amounts back into a spacer: a cell is filled
+`Threshold(W, k)` turns a row of amounts back into a spacer: a cell is true
 where its amount is at least k, and the result keeps the row's reading. it's
 the bridge from amounts back to states, the way detach is the bridge from a
 view. with the stack A, B, C from "weights", in "structures":
@@ -429,7 +432,7 @@ shown flattened, on the root's cells:
 
 `Depths(K)` goes back: for each cell, how many levels of the cascade K it's in.
 `Depths(Levels(W))` is W again, and `Levels(Depths(K))` is K again, as long as K
-doesn't end in an all-empty layer.
+doesn't end in an all-null layer.
 
 this isn't a coincidence. a row of whole amounts and a cascade are two ways of
 writing the same nested structure: counting how deep each cell goes, or listing

@@ -4,7 +4,7 @@
 
 a spacer is written in one of two forms, which map one to one:
 
-- **typed/keyboard**: `x` for filled and `.` for empty, with no spaces, in
+- **typed/keyboard**: `x` for true and `.` for null, with no spaces, in
   order from cell 0. easy to enter by hand
 - **display/read-only**: shapes, with a space between cells. purer to read
 
@@ -15,7 +15,7 @@ keyboard.
 
 other symbols work just as well, as long as they follow five rules:
 
-1. **distinct states**: filled and empty look different
+1. **distinct states**: true and null look different
 2. **separate cells**: every cell can be told apart from its neighbours
 3. **countable runs**: a run of cells in the same state doesn't blur
    together; you can count the cells in it at a glance
@@ -26,7 +26,7 @@ other symbols work just as well, as long as they follow five rules:
 5. **clear edges**: it's clear where a written spacer starts and ends
 
 `|xx___x__|` breaks rule 3: in many fonts the underscores merge into one line,
-so it's hard to tell how many empty cells there are.
+so it's hard to tell how many null cells there are.
 
 rule 4 is the subtle one. 0 and 1 are also numbers, so `1 0 1 0 0 1 0 0` could
 be eight states, or eight amounts that happen to be 0 or 1, and the symbols
@@ -37,7 +37,7 @@ always means amounts.
 no pair of symbols is entirely free of other meanings: `x` is also a letter,
 and `.` a full stop. in a run they don't read as anything else, but a single
 `x` could. that's what rule 5 is for: in the typed form a spacer always has its
-edges, so `|x|` is clearly a spacer of one filled cell. (in figures, where a
+edges, so `|x|` is clearly a spacer of one true cell. (in figures, where a
 spacer sits on its own line with labels, the layout marks its edges.)
 
 ### edges show the reading
@@ -60,15 +60,15 @@ inward.
 ### the display form
 
 in the display form, the shapes of the cells carry the reading, so no edges are
-needed. each shape is its typed edges closed up into every cell, and filled
-and empty always differ twice: in fill, and in size, direction or turn:
+needed. each shape is its typed edges closed up into every cell, and true and
+null always differ twice: solid or hollow, and in size, direction or turn:
 
-    )xx...x..(    ● ● ⚬ ⚬ ⚬ ● ⚬ ⚬         circles, from round brackets: big filled,
-                                          small empty
+    )xx...x..(    ● ● ⚬ ⚬ ⚬ ● ⚬ ⚬         circles, from round brackets: big solid
+                                          true, small hollow null
     <xx...x..>    ▲ ▲ ▽ ▽ ▽ ▲ ▽ ▽         triangles, from < and > turned upright:
-                                          filled up, empty down
-    |xx...x..|    ■ ■ ◇ ◇ ◇ ■ ◇ ◇         squares, from straight walls: filled
-                                          square, empty square turned (a diamond)
+                                          true up, null down
+    |xx...x..|    ■ ■ ◇ ◇ ◇ ■ ◇ ◇         squares, from straight walls: a solid
+                                          square, and a hollow one turned (a diamond)
     [xx...x..]    [ ▲ ▲ ▽ ▽ ▽ ▲ ▽ ▽ ]     a piece is linear in its own terms;
                                           the brackets say there's more beyond
     |><|          |▶◀|                    zero
@@ -87,7 +87,7 @@ first to go out of line. where they aren't available, write the typed form, or
 any other symbols that follow the five rules: the shapes are one read-optimized
 choice, not the only one.
 
-(a tangent: having filled and empty differ twice spends a second visual
+(a tangent: having true and null differ twice spends a second visual
 difference, size, direction or turn, that could otherwise carry something
 else. if a later use needs to show an extra property of each cell, that
 second difference is the first thing to give back.)
@@ -100,9 +100,9 @@ a spacer can also be written by its points, after its resolution:
     )x..x.(      →   )5: 0,3(
 
 the resolution has to be there: without it, `|x..x.|` and `|x..x...|` would
-both come out as `0,3`. an all-empty spacer has no points: `|4:|`. here the
+both come out as `0,3`. an all-null spacer has no points: `|4:|`. here the
 digits are positions, which are numbers, so rule 4 holds. the point form is
-shorter when few cells are filled; the cell form shows the arrangement at a
+shorter when few cells are true; the cell form shows the arrangement at a
 glance.
 
 ### labels
@@ -164,7 +164,7 @@ comes first: starting `)xx...x..(` at cell 5 gives `)x..xx...(`; in points,
 
 ## why not "binary string"
 
-write each cell's state as 1 for filled and 0 for empty and you get a binary
+write each cell's state as 1 for true and 0 for null and you get a binary
 string:
 
     ■ ■ ◇ ◇ ◇ ■ ◇ ◇   →   11000100

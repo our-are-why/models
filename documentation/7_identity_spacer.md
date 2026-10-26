@@ -19,9 +19,11 @@ the two readings show the difference clearly. a circle has no start, so cell
 0 is pure convention. a line has two ends, so the ends are essence, but which
 end comes first is convention.
 
-some things sit in between. which state is filled is written by convention
-(■ or `x` here, 1 elsewhere), but the difference it marks, between the things
-being spaced and the space between them, isn't one.
+some things sit in between. how the states are written is convention (■ or
+`x` here, 1 elsewhere), and so is which one is called true. whether one state
+is the thing and the other its absence isn't a convention but a perspective:
+the asymmetric perspective sees a thing and its absence, and the symmetric one
+sees two equals (see "true and null", in "basics").
 
 ## identity
 

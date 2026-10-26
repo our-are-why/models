@@ -45,38 +45,52 @@ other reading, on its own. turning one into the other takes a function (see
 "functions"): unwinding a circle from its cell 0 gives a line, and winding a
 line, so its ends join, gives a circle.
 
-## filled and empty
+## true and null
 
-a cell's two states are called **filled** (■) and **empty** (◇). in other
-settings the same pair shows up as 1 and 0, or true and false.
+a cell's two states are **true** (■) and **null** (◇). the pair can be seen in
+two ways, and both are valid:
 
-which state is which is a choice, but not an arbitrary one: filled cells are
-the things being spaced, and empty cells are the space between them.
+- **asymmetric, true/null**: a true cell holds something, and a null cell holds
+  nothing. null isn't the opposite of true, but its absence: true cells are the
+  things being spaced, and null cells are the space between them
+- **symmetric, true/false**: neither state is special, and each is the other's
+  negation. this is the perspective of logic, where the second state is
+  **false**
+
+true is the same in both; they differ only in what the other state is. the
+measures in these chapters take the asymmetric perspective, and so do the words
+for cells: true and null. the functions that combine spacers cell by cell come
+from logic, and there null reads as false (see "functions"). elsewhere, the
+same pair often shows up as 1 and 0.
+
+null means absence, not unknown: a null cell is decided, and holds nothing. (in
+databases, null often means "unknown", a third state; here there's no third
+state.)
 
 - **resolution**: how many cells a spacer has
-- **density**: how many of them are filled
-- **sparsity**: how many are empty
+- **density**: how many of them are true
+- **sparsity**: how many are null
 
       ■ ■ ◇ ◇ ◇ ■ ◇ ◇     resolution 8, density 3, sparsity 5
 
 density and sparsity always add up to the resolution.
 
 these three say how many cells of each kind there are, not where they are,
-so many spacers share the same three. with 4 cells, 2 of them filled, there
-are six:
+so many spacers share the same three. with 4 cells, 2 of them true, there are
+six:
 
     ■ ■ ◇ ◇    ■ ◇ ■ ◇    ■ ◇ ◇ ■    ◇ ■ ■ ◇    ◇ ■ ◇ ■    ◇ ◇ ■ ■
 
 swap every cell's state and you get the spacer's **negative**: the same
-arrangement/distribution, seen from its empty space. the negative's density is
+arrangement/distribution, seen from its null space. the negative's density is
 the original's sparsity. one determines the other, but they aren't the same
 thing: a spacer and its negative are two different spacers. `Not(A)` gives A's
 negative (see "functions").
 
 ## any arrangement
 
-a spacer puts no condition on which of its cells are filled: any
-arrangement/distribution of filled and empty cells is a spacer, whether it
+a spacer puts no condition on which of its cells are true: any
+arrangement/distribution of true and null cells is a spacer, whether it
 follows a clear pattern, has some structure, or has no rhyme or reason.
 
     ■ ■ ◇ ◇ ■ ■ ◇ ◇     a repeating pattern
@@ -86,7 +100,7 @@ follows a clear pattern, has some structure, or has no rhyme or reason.
 so two things need keeping apart:
 
 - **the spacer as a device**: open-ended. it only says there are cells, each
-  filled or empty, and it holds any arrangement at all
+  true or null, and it holds any arrangement at all
 - **the meaning of an arrangement**: whether a particular one follows a rule,
   and where it came from (a rhythm, a set of numbers, a coin toss). that
   belongs to the arrangement, not to spacers in general
@@ -95,8 +109,8 @@ the cells don't record where an arrangement came from: the same cells could
 come from a careful rule or from tossing a coin, and nothing in them would show
 which.
 
-put another way: a filled cell is just filled. it carries no metadata about
-why it's filled, or what reason/origin put it there. whatever an arrangement
+put another way: a true cell is just true. it carries no metadata about why
+it's true, or what reason/origin put it there. whatever an arrangement
 means lives outside the spacer, in what we know about where it came from.
 
 later chapters look closely at particular kinds of arrangement; each is one
@@ -107,7 +121,7 @@ kind among all spacers, not what a spacer is.
 a spacer has at least one cell. the smallest ones are worth a look, because
 they're where the general rules reach their limits.
 
-- **all empty** and **all filled**: every cell in the same state. both are
+- **all null** and **all true**: every cell in the same state. both are
   spacers, and each is the other's negative
 - **one cell**: read circularly, the cell is its own neighbour, both ways
   round; read linearly, it's both ends at once
@@ -118,5 +132,5 @@ they're where the general rules reach their limits.
 
 with no cells at all there's no space, and so no spacer. we still give it a
 name, **zero**, because it can come up as the result of a change that leaves
-no cells. zero isn't the all-empty spacer: an all-empty spacer is a space with
+no cells. zero isn't the all-null spacer: an all-null spacer is a space with
 nothing in it; zero is no space at all.

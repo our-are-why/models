@@ -6,8 +6,8 @@ every spacer has a finite number of cells. infinity comes in through a
 **generator**: a precise rule or process that makes a spacer at each
 resolution, n, that it covers. it doesn't have to cover them all: one might
 only make spacers with an even number of cells, or only ones that double each
-time. the rule has to say exactly which cells are filled; a loose phrase like
-"fill the first half" isn't enough, since it leaves cases like 5 cells open.
+time. the rule has to say exactly which cells are true; a loose phrase like
+"the first half" isn't enough, since it leaves cases like 5 cells open.
 how the rule is written is up to whoever defines the generator.
 
 how its spacers change as n grows is its **resolution dynamics**, and going to
@@ -36,7 +36,7 @@ without keys: `Primes(8) -> |..xx.x.x|`. the order comes from the generator's
 introduced with its values in order (`Rotate(S, k)`):
 
     Primes(r)                    one value: the resolution
-    Block(r, d)                  the first d cells filled: first the resolution, then the density
+    Block(r, d)                  the first d cells true: first the resolution, then the density
     Block(8, 3)                  means  Block{r: 8, d: 3}
     Block(8, 3) -> |xxx.....|
 
@@ -52,10 +52,10 @@ its own, and any combination can occur, with one exception noted below.
 
 - **growth/extension**: earlier cells never change; new ones are added. it
   reads like time passing, and fits the linear reading, where a line has an
-  end to grow from. filling the cells whose number is prime:
+  end to grow from. making the cells whose number is prime true:
   `|..xx.x.x|` → `|..xx.x.x...x|`
 - **refinement/subdivision**: each spacer describes the same whole at a finer
-  grain, in either reading. filling cell j when 2j is less than n:
+  grain, in either reading. making cell j true when 2j is less than n:
   `|xx..|` → `|xxx..|` → `|xxx...|` → `|xxxx....|`. what counts as "the same
   whole" depends on the context; refinement is named here as one force in a
   spacer's dynamics, not pinned down
