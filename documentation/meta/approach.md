@@ -42,9 +42,9 @@ move that's sound in one can be meaningless in another.
 for strands, a world settles:
 
 - which perspective on the states it takes: true/null or true/false
-- whether fluid is abstract or concrete, and if concrete, hierarchical or a
-  sibling
-- whether a committed strand can melt back into a fluid one
+- whether a strand with no shape is abstract or fluid, and if fluid,
+  hierarchical or sibling, and with it whether a committed strand can melt
+  back into a fluid one
 - what identity sets aside, or adds
 
 by default, the strand chapters take the asymmetric perspective on the states,
@@ -57,8 +57,9 @@ time. rather than pick one answer and call it the truth, the docs name the
 choice, give a default, and leave the rest to the world. so whoever uses the
 model should know their world, and align with its semantics.
 
-**where.** "what fluid is", "true and null" and "worlds", in the strand basics;
-melt and commitment, in functions; the default and its overrides, in identity.
+**where.** "abstract and fluid", "true and null" and "worlds", in the strand
+basics; melt and commitment, in functions; the default and its overrides, in
+identity.
 
 **the case against.** worlds can become an escape hatch: if every conflict is
 answered with "it depends on the world", the model can never be wrong. the
@@ -135,8 +136,8 @@ side, and say which one the running text uses, and why.
 of the states is what makes spacing meaningful; the symmetric view is what
 makes logic work. both are needed.
 
-**where.** true/null and true/false, and fluid as abstract or concrete, in the
-strand basics; cascades written top-down or bottom-up, in structures; a row of
+**where.** true/null and true/false, and abstract and fluid, in the strand
+basics; cascades written top-down or bottom-up, in structures; a row of
 amounts and a cascade as two views of one structure, in functions (levels and
 depths).
 
@@ -221,8 +222,9 @@ become.
 shapes share, in the strand basics; zero is named, though it isn't a strand.
 
 **the case against.** some things really are undecided, and calling them
-adaptable would hide that. where both readings are real, the docs keep both:
-fluid can be abstract or concrete.
+adaptable would hide that. where both readings are real, the docs keep both,
+under different names: an abstract strand is waiting, and a fluid one is
+adaptable.
 
 **related.** nothing close comes to mind as an established principle; it's
 near the writing advice to say what is, rather than what isn't.
@@ -327,14 +329,14 @@ primitive obsession and value objects, in software design.
 
 ## naming
 
-**what.** plain words first. name a perspective after what it lets you do,
-and a structure after what it is, neutrally, so that no perspective is built
-into it: a strand read as things and the space between them is a spacer, but
-the strand itself is named only for its shape. keep collisions with other
-meanings low, pragmatically: no word is free of them, so
-it's a judgement, not a ban. pair a term with an established or alternative
-name at first use (arrangement/distribution). don't take a precise term from
-another field and bend it.
+**what.** plain words first. name a perspective after what it lets you do, and
+a structure after what it is, neutrally, so that no perspective is built into
+it: a strand read as things and the space between them is a spacer, but the
+strand itself is named only for its shape. keep collisions with other meanings
+low, pragmatically: no word is free of them, so it's a judgement, not a ban.
+pair a term with an established or alternative name at first use
+(arrangement/distribution). don't take a precise term from another field and
+bend it.
 
 **why.** names are where readers bring in assumptions, and a name that collides
 brings in the wrong ones.

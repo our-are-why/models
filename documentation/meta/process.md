@@ -30,11 +30,10 @@ down. writing too early fixes a shape that hasn't been tested.
 ## drafts and revisions
 
 the docs grow in drafts. the strand domain, first called spacer, began as one
-rough draft; when it
-was ready to be shaped, it was frozen as a version, split into chapters with
-its text unchanged, and then revised in the chapters. each step was its own
-change, so each can be checked on its own: the split moved text and nothing
-else, and the revision changed text and nothing else.
+rough draft; when it was ready to be shaped, it was frozen as a version, split
+into chapters with its text unchanged, and then revised in the chapters. each
+step was its own change, so each can be checked on its own: the split moved
+text and nothing else, and the revision changed text and nothing else.
 
 ## open questions
 

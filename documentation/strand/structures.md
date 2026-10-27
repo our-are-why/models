@@ -255,11 +255,12 @@ but when the strands going in are patterned, the weights can carry structure of
 their own: structure of the whole that no member shows on its own, which is
 what's sometimes called weak emergence. then they become objects worth studying
 in their own right: a space of amounts, where the amount works almost like an
-extra dimension. that space is noted here, not explored.
+extra dimension. that space is placed among discrete spaces in "space", but
+not explored further here.
 
-weights are written as a row of numbers, which are amounts, not states (rule
-4): `|2 2 0 1 0 3 1 0|`. `Weights((A, B, C))` gives a stack's weights as such a
-row.
+weights are written as a row of numbers, which are amounts, not states (rule 4,
+in "notation"): `|2 2 0 1 0 3 1 0|`. `Weights((A, B, C))` gives a stack's
+weights as such a row.
 
 the row takes the stack's reading, written with the same edges: a circular
 stack gives `)2 2 0 1 0 3 1 0(`, a linear one `<2 2 0 1 0 3 1 0>`, and a fluid

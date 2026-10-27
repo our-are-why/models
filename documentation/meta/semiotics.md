@@ -32,7 +32,7 @@ meant in the general sense, for any system of signs, a notation included.
 | --- | --- |
 | syntax | notation: the typed and display forms, edges, labels, descriptions, the spacing rule, escaping |
 | semantics | basics, measures, structures and functions: what a strand, a scope, a layer or a function is |
-| pragmatics | worlds: which perspective on the states, what fluid is, whether melt exists, what identity sets aside |
+| pragmatics | worlds: which perspective on the states, abstract or fluid, whether melt exists, what identity sets aside |
 
 some parts sit across layers, on purpose:
 

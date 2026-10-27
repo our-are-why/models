@@ -7,8 +7,7 @@ that say how something is known, and the writing conventions. it's the place
 to start. why the docs are written at all, and what documentation is for, is
 in [the meta domain](meta/documentation.md).
 
-the concepts here are listed, with stable IDs, in
-[concepts.md](concepts.md).
+the concepts here are listed, with stable IDs, in [concepts.md](concepts.md).
 
 ## domains and stripes
 
@@ -175,9 +174,8 @@ a new concept gets the next free number, whichever chapter it's in.
 
 a whole draft can be **frozen**: `strand/spacer_v0.md` is the first draft of
 the strand domain, from when it was called spacer, kept exactly as it was when
-the chapters were split from it.
-a frozen version is never edited. it's a record of how the ideas stood, not part
-of the docs.
+the chapters were split from it. a frozen version is never edited. it's a
+record of how the ideas stood, not part of the docs.
 
 ## status labels
 

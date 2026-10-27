@@ -98,12 +98,11 @@ from [`strand/basics.md`](strand/basics.md)
 | C007 | reading | view | how a strand is read: which cells are neighbours, and what a position means | C004 |
 | C008 | circular |  | a reading where the last cell is next to the first, so there are no ends | C007 |
 | C009 | linear |  | a reading where the first and last cells are ends | C007 |
-| C010 | fluid | neutral | a strand with everything the two shapes share, its cells in order, but no shape | C007 |
+| C010 | fluid | neutral, concrete fluid | a strand with no shape of its own, as a form in its own right: adaptable, like a liquid taking its container's shape | C007 |
 | C011 | commitment |  | once a strand is read circular or linear, that's part of what it is, and doesn't change on its own | C008, C009, C010 |
-| C012 | abstract fluid |  | fluid as a placeholder for a shape not yet chosen | C010, C002 |
-| C013 | concrete fluid |  | fluid as a form in its own right, adaptable, like a liquid taking its container's shape | C010, C002 |
-| C014 | hierarchical fluid |  | concrete fluid above circles and lines: they come from it, and only that way | C013, C011 |
-| C015 | sibling fluid |  | concrete fluid as a third form beside circles and lines: any of the three can become any other | C013 |
+| C012 | abstract | abstract fluid | a strand with no shape yet: a placeholder for a circle or a line, waiting to be made concrete; written `\|…\|` like fluid | C007, C002 |
+| C014 | hierarchical fluid |  | fluid above circles and lines, which come from it, and only that way; allows the same moves as abstract; excludes sibling fluid | C010, C011, C012 |
+| C015 | sibling fluid |  | fluid as a third form beside circles and lines, any of the three becoming any other; excludes hierarchical fluid | C010 |
 | C016 | true | filled | the state of a cell that holds something | C006 |
 | C017 | null | empty | the state of a cell that holds nothing: the absence of true, not unknown | C006 |
 | C018 | asymmetric perspective |  | true/null: one state is a thing, the other its absence. the measures take this one | C016, C017, C003 |
@@ -148,8 +147,8 @@ from [`strand/measures.md`](strand/measures.md)
 | C040 | bounded |  | a linear strand with nothing beyond its ends | C009 |
 | C041 | scoped |  | a linear strand that's a piece of something larger: there's more beyond its ends, as context | C009 |
 | C042 | distance |  | how many steps from one cell to another, never negative. round a circle there are two; the + one by default | C038, C039 |
-| C043 | interval |  | the distance from one point to the next, going + | C042, C023 |
-| C044 | gap |  | how many null cells lie between one point and the next. an interval is one more than its gap | C017, C023 |
+| C043 | interval |  | the distance from one point to the next, going + | C042, C023, C143 |
+| C044 | gap |  | how many null cells lie between one point and the next. an interval is one more than its gap | C017, C023, C143 |
 | C045 | end gap |  | the null cells before a line's first point, or after its last | C044, C009 |
 | C046 | joint |  | a place where two neighbouring cells meet | C005 |
 | C047 | seam |  | a joint where the two cells are in different states | C046, C006 |

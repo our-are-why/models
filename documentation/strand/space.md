@@ -71,7 +71,8 @@ simulation call these **periodic** and **open** boundary conditions.
 
 in more dimensions there's a reading per dimension. a grid read circularly one
 way and linearly the other is a cylinder; read circularly both ways, it's a
-torus. fluid carries over too: a space whose edges haven't been given a shape.
+torus. fluid and abstract carry over too: a space whose edges have no shape
+of their own, or none yet.
 
 ## measures, generalized
 
@@ -122,10 +123,9 @@ two dimensions, turns.
 
 generalizing from two examples, both one-dimensional and one built from the
 other, risks mistaking their quirks for the general case: a single direction,
-"the next point", two readings. the table
-above is a first sort, not a proof. the right-hand column may hide ideas that
-do carry over in another form, and the left may hide assumptions that only
-hold in one dimension.
+"the next point", two readings. the table above is a first sort, not a proof.
+the right-hand column may hide ideas that do carry over in another form, and
+the left may hide assumptions that only hold in one dimension.
 
 ## related
 

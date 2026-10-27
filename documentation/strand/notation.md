@@ -60,7 +60,8 @@ in the typed form, the edges around a strand say how it's read:
     <xx...x..>    linear        bounded: an end on each side, and nothing beyond
     [xx...x..]    scoped        a piece of a larger strand: it has ends, but
                                 there's more beyond them
-    |xx...x..|    fluid         plain walls: just the strand, with no shape
+    |xx...x..|    fluid or      plain walls: just the strand, with no shape;
+                  abstract      the world says which of the two it means
 
 **zero** is `|><|`: the walls pushed together, with no space left between them.
 it only takes the plain walls, since with no cells there's nothing to read as a
@@ -87,7 +88,7 @@ null always differ twice: solid or hollow, and in size, direction or turn:
     |><|          |▶◀|                    zero
 
 a single ● can't be mistaken for anything else, so the shapes do the job the
-edges do in the typed form. the figures before this section use the fluid
+edges do in the typed form. most figures in these chapters use the fluid
 squares: they don't need a circle or a line. where no cells are drawn (in
 points and labels, below, and in scopes, in "structures"), the edges stay, with
 → and − in place of -> and -. square brackets around cells get a space inside
@@ -106,7 +107,7 @@ difference, size, direction or turn, that could otherwise carry something
 else. if a later use needs to show an extra property of each cell, that
 second difference is the first thing to give back.)
 
-### points
+### the point form
 
 **builds on:** resolution, points, in "basics".
 

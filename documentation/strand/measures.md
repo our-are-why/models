@@ -48,7 +48,7 @@ for.
 
 ### intervals and gaps
 
-**builds on:** linear, null, points, in "basics".
+**builds on:** linear, null, points, spacer, in "basics".
 
 a strand's points are the positions of its true cells (see "basics"). the
 measures here read the strand as a spacer: its true cells as things, and its

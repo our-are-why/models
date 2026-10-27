@@ -2,10 +2,11 @@
 
 **in short.** a strand is a one-dimensional space of cells, each true or null.
 it can be read as a circle or a line, or be fluid, with no shape. this chapter
-covers the two shapes and what fluid is, the two states and the two ways of
-seeing them (with the spacer, one asymmetric perspective among several), the
-counts (resolution, density and sparsity) and the points, the
-negative, why any arrangement is a strand, and the smallest cases, down to
+covers the two shapes, and the two ways of having none, fluid and abstract;
+the two states and the
+two ways of seeing them, with the spacer as one asymmetric perspective among
+several; the counts (resolution, density and sparsity), the points and the
+negative; why any arrangement is a strand; and the smallest cases, down to
 zero, which isn't one. it ends with worlds: the settings that decide what the
 defaults leave open.
 
@@ -30,13 +31,13 @@ a strand is one kind of discrete space, and a discrete space is one kind of
 space: one dimension, with each cell in one of two states. ("discrete" here
 means made of separate cells with neighbours. _from memory_: in topology, a
 discrete space is something else, and this is closer to a graph, a path or a
-cycle; more in "space".) everything in these chapters is
-worked out for one dimension, where much of it is close to self-evident. spaces
-can have more dimensions, and their cells can hold other kinds of values. but
-in more dimensions, things like neighbours, distance and "the next point" stop
-being obvious, and many ideas here may change shape. those paths are noted and
-deliberately left for later. one other kind of value comes up with weights
-(see "structures").
+cycle; more in "space".) everything in these chapters is worked out for one
+dimension, where much of it is close to self-evident. spaces can have more
+dimensions, and their cells can hold other kinds of values. but in more
+dimensions, things like neighbours, distance and "the next point" stop being
+obvious, and many ideas here may change shape. those paths are noted and
+deliberately left for later. one other kind of value comes up with weights (see
+"structures").
 
 ## circular and linear
 
@@ -55,38 +56,47 @@ what changes is which cells are neighbours, and what a cell's position means.
 - **linear**: the first and last cells are the ends. a position is an amount:
   how far from the start. between two cells there is one distance
 
-a strand can also be **fluid**: it has everything the two shapes share, its
-cells in order, each next to the one before it, but no shape. whether its last
-cell meets its first isn't part of it, and a use that needs a shape gives it
-one.
+a strand can also have no shape: it has everything the two shapes share, its
+cells in order, each next to the one before it, but whether its last cell
+meets its first isn't part of it. that can mean two different things, and
+they get different names:
+
+- **fluid**: a form in its own right, adaptable, the way a liquid has a
+  definite volume but takes the shape of its container. a use that needs a
+  shape gives it one
+- **abstract**: a placeholder for a shape that hasn't been chosen yet. it
+  stands in for a circle or a line, and is waiting to be made concrete
 
 once a strand is read circular or linear, that becomes part of what it is: it
 doesn't go back to fluid, or switch to the other reading, on its own. turning
 one into the other takes a function (see "functions"): unwinding a circle from
 its cell 0 gives a line, and winding a line, so its ends join, gives a circle.
 
-### what fluid is
+### abstract and fluid
 
 **builds on:** world, in "approach".
 
-depending on the world (see "worlds", below), fluid is one of two things, and
-both are valid:
+the plain walls `|…|` are written the same way for both, so a world says which
+it means (see "worlds", below). and fluid itself can stand in either of two
+relations to circles and lines. that makes three models, and a world takes one:
 
-- **abstract**: a placeholder for a shape that hasn't been chosen yet. the
-  fluid strand stands in for a circle or a line
-- **concrete**: a form in its own right, adaptable, the way a liquid has a
-  definite volume but takes the shape of its container. nobody calls a liquid
-  a solid that hasn't decided yet
+| model | a strand written `\|…\|` is | committing | melting back |
+| --- | --- | --- | --- |
+| **abstract** | a placeholder for a shape not yet chosen | one-way: the choice is made | no: a choice isn't unmade |
+| **hierarchical fluid** | a form in its own right, above circles and lines: they come from it, and only that way | one-way | no |
+| **sibling fluid** | a form in its own right, beside circles and lines: any of the three can become any other, a triangle | yes | yes (see melt, in "functions") |
 
-a concrete fluid can stand in either of two relations to circles and lines:
+the three mostly exclude each other. a placeholder isn't a form in its own
+right, and a form that circles and lines only come from can't also be one they
+turn back into. where they overlap is in behaviour: abstract strands and
+hierarchical fluid allow exactly the same moves, since both keep commitment
+one-way, and differ only in what the strand is taken to be.
 
-- **hierarchical**: fluid sits above them. circles and lines come from it, and
-  only that way, so committing is one-way
-- **sibling**: fluid is a third form beside them, and any of the three can
-  become any other, a triangle. a committed strand can melt back into a fluid
-  one (see melt, in "functions")
-
-these are independent choices, and a world makes them.
+so the running text is written for fluid, in the hierarchical model, and
+holds word for word in an abstract world: there, read "fluid" as "abstract",
+and every move is the same. melt belongs to sibling fluid alone. nobody calls
+a liquid a solid that hasn't decided yet, and the name "fluid" is kept for the
+form that's adaptable, not the one that's waiting.
 
 ## true and null
 
@@ -100,6 +110,10 @@ two ways, and both are valid:
 - **symmetric, true/false**: neither state is special, and each is the other's
   negation. this is the perspective of logic, where the second state is
   **false**
+
+null means absence, not unknown: a null cell is decided, and holds nothing. (in
+databases, null often means "unknown", a third state; here there's no third
+state.)
 
 true is the same in both; they differ only in what the other state is. the
 measures in these chapters take the asymmetric perspective, and so do the words
@@ -119,9 +133,7 @@ the asymmetric perspective can be taken in more than one way:
 these are named here, not developed, and there are likely others. each is a
 perspective a world can take; the strand itself takes none of them.
 
-null means absence, not unknown: a null cell is decided, and holds nothing. (in
-databases, null often means "unknown", a third state; here there's no third
-state.)
+## counts and points
 
 - **resolution**: how many cells a strand has
 - **density**: how many of them are true
@@ -173,8 +185,9 @@ put another way: a true cell is just true. it carries no metadata about why
 it's true, or what reason/origin put it there. whatever an arrangement
 means lives outside the strand, in what we know about where it came from.
 
-later chapters look closely at particular kinds of arrangement; each is one
-kind among all strands, not what a strand is.
+chapters still to come, starting with evenly spread arrangements, look closely
+at particular kinds of arrangement; each is one kind among all strands, not
+what a strand is.
 
 ## the smallest strands
 
@@ -199,8 +212,9 @@ nothing in it; zero is no space at all.
 
 a **world**, or semantic world, is the setting a strand is used in, with its
 own semantics. it settles what these chapters leave open: the perspective on
-the states, what fluid is, whether melt is allowed, and what identity sets
-aside. by default, the running text takes the asymmetric perspective,
-commitment is one-way, and there's no melt. worlds aren't specific to strands:
-they're part of [the approach](../meta/approach.md) behind all
-these docs.
+the states; whether `|…|` is abstract or fluid, and if fluid, hierarchical or
+sibling, and with it whether melt is allowed; and what identity sets aside. by
+default, the running text takes the asymmetric perspective and hierarchical
+fluid, with commitment one-way and no melt, and holds just the same for
+abstract strands. worlds aren't specific to strands:
+they're part of [the approach](../meta/approach.md) behind all these docs.

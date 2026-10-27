@@ -40,7 +40,7 @@ sees two equals (see "true and null", in "basics").
 **builds on:** state, reading, resolution, in "basics"; Commit, Rotate,
 Reverse, Mirror, Unwind, Wind, in "functions".
 
-this doc gives identity a **default**: a starting point that any use can
+these chapters give identity a **default**: a starting point that any use can
 override, tightening or loosening it to fit what it's doing.
 
 **by default, two strands are the same strand when they have:**
@@ -72,14 +72,14 @@ doesn't make them essence (see "essence and convention"): the default is simply
 the strictest comparison, so it never merges two strands that a use might need
 to keep apart.
 
-a fluid strand **fits** a circular or linear strand with the same resolution and
-cells: it could become it, just by committing to a reading. fitting isn't
-identity, and by default it runs one way only, from fluid to committed:
-`|x..|` fits both `)x..(` and `<x..>`, but those two are still different
-strands. between them, unwind and wind convert either way, losing nothing.
-in a world with melt, fitting runs both ways too. the comparisons themselves
-don't depend on the world: they say how two strands relate, not which moves a
-world allows.
+a fluid strand **fits** a circular or linear strand with the same resolution
+and cells: it could become it, just by committing to a reading. fitting isn't
+identity, and by default it runs one way only, from fluid to committed: `|x..|`
+fits both `)x..(` and `<x..>`, but those two are still different strands.
+between them, unwind and wind convert either way, losing nothing. with
+sibling fluid, where melting is allowed, fitting runs both ways too.
+the comparisons themselves don't depend on the world: they say how two strands
+relate, not which moves a world allows.
 
 that gives five ways of comparing:
 

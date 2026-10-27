@@ -57,8 +57,8 @@ makes sense for it and its result doesn't depend on it afterwards, and **fluid
 in gives fluid out**: committing to a reading is left to whoever uses the
 result. a fluid strand can be rotated as a circle and then read as a line: with
 `N := |xx...x..|`, `Rotate(N, 5)` is `|x..xx...|`, and `<Rotate(N, 5)>` is
-`<x..xx...>`. the only exceptions are the functions whose job is to change a
-reading: unwind and wind.
+`<x..xx...>`. the exceptions are the functions whose job is the reading
+itself: commit, unwind and wind, and melt, where a world allows it.
 
 each function does one kind of thing to one kind of strand. when the same idea
 means different things for lines and circles, they get different functions,
@@ -138,15 +138,16 @@ both arrive at the same cells here. which to use depends on whether the reading
 is part of the structure, or a shape given later.
 
 commitment is one-way by default: nothing takes a committed strand back to
-fluid. that fits a world where fluid is abstract, or hierarchical (see "what
-fluid is", in "basics").
+fluid. that's how abstract strands and hierarchical fluid work (see "abstract
+and fluid", in "basics").
 
 ### melt, in some worlds
 
 **builds on:** world, in "approach"; sibling fluid, in "basics".
 
-in a world where fluid is a sibling of circles and lines, `Melt(S)` forgets a
-committed strand's shape, and gives the fluid strand with the same cells:
+for sibling fluid, a form beside circles and lines (see "abstract and fluid",
+in "basics"), `Melt(S)` forgets a committed strand's shape, and gives the
+fluid strand with the same cells:
 
     Melt( )xx...x..( )      →  |xx...x..|
     Melt(<xx...x..>)        →  |xx...x..|
@@ -155,10 +156,11 @@ committed strand's shape, and gives the fluid strand with the same cells:
   `Unwind(C)` is `<Melt(C)>`, and winding is `) Melt(L) (`
 - where the shape is essential, melting throws away meaning, and isn't valid:
   a clock face is a circle in any world that cares about time
-- in a hierarchical world, melt usually doesn't fit, since the forms only come
-  from fluid. but if the hierarchy is read as "a circle is a fluid strand with
-  a shape added", forgetting the shape is always possible. so even there, the
-  world decides
+- for abstract strands and hierarchical fluid, melt doesn't fit: a choice
+  isn't unmade, and the forms only come from fluid. a hierarchy read the other way,
+  as "a circle is a fluid strand with a shape added", would allow forgetting
+  the shape, but then fluid and the forms can each become the other, which is
+  sibling fluid under another name
 
 ### rotate
 
@@ -270,7 +272,8 @@ line.
 **builds on:** circular, linear, commitment, in "basics".
 
 these two change a committed reading, so they're the only functions that turn
-a circle into a line, or a line into a circle.
+a circle into a line, or a line into a circle, directly. (with sibling fluid,
+melting and then committing is another route: see melt.)
 
 `Unwind(C)` opens a circle into a line, starting from its frame's cell 0.
 `Wind(L)` joins a line's two ends into a circle.
@@ -310,8 +313,8 @@ their own: the window's edges become free ends.
     A := )8: S([5+4]       →  [x..xx]
     Detach(A)              →  <x..xx>
 
-- the result is linear: a piece is already linear in its own terms, and a
-  reading only goes one way. `Wind(Detach(A))` makes it a circle
+- the result is linear: a piece is already linear in its own terms, and by
+  default a reading only goes one way. `Wind(Detach(A))` makes it a circle
 - detaching forgets the context: the parent, and where the piece sat in it. so
   `Detach(A) === A`, the same cells, but they aren't the same strand: one is
   whole, the other a part. there's no way back, except taking the scope from
