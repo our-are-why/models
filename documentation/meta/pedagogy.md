@@ -2,13 +2,13 @@
 
 **in short.** how the docs try to teach: plain words first, ideas in an order
 where nothing is used before it's explained, a short version before the long
-one, one running example, and every idea set against what it's easy to
-mistake it for. then bigger ideas about teaching: the meaning of a form, not
-only its mechanics; a subject as a vehicle for training thought; showing the
-path, not only the result; teaching a form both pure and hidden in another
-domain, since neither is the real one; problems with more than one valid
-answer; teaching the meta out loud, with a thread of its own; and a thread of
-each learner's own. each is a choice about how a reader learns, with its
+one, one running example, and every idea set against what it's easy to mistake
+it for. then bigger ideas about teaching: the meaning of a form, not only its
+mechanics; a subject as a vehicle for training thought; showing the path, not
+only the result; teaching a form both pure and hidden in another domain, since
+neither is the real one; problems with more than one valid answer; teaching the
+meta out loud, with a thread of its own; a thread of each learner's own; and
+teaching learners to ask. each is a choice about how a reader learns, with its
 reasons and its costs.
 
 the concepts here are listed, with stable IDs, in
@@ -285,6 +285,18 @@ through that interest.
 a thread chosen too early can narrow what's explored. and relating every
 subject to each learner's interest is more than one teacher can do for a whole
 class, which is where AI may help (see "AI in teaching", in [ai](ai.md)).
+
+## questions, taught
+
+this is a framing of "questions before answers" (see
+[the approach](approach.md)), from the side of teaching. schools mostly reward
+answers, and treat a question as a sign of not knowing. but a good question
+takes understanding: knowing the shape of what you don't know. asking can be
+taught directly: _from memory_, the question formulation technique (Dan
+Rothstein and Luz Santana) has learners produce, sort and sharpen their own
+questions before anything is answered. it fits the rest of this chapter, too:
+interleaving starts every problem with a question, "which tool is this?", and
+the meta thread is, in large part, a thread of questions about how we know.
 
 ## seen from elsewhere
 

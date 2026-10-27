@@ -57,7 +57,7 @@ time. rather than pick one answer and call it the truth, the docs name the
 choice, give a default, and leave the rest to the world. so whoever uses the
 model should know their world, and align with its semantics.
 
-**where.** "abstract and fluid", "true and null" and "worlds", in the strand
+**where.** "abstract and fluid", "two states" and "worlds", in the strand
 basics; melt and commitment, in functions; the default and its overrides, in
 identity.
 
@@ -371,6 +371,49 @@ modesty, or as an excuse. they should stay short, and be replaced as things
 get checked.
 
 **related.** levels of evidence, in science; provenance, in data.
+
+## questions before answers
+
+**what.** questions matter more than answers, asymmetrically: an answer depends
+on its question, but a question doesn't depend on its answer. the familiar
+picture is Douglas Adams's: the answer to life, the universe and everything is
+42, and it's useless, because nobody knows what the question was. a question
+without its answer still points somewhere: it carries a framing, shows what the
+asker understands and where the gap is, and pulls the inquiry forward, while an
+accepted answer tends to close it. so a perspective is often best given as
+questions, with answers where they're earned. a great answer can outweigh a
+poor question, and some answers change everything; the asymmetry holds in
+general, not in every case.
+
+**why.** questions are what move understanding forward, and they show it: the
+quality of someone's questions is often a better measure of what they
+understand than their answers. and answers have become cheap, now that a model
+will answer almost anything at once. what stays scarce is the question: what to
+ask, what to doubt, and how to frame it.
+
+**where.** "the case against", in every idea here, and "open to challenge",
+below: questions put to the docs themselves; open questions, in the process;
+and the purpose of the docs, having thinking debugged, which happens through
+questions (see [personal](personal.md)).
+
+**the case against.** some answers are decisive: a cure, a proof, a fix. bad
+faith uses questions too: a loaded question carries a claim in its framing, and
+"just asking questions" can insinuate rather than inquire. and questions can
+run on. some depth of questions leading to more questions is healthy: it's how
+edge cases get caught before they bite, the way the smallest strands show
+where the general rules reach their limits. the risk is questioning without a
+bound, that never lands anywhere that could be answered or acted on.
+
+**related.** problem finding (Jacob Getzels and Mihaly Csikszentmihalyi, *The
+Creative Vision*), where those who spent longer finding and framing the problem
+did the more creative work; Albert Einstein and Leopold Infeld, *The Evolution
+of Physics*: "the formulation of a problem is often more essential than its
+solution"; David Hilbert's 23 problems, which steered much of a century's
+mathematics; the question under discussion, in pragmatics (Craige Roberts);
+Socratic questioning.
+
+**seen from elsewhere.** teaching learners to ask, in
+[pedagogy](pedagogy.md); questions now that answers are cheap, in [ai](ai.md).
 
 ## open to challenge
 

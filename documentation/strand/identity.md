@@ -33,7 +33,7 @@ some things sit in between. how the states are written is convention (■ or
 `x` here, 1 elsewhere), and so is which one is called true. whether one state
 is the thing and the other its absence isn't a convention but a perspective:
 the asymmetric perspective sees a thing and its absence, and the symmetric one
-sees two equals (see "true and null", in "basics").
+sees two equals (see "two states", in "basics").
 
 ## identity
 

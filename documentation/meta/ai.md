@@ -3,8 +3,9 @@
 **in short.** AI as a reader of these docs, and as a collaborator in debugging
 them: what makes the docs loadable by a model, how to ask one for help, what
 to trust in what it says back, what teaching looks like when the reader is an
-AI, and AI in teaching, where it may let a teacher be a shepherd rather than
-the source of every piece of expertise.
+AI, AI in teaching, where it may let a teacher be a shepherd rather than the
+source of every piece of expertise, and questions, now that answers are
+cheap.
 
 the concepts here are listed, with stable IDs, in
 [concepts.md](../concepts.md).
@@ -90,6 +91,16 @@ sure the second still happens. _from memory_: one-to-one tutoring has long been
 known to help a great deal (Benjamin Bloom's "two sigma" finding, 1984), which
 is the hope behind AI tutors; the evidence on AI tutors themselves is still
 new.
+
+## questions, from AI
+
+this is a framing of "questions before answers" (see
+[the approach](approach.md)), from AI's side. a model will answer almost
+anything, at once and fluently, so answers have become cheap. what stays scarce
+is the question: what to ask, how to frame it, and what to doubt in what comes
+back. a well-framed question also guards against a model's failure mode, since
+a fluent answer to a badly framed question is still wrong. and a model meant
+for teaching, as above, should often answer with a question.
 
 ## related
 

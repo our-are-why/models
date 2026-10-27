@@ -32,6 +32,7 @@ from [`meta/approach.md`](meta/approach.md)
 | C003 | perspective |  | one of several valid ways of seeing the same thing, none the hidden truth behind the others |  |
 | C146 | basic level |  | the level where a thing is looked for and named; the docs organize there, and state the ancestry in words |  |
 | C152 | reduction |  | a simpler form taken on purpose, for a use, setting meaning aside; equal as a value, not as a meaning | C003 |
+| C166 | questions before answers |  | an answer depends on its question, not the other way round; questions move understanding forward and show it; bounded questioning catches edge cases |  |
 
 ## meta: semiotics
 
@@ -85,7 +86,10 @@ from [`meta/process.md`](meta/process.md)
 | --- | --- | --- | --- | --- |
 | C139 | open question |  | a question that can't be settled straight away: listed, then resolved or deferred, with the reason |  |
 | C140 | consistency pass |  | reading a whole domain again for contradictions and leftovers, reporting first, then fixing | C130 |
-| C164 | oscillation |  | the work moving back and forth between abstract periods and applied ones, each feeding the other |  |
+| C165 | engagement first |  | staying engaged with the work matters more than forcing focus onto one narrow thing; attention moves at a natural pace, with finishing and discomfort as counterweights |  |
+| C164 | oscillation |  | moving back and forth, between abstract and applied periods, between ideas, or between small and large structure, each side feeding the other; healthy when chosen, few and deep enough | C165 |
+| C167 | tangent |  | a line of work followed where it goes, with the context it left kept, and returned to | C165 |
+| C168 | tying off |  | bringing work into a meaningful, self-contained piece, valuable as it stands, though not necessarily finished | C165 |
 
 ## strand: basics
 
@@ -95,7 +99,7 @@ from [`strand/basics.md`](strand/basics.md)
 | --- | --- | --- | --- | --- |
 | C004 | strand | spacer | a one-dimensional, discrete space of cells, each in one of two states; a kind of discrete space |  |
 | C005 | cell | slot | one piece of a strand's space, with a position and a state | C004 |
-| C006 | state |  | what a cell holds: true or null | C005 |
+| C006 | state |  | what a cell holds: one of two states, named true and null by default | C005 |
 | C007 | reading | view | how a strand is read: which cells are neighbours, and what a position means | C004 |
 | C008 | circular |  | a reading where the last cell is next to the first, so there are no ends | C007 |
 | C009 | linear |  | a reading where the first and last cells are ends | C007 |
@@ -104,10 +108,10 @@ from [`strand/basics.md`](strand/basics.md)
 | C012 | abstract | abstract fluid | a strand with no shape yet: a placeholder for a circle or a line, waiting to be made concrete; written `\|…\|` like fluid | C007 |
 | C014 | hierarchical fluid |  | fluid above circles and lines, which come from it, and only that way; allows the same moves as abstract; excludes sibling fluid; a world picks between them | C010, C011, C012, C002 |
 | C015 | sibling fluid |  | fluid as a third form beside circles and lines, any of the three becoming any other; excludes hierarchical fluid; a world picks between them | C010, C002 |
-| C016 | true | filled | the state of a cell that holds something | C006 |
-| C017 | null | empty | the state of a cell that holds nothing: the absence of true, not unknown | C006 |
-| C018 | asymmetric perspective |  | true/null: one state is a thing, the other its absence. the measures take this one | C016, C017, C003 |
-| C019 | symmetric perspective |  | true/false: neither state is special, and each is the other's negation. logic's perspective | C016, C017, C003 |
+| C016 | true | filled | the default name for one state: the one that holds something, read asymmetrically, or one of two equals, read symmetrically | C006, C018, C019 |
+| C017 | null | empty | the default name for the other state, read asymmetrically: the absence of true, not unknown | C006, C018 |
+| C018 | asymmetric perspective |  | one state is something, the other its absence; true and null by default, though other names fit (present and absent, marked and unmarked). the measures take this one | C006, C003 |
+| C019 | symmetric perspective |  | neither state is special, each the other's negation; true and false by default, logic's names (others: 1 and 0, yes and no) | C006, C003 |
 | C143 | spacer |  | an asymmetric perspective on a strand: true cells as things, null cells as the space between them | C004, C018 |
 | C144 | selection |  | an asymmetric perspective on a strand: which positions are chosen; named, not developed | C004, C018 |
 | C145 | rhythm |  | an asymmetric perspective on a strand: onsets in time; named, not developed | C004, C018 |

@@ -97,20 +97,26 @@ flowchart LR
   basics --> space
   measures --> space
   structures --> space
+  ai -.- approach
   ai -.- pedagogy
   approach -.- documents
+  approach -.- functions
+  approach -.- identity
   approach -.- pedagogy
   basics -.- functions
   basics -.- space
   basics -.- structures
   documentation -.- documents
-  documents -.- pedagogy
   documentation -.- personal
+  documents -.- pedagogy
   functions -.- identity
   functions -.- notation
   functions -.- structures
   notation -.- structures
   pedagogy -.- personal
+  pedagogy -.- process
+  personal -.- process
+  space -.- structures
 ```
 
 a **suggested path**, one good way through and not the only one: in meta,

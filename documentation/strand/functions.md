@@ -90,7 +90,7 @@ one basic thing. they're the familiar operations of logic, and of sets read on
 the points: `And` is intersection (∩), `Or` is union (∪), `Xor` is symmetric
 difference (△), `Without` is difference (∖), and `Not` is the complement.
 these functions take logic's symmetric perspective, where null reads as false
-(see "true and null", in "basics").
+(see "two states", in "basics").
 
 they're also thresholds on weights: stack A and B, and `And(A, B)` is where the
 weight is 2, `Or(A, B)` where it's at least 1, and `Xor(A, B)` where it's

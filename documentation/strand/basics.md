@@ -1,14 +1,13 @@
 # basics
 
-**in short.** a strand is a one-dimensional space of cells, each true or null.
-it can be read as a circle or a line, or be fluid, with no shape. this chapter
-covers the two shapes, and the two ways of having none, fluid and abstract;
-the two states and the
-two ways of seeing them, with the spacer as one asymmetric perspective among
-several; the counts (resolution, density and sparsity), the points and the
-negative; why any arrangement is a strand; and the smallest cases, down to
-zero, which isn't one. it ends with worlds: the settings that decide what the
-defaults leave open.
+**in short.** a strand is a one-dimensional space of cells, each in one of two
+states. it can be read as a circle or a line, or have no shape: fluid, or
+abstract. this chapter covers the two shapes and the two ways of having none;
+the two states, the perspectives on them and the names each gives them, with
+the spacer as one asymmetric perspective among several; the counts (resolution,
+density and sparsity), the points and the negative; why any arrangement is a
+strand; and the smallest cases, down to zero, which isn't one. it ends with
+worlds: the settings that decide what the defaults leave open.
 
 the thinking behind it is in [the approach](../meta/approach.md).
 
@@ -99,28 +98,34 @@ and every move is the same. melt belongs to sibling fluid alone. nobody calls
 a liquid a solid that hasn't decided yet, and the name "fluid" is kept for the
 form that's adaptable, not the one that's waiting.
 
-## true and null
+## two states
 
 **builds on:** perspective, in "approach".
 
-a cell's two states are **true** (■) and **null** (◇). the pair can be seen in
-two ways, and both are valid:
+every cell is in one of two states. the strand itself doesn't say what the two
+are, or how they relate: that's a perspective, and there are two kinds:
 
-- **asymmetric, true/null**: a true cell holds something, and a null cell holds
-  nothing. null isn't the opposite of true, but its absence
-- **symmetric, true/false**: neither state is special, and each is the other's
-  negation. this is the perspective of logic, where the second state is
-  **false**
+- **asymmetric**: one state is something, and the other is its absence. the
+  second isn't the opposite of the first, but the lack of it
+- **symmetric**: neither state is special, and each is the other's negation
+
+each kind can be named in more than one way, and no pair of names is the only
+or the best one:
+
+| perspective | default names | other names that fit |
+| --- | --- | --- |
+| asymmetric | **true** (■) and **null** (◇) | present and absent, marked and unmarked |
+| symmetric | **true** and **false** | 1 and 0, yes and no |
+
+these docs prefer the asymmetric perspective, and call the states **true** and
+**null** by default: the measures take that perspective, and so do the words
+for cells. the functions that combine strands cell by cell come from logic,
+which is symmetric, and there null reads as false (see "functions"). true is
+the same in both default pairs; only the other name changes.
 
 null means absence, not unknown: a null cell is decided, and holds nothing. (in
 databases, null often means "unknown", a third state; here there's no third
 state.)
-
-true is the same in both; they differ only in what the other state is. the
-measures in these chapters take the asymmetric perspective, and so do the words
-for cells: true and null. the functions that combine strands cell by cell come
-from logic, and there null reads as false (see "functions"). elsewhere, the
-same pair often shows up as 1 and 0.
 
 the asymmetric perspective can be taken in more than one way:
 
@@ -173,7 +178,7 @@ follows a clear pattern, has some structure, or has no rhyme or reason.
 so two things need keeping apart:
 
 - **the strand as a device**: open-ended. it only says there are cells, each
-  true or null, and it holds any arrangement at all
+  in one of two states, and it holds any arrangement at all
 - **the meaning of an arrangement**: whether a particular one follows a rule,
   and where it came from (a rhythm, a set of numbers, a coin toss). that
   belongs to the arrangement, not to strands in general

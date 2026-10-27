@@ -38,7 +38,7 @@ a **discrete space**, in the sense used here, has three parts:
   cell's neighbours are the cells one step away either way, and the joints are
   where neighbours meet
 - **values**: each cell holds one value, from a set of values. a strand's set
-  has two, true and null. a row of amounts holds whole numbers, from 0 up to
+  has two states, true and null by default. a row of amounts holds whole numbers, from 0 up to
   the number of members in its stack
 
 _from memory_: in topology, a discrete space is something else. this is closer
@@ -95,7 +95,7 @@ a first sort of these chapters:
 | holds for any discrete space | worked out only for one dimension |
 | --- | --- |
 | cells and values | steps and directions, + and − |
-| true and null, and the two perspectives, for two values | distance as the + one, by default |
+| two states, and the two perspectives on them, for two values | distance as the + one, by default |
 | resolution, and a count per value | intervals, gaps and end gaps: "the next point" |
 | the negative, for two values | |
 | any arrangement; the smallest cases; zero | seams, bands and runs; bands become regions |
