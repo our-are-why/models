@@ -74,6 +74,14 @@ longer has to be the source of every piece of expertise. they can be a
 understood, while AI ties ideas from one subject into the concrete setting of
 another, a learner's own interest included.
 
+a general-purpose model is a poor fit for this as it stands. it's shaped to be
+helpful by answering, and a learner is often helped most by not being
+answered: by a question back, a different angle, another perspective, or
+encouragement to keep going. so a model meant for teaching probably needs a
+layer of its own, through fine-tuning or other training, aimed at taking part
+in the thinking rather than doing it: collaborating, and offering angles,
+instead of handing over results.
+
 **the case against.** AI is fallible, and a learner may not catch its
 mistakes. it can do the thinking the learner was meant to do, which defeats
 the point of teaching thought. and access to it isn't even. so AI's part is to
@@ -88,4 +96,5 @@ new.
 _from memory_: retrieval and grounding, in AI, where a model is given the
 source text to answer from rather than its recall; documentation written to
 be read by tools as well as people; the teacher as "guide on the side" rather
-than "sage on the stage" (Alison King); Bloom's two sigma problem.
+than "sage on the stage" (Alison King); Bloom's two sigma problem; Socratic
+questioning, which teaches by asking rather than telling.
