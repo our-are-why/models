@@ -28,9 +28,6 @@ becomes a view of it from strands (see "cross-cutting topics", in
 
 ## a discrete space
 
-**builds on:** strand, cell, state, in "basics"; joint, in "measures"; row of
-amounts, in "structures".
-
 a **discrete space**, in the sense used here, has three parts:
 
 - **cells**: separate places, with nothing in between
@@ -62,8 +59,6 @@ included (_from memory_: image processing calls these 4- and
 much of these chapters reads as close to self-evident.
 
 ## types as boundary conditions
-
-**builds on:** type, circular, linear, in "basics".
 
 a strand's type says what happens at its edges: circular, the last cell meets
 the first; linear, the ends stop. _from memory_: physics and simulation call

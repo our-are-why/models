@@ -10,7 +10,7 @@ into self-contained pieces. the docs are the product; this is the way they're
 made.
 
 the concepts here are listed, with stable IDs, in
-[concepts.md](../concepts.md).
+[concepts.md](../../models/concepts.md).
 
 ## mechanics
 

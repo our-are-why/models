@@ -1,10 +1,11 @@
 # concepts
 
-every concept these docs define, with a stable ID. IDs are numbered in the order
-they were first assigned, and never reused or renumbered: a renamed concept keeps
-its ID, and a retired one leaves a gap. **was** gives former names, and **builds on**
-lists the concepts its definition uses. the words here are short reminders; each
-chapter has the full definition.
+every concept these docs define, with a stable ID. IDs are numbered in the
+order they were first assigned, and never reused or renumbered: a renamed
+concept keeps its ID, and a retired one leaves a gap. **was** gives former
+names, and **builds on** lists the concepts its definition uses. the words here
+are short reminders; each chapter has the full definition. the meta groups come
+from `rough/meta/`, where the approach behind the docs is still forming.
 
 ## documents
 
@@ -21,9 +22,9 @@ from [`documents.md`](documents.md)
 | C132 | concept ID |  | C and a number, given in order, never reused or renumbered |  |
 | C133 | frozen version |  | a whole draft kept exactly as it was, as a record; never edited, and not part of the docs | C130 |
 
-## meta: approach
+## meta, in rough: approach
 
-from [`meta/approach.md`](meta/approach.md)
+from [`rough/meta/approach.md`](../rough/meta/approach.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
@@ -35,9 +36,9 @@ from [`meta/approach.md`](meta/approach.md)
 | C166 | questions before answers |  | an answer depends on its question, not the other way round; questions move understanding forward and show it; bounded questioning catches edge cases |  |
 | C170 | explicit over inferred |  | a distinction that matters is carried where it's used, in the notation, name or definition, not left to be inferred from context |  |
 
-## meta: semiotics
+## meta, in rough: semiotics
 
-from [`meta/semiotics.md`](meta/semiotics.md)
+from [`rough/meta/semiotics.md`](../rough/meta/semiotics.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
@@ -45,9 +46,9 @@ from [`meta/semiotics.md`](meta/semiotics.md)
 | C128 | semantics |  | how signs relate to what they stand for: what a well-written thing means | C127 |
 | C129 | pragmatics |  | how meaning depends on who uses the signs, and where; worlds sit here | C128, C002 |
 
-## meta: pedagogy
+## meta, in rough: pedagogy
 
-from [`meta/pedagogy.md`](meta/pedagogy.md)
+from [`rough/meta/pedagogy.md`](../rough/meta/pedagogy.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
@@ -62,26 +63,26 @@ from [`meta/pedagogy.md`](meta/pedagogy.md)
 | C160 | meta thread |  | the meta (abstraction, modelling, semantics, learning how to learn) as a subject of its own, with framings in every other | C137, C138 |
 | C161 | passion thread |  | something a learner chooses and keeps coming back to, with what they learn related to it as they go | C155 |
 
-## meta: documentation
+## meta, in rough: documentation
 
-from [`meta/documentation.md`](meta/documentation.md)
+from [`rough/meta/documentation.md`](../rough/meta/documentation.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
 | C141 | documentarian |  | someone who records how ideas look from a particular place, openly, without claiming the only view | C003 |
 | C142 | living document |  | a document revised as the thinking moves, with its history kept but not part of it | C133 |
 
-## meta: ai
+## meta, in rough: ai
 
-from [`meta/ai.md`](meta/ai.md)
+from [`rough/meta/ai.md`](../rough/meta/ai.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
 | C162 | shepherd |  | a teacher who guides, chooses what to look at next and judges what's understood, without being the source of every piece of expertise |  |
 
-## meta: process
+## meta, in rough: process
 
-from [`meta/process.md`](meta/process.md)
+from [`rough/meta/process.md`](../rough/meta/process.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |

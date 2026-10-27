@@ -9,9 +9,6 @@ the concepts here are listed, with stable IDs, in [concepts.md](../concepts.md).
 
 ## scopes
 
-**builds on:** circular, in "basics"; edges, label, in "notation"; step,
-scoped, in "measures".
-
 a **scope** takes a piece of a strand. it's written after the strand, in square
 brackets, and the strand's edges and resolution always come with it, because
 how a scope behaves depends on both:
@@ -96,8 +93,6 @@ different parents (see lift and collapse, in "functions").
 
 ## layers
 
-**builds on:** density, points, in "basics".
-
 a strand's true cells can become the cells of another strand. that second
 strand is a **layer**: it chooses among the first one's points. the first
 strand is the **root**, as with scopes.
@@ -168,8 +163,6 @@ smaller tiles. it's close to refinement, and it's left for later.
 
 ### collections
 
-**builds on:** strand, in "basics".
-
 a **collection** is several strands taken together. two things about a
 collection are independent of each other:
 
@@ -193,8 +186,6 @@ picks out strands too, and what it gives can be any of these kinds:
 repeats, or an order.
 
 ### stacks
-
-**builds on:** type, in "basics".
 
 to count across a collection, its strands are **stacked**: lined up cell by
 cell. stacking is a device for working with strands, not a new kind of strand,
@@ -222,8 +213,6 @@ framed, so `)x.x..(` and `)x..x.(` add to different columns, although as
 circles one is the other started from a different cell.
 
 ### weights
-
-**builds on:** true, points, in "basics".
 
     cell      0 1 2 3 4 5 6 7
     A         ■ ■ □ □ □ ■ □ □

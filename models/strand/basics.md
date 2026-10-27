@@ -9,7 +9,7 @@ with the spacer as one asymmetric perspective among several; the counts
 arrangement is a strand; and the smallest cases, down to zero, which isn't one.
 it ends with worlds: the settings that decide what the defaults leave open.
 
-the thinking behind it is in [the approach](../meta/approach.md).
+the thinking behind it is in [the approach](../../rough/meta/approach.md).
 
 the concepts here are listed, with stable IDs, in [concepts.md](../concepts.md).
 
@@ -39,8 +39,6 @@ deliberately left for later. one other kind of value comes up with weights (see
 "structures").
 
 ## types
-
-**builds on:** world, in "approach".
 
 a strand has a **type**: whether its last cell meets its first. the cells and
 their states stay the same either way; what the type changes is which cells are
@@ -78,8 +76,6 @@ a strand's type, whichever it is, is part of what it is, and it stays that way
 unless a function changes it (see "types in and out", in "functions").
 
 ## two states
-
-**builds on:** perspective, in "approach".
 
 every cell is in one of two states. the strand itself doesn't say what the two
 are, or how they relate: that's a perspective, and there are two kinds:
@@ -201,4 +197,5 @@ the states, which of abstract, unidirectional fluid and bidirectional fluid it
 uses, and what identity sets aside. by default, the running text takes the
 asymmetric perspective and unidirectional fluid. in an abstract world, read
 "fluid" as "abstract", and `/…/` as `|…|`. worlds aren't specific to strands:
-they're part of [the approach](../meta/approach.md) behind all these docs.
+they're part of [the approach](../../rough/meta/approach.md) behind all these
+docs.

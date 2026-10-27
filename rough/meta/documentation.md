@@ -6,7 +6,7 @@ moves, and read to use, to learn or to challenge. it's set apart from its
 neighbours: tutorials, references, specifications and journals.
 
 the concepts here are listed, with stable IDs, in
-[concepts.md](../concepts.md).
+[concepts.md](../../models/concepts.md).
 
 ## a record of perspective
 
@@ -51,7 +51,7 @@ the docs are easiest to read when it's clear what kind of writing they are:
 the docs are never finished. each chapter says what it is now; the history of
 how it got there is kept, not deleted, but it isn't the docs. a frozen version
 marks a point worth keeping whole (see "frozen versions", in
-[documents](../documents.md)).
+[documents](../../models/documents.md)).
 
 ## readers
 

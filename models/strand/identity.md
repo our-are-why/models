@@ -9,14 +9,12 @@ the concepts here are listed, with stable IDs, in [concepts.md](../concepts.md).
 
 ## essence and convention
 
-**builds on:** strand, in "basics".
-
 some things about a strand belong to the strand itself; others are choices we
 make to write it down or talk about it. to tell them apart, imagine two people
 drawing the same strand differently: starting at a different cell, counting
 the other way round, using other symbols. what they still agree on is
 essence/semantics; what they don't is convention. (the general idea, beyond
-strands, is in [the approach](../meta/approach.md).)
+strands, is in [the approach](../../rough/meta/approach.md).)
 
 - **essence**: the resolution, the density and the sparsity; the distances
   between cells; in a line, what sits at the ends. these are found in
@@ -37,9 +35,6 @@ the asymmetric perspective sees a thing and its absence, and the symmetric one
 sees two equals (see "two states", in "basics").
 
 ## identity
-
-**builds on:** state, type, resolution, in "basics"; Commit, Rotate, Reverse,
-Mirror, Unwind, Wind, in "functions".
 
 these chapters give identity a **default**: a starting point that any use can
 override, tightening or loosening it to fit what it's doing.

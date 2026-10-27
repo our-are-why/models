@@ -5,7 +5,7 @@ isn't. like every personal chapter, it's written in the first person, because
 it's about who's writing, and from where, so that a reader can weigh the rest.
 
 it defines no concepts of its own; the index of those is
-[concepts.md](../concepts.md).
+[concepts.md](../../models/concepts.md).
 
 ## what this is
 

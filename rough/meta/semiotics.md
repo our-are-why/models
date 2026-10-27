@@ -7,7 +7,7 @@ says which parts of the docs sit at which layer, so that a question can be
 asked at the right one.
 
 the concepts here are listed, with stable IDs, in
-[concepts.md](../concepts.md).
+[concepts.md](../../models/concepts.md).
 
 ## three layers
 

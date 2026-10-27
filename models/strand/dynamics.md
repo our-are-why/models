@@ -10,9 +10,6 @@ the concepts here are listed, with stable IDs, in [concepts.md](../concepts.md).
 
 ## going to infinity
 
-**builds on:** strand, resolution, zero, in "basics"; description, in
-"notation".
-
 every strand has a finite number of cells. infinity comes in through a
 **generator**: a precise rule or process that makes a strand at each
 resolution, n, that it covers. it doesn't have to cover them all: one might

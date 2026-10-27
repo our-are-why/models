@@ -9,8 +9,6 @@ the concepts here are listed, with stable IDs, in [concepts.md](../concepts.md).
 
 ## writing a strand down
 
-**builds on:** true, null, in "basics".
-
 a strand is written in one of two forms, which map one to one:
 
 - **keyboard**: `x` for true and `.` for null, with no spaces, in
@@ -51,8 +49,6 @@ strand sits on its own line with labels, the layout marks its edges.)
 
 ### edges show the type
 
-**builds on:** type, zero, in "basics".
-
 in the keyboard form, the edges around a strand say its type:
 
     )xx...x..(    circular          round brackets turned outward: the edges open
@@ -82,8 +78,6 @@ for a strand. `>…<` isn't used, so zero's middle can't be mistaken for edges
 turned inward.
 
 ### the display form
-
-**builds on:** type, in "basics".
 
 in the display form, the shapes of the cells carry the type, so no edges are
 needed. each shape is its keyboard edges closed up into every cell, and true and
@@ -122,8 +116,6 @@ cell, those are the first things to use.)
 
 ### the point form
 
-**builds on:** resolution, points, in "basics".
-
 a strand can also be written by its points, after its resolution:
 
     |xx...x..|   →   |8: 0,1,5|
@@ -136,8 +128,6 @@ shorter when few cells are true; the cell form shows the arrangement at a
 glance.
 
 ### labels
-
-**builds on:** strand, in "basics".
 
 a strand can be given a name, a **label**, to refer to it later:
 
@@ -154,8 +144,6 @@ changes to mean another. in these chapters, each example's labels belong to
 that example: the same letter can name a different strand in another one.
 
 ### descriptions
-
-**builds on:** resolution, density, in "basics".
 
 a **description** lists what's known about a strand, in braces:
 

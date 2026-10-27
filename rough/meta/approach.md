@@ -12,7 +12,7 @@ comes from it.
 this is the modelling part of the meta domain, which is about how every domain
 here is modelled and written down; why it's done at all is in
 [personal](personal.md). the concepts here are listed, with stable
-IDs, in [concepts.md](../concepts.md).
+IDs, in [concepts.md](../../models/concepts.md).
 
 ## how to read this
 
@@ -83,7 +83,7 @@ the top, not three folders down. structure is added once it's earned: a
 subdomain starts as one file, and becomes a folder when it grows chapters. and
 where it helps, one thing is reached from more than one place, the way a
 database denormalizes a record for access (see "cross-cutting topics", in
-[documents](../documents.md)). the structure follows the use, not the other way
+[documents](../../models/documents.md)). the structure follows the use, not the other way
 round.
 
 **why.** a hierarchy mirrored exactly makes every path long, and fixes a
@@ -348,7 +348,7 @@ and world; the notes on "cell" and "weight".
 **the case against.** plain words carry everyday meanings that technical words
 don't. and every renaming (slot to cell, filled to true, neutral to fluid,
 spacer to strand) costs readers who learned the old name;
-[concepts.md](../concepts.md) keeps former names for that reason.
+[concepts.md](../../models/concepts.md) keeps former names for that reason.
 
 **related.** the ubiquitous language of domain-driven design; affordance, in
 design and psychology.

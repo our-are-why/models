@@ -8,7 +8,7 @@ source of every piece of expertise, and questions, now that answers are
 cheap.
 
 the concepts here are listed, with stable IDs, in
-[concepts.md](../concepts.md).
+[concepts.md](../../models/concepts.md).
 
 ## AI as a reader
 

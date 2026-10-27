@@ -12,7 +12,7 @@ teaching learners to ask. each is a choice about how a reader learns, with its
 reasons and its costs.
 
 the concepts here are listed, with stable IDs, in
-[concepts.md](../concepts.md).
+[concepts.md](../../models/concepts.md).
 
 ## plain words first
 
@@ -35,7 +35,7 @@ elsewhere says so, in a **builds on** line, and the concept index checks that
 definitions bottom out: no chain of "builds on" comes back to where it
 started. order between chapters is shown in a map rather than fixed by
 numbers, since some chapters lean on each other (see "the map", in
-[documents](../documents.md)).
+[documents](../../models/documents.md)).
 
 the reason is that a learner can't hold an undefined word open for long: they
 fill it with a guess, and the guess becomes what they learned. when the strand
@@ -177,7 +177,7 @@ of them is labelled.
 **across the curriculum.** schools mostly divide teaching by subject, each in
 isolation: mathematics in the mathematics class, and hardly anywhere else. by
 the docs' own rule for topics that cut across domains (see "cross-cutting
-topics", in [documents](../documents.md)), mathematics would keep its home,
+topics", in [documents](../../models/documents.md)), mathematics would keep its home,
 and other subjects would each carry a framing of it: physics, music, art,
 economics or a workshop, teaching the same forms from their side, entangled
 with their own concerns. that may be where learning that transfers, and
@@ -186,7 +186,7 @@ critical thinking, come from.
 **in these docs.** strands were found this way. the work started in a noisy,
 meaningful setting, rhythms and evenly spread patterns, and the pure form came
 out of it: first the strand, then discrete space (see
-[space](../strand/space.md), in strand). both are kept: the chapters, and the
+[space](../../models/strand/space.md), in strand). both are kept: the chapters, and the
 path that led to them.
 
 **the case against.** noise can swamp a beginner, who learns better with the
