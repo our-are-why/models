@@ -134,7 +134,7 @@ from [`strand/notation.md`](strand/notation.md)
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
 | C029 | keyboard form | typed form | `x` for true and `.` for null, from cell 0, with edges. easy to enter by hand | C016, C017 |
-| C030 | display form |  | shapes, with a space between cells, that carry the type: ● ⚬, ▲ ▽, ■ ◇ | C029, C007 |
+| C030 | display form |  | shapes, with a space between cells, that carry the type; true full and null hollow, in the same shape: ● ○, ▲ △, ◢ ◿, ◣ ◺, ■ □ | C029, C007 |
 | C031 | symbol rules |  | the five rules any symbols follow: distinct states, separate cells, countable runs, minimize collisions, clear edges | C029 |
 | C032 | edges |  | the brackets that show a written strand's type: `)…(` circular, `<…>` linear, `/…/` unidirectional fluid, `\…\` bidirectional fluid, `\|…\|` abstract, `[…]` scoped, and `\|><\|` for zero | C029, C007, C028 |
 | C033 | point form |  | a strand written by its resolution and points: `\|8: 0,1,5\|` | C020, C023 |

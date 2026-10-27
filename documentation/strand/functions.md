@@ -93,12 +93,12 @@ strand. like stacking, this frames both strands, as written by default, and the
 same type rules apply: both circular, both linear or both fluid, and the
 result takes their type.
 
-    A                ■ ■ ◇ ◇ ◇ ■ ◇ ◇
-    B                ■ ◇ ◇ ■ ◇ ■ ◇ ◇
-    And(A, B)        ■ ◇ ◇ ◇ ◇ ■ ◇ ◇      true where both are
-    Or(A, B)         ■ ■ ◇ ■ ◇ ■ ◇ ◇      true where at least one is
-    Xor(A, B)        ◇ ■ ◇ ■ ◇ ◇ ◇ ◇      true where exactly one is
-    Without(A, B)    ◇ ■ ◇ ◇ ◇ ◇ ◇ ◇      true where A is and B isn't
+    A                ■ ■ □ □ □ ■ □ □
+    B                ■ □ □ ■ □ ■ □ □
+    And(A, B)        ■ □ □ □ □ ■ □ □      true where both are
+    Or(A, B)         ■ ■ □ ■ □ ■ □ □      true where at least one is
+    Xor(A, B)        □ ■ □ ■ □ □ □ □      true where exactly one is
+    Without(A, B)    □ ■ □ □ □ □ □ □      true where A is and B isn't
 
 the negative is the same idea for one strand: `Not(A)` is true wherever A
 isn't.

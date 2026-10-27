@@ -61,7 +61,7 @@ an interval is always one more than its gap: the gap, plus the step onto the
 next point.
 
     cell        0 1 2 3 4 5 6 7
-                ■ ■ ◇ ◇ ◇ ■ ◇ ◇       points 0, 1, 5
+                ■ ■ □ □ □ ■ □ □       points 0, 1, 5
 
     circular    intervals  1 4 3      add up to the resolution, 8
                 gaps       0 3 2      add up to the sparsity, 5
@@ -93,8 +93,8 @@ state, each as long as it goes. a band of two or more cells is a **run**.
 (**panel** would work as well as band: panels are what seams join.)
 
     cell      0 1 2 3 4 5 6 7
-              ■ ■ ◇ ◇ ◇ ■ ◇ ◇
-    bands     ■ ■ | ◇ ◇ ◇ | ■ | ◇ ◇       4 bands, 3 of them runs
+              ■ ■ □ □ □ ■ □ □
+    bands     ■ ■ | □ □ □ | ■ | □ □       4 bands, 3 of them runs
 
 - **linear**: `<xx...x..>` has 3 seams and 4 bands, so one more band than seams
 - **circular**: the last and first cells are neighbours too, so there can be a

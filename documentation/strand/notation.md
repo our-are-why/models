@@ -87,38 +87,38 @@ turned inward.
 
 in the display form, the shapes of the cells carry the type, so no edges are
 needed. each shape is its keyboard edges closed up into every cell, and true and
-null always differ twice: full or hollow, and in size, direction or turn:
+null are the same shape in the same place, full or hollow:
 
-    )xx...x..(    ● ● ⚬ ⚬ ⚬ ● ⚬ ⚬         circles, from round brackets: big full
-                                          true, small hollow null
-    <xx...x..>    ▲ ▲ ▽ ▽ ▽ ▲ ▽ ▽         triangles, from < and > turned upright:
-                                          true up, null down
-    |xx...x..|    ■ ■ ◇ ◇ ◇ ■ ◇ ◇         squares, from straight walls: a full
-                                          square, and a hollow one turned (a diamond)
-    /xx...x../    not chosen yet          fluid's shapes are still to be chosen; until
-    \xx...x..\                            then, fluid strands are written in the keyboard form
-    [xx...x..]    [ ▲ ▲ ▽ ▽ ▽ ▲ ▽ ▽ ]     a piece is linear in its own terms;
+    )xx...x..(    ● ● ○ ○ ○ ● ○ ○         circles, from round brackets
+    <xx...x..>    ▲ ▲ △ △ △ ▲ △ △         triangles, from < and > turned upright
+    |xx...x..|    ■ ■ □ □ □ ■ □ □         squares, from straight walls
+    /xx...x../    ◢ ◢ ◿ ◿ ◿ ◢ ◿ ◿         corner triangles, from / closed up: cut
+                                          along a forward lean
+    \xx...x..\    ◣ ◣ ◺ ◺ ◺ ◣ ◺ ◺         corner triangles, from \ closed up: cut
+                                          along a back lean
+    [xx...x..]    [ ▲ ▲ △ △ △ ▲ △ △ ]     a piece is linear in its own terms;
                                           the brackets say there's more beyond
     |><|          |▶◀|                    zero
 
 a single ● can't be mistaken for anything else, so the shapes do the job the
-edges do in the keyboard form. most figures in these chapters use the abstract
-squares: they don't need a type. where no cells are drawn (in points and
-labels, below, and in scopes, in "structures"), the edges stay, with → and − in
-place of -> and -. square brackets around cells get a space inside them, like
-the cells do: `[ ▲ ▽ ▲ ]`. ranges and other numbers stay as they are: `[5→8]`.
+edges do in the keyboard form. because true and null keep the same shape in the
+same place, a row keeps an even rhythm, whichever states sit side by side. most
+figures in these chapters use the abstract squares: they don't need a type.
+where no cells are drawn (in points and labels, below, and in scopes, in
+"structures"), the edges stay, with → and − in place of -> and -. square
+brackets around cells get a space inside them, like the cells do: `[ ▲ △ ▲ ]`.
+ranges and other numbers stay as they are: `[5→8]`.
 
-the display form needs geometric shapes (● ⚬ ▲ ▽ ■ ◇), which most modern fonts
-include. some terminals give them two columns instead of one, which can upset
-alignment; ⚬ is drawn narrower than the others there, so circular rows are the
-first to go out of line. where they aren't available, write the keyboard form,
-or any other symbols that follow the five rules: the shapes are one
-read-optimized choice, not the only one.
+the display form needs geometric shapes (● ○ ▲ △ ◢ ◿ ◣ ◺ ■ □), which most
+modern fonts include. some terminals give them two columns instead of one, and
+not every font draws them all the same width, which can upset alignment. where
+they aren't available, write the keyboard form, or any other symbols that
+follow the five rules: the shapes are one read-optimized choice, not the only
+one.
 
-(a tangent: having true and null differ twice spends a second visual
-difference, size, direction or turn, that could otherwise carry something
-else. if a later use needs to show an extra property of each cell, that
-second difference is the first thing to give back.)
+(a tangent: with true and null differing only in fill, size, direction and
+turn are left free. if a later use needs to show an extra property of each
+cell, those are the first things to use.)
 
 ### the point form
 
@@ -201,7 +201,7 @@ comes first: starting `)xx...x..(` at cell 5 gives `)x..xx...(`; in points,
 write each cell's state as 1 for true and 0 for null and you get a binary
 string:
 
-    ■ ■ ◇ ◇ ◇ ■ ◇ ◇   →   11000100
+    ■ ■ □ □ □ ■ □ □   →   11000100
 
 it's a familiar way to write something like a strand, and it follows the first
 three rules above, though not the fourth, and with no edges, not the fifth

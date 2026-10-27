@@ -16,12 +16,12 @@ the concepts here are listed, with stable IDs, in [concepts.md](../concepts.md).
 a **strand** is a one-dimensional, discrete space made of cells, where each
 cell is in one of two states.
 
-    ■ ■ ◇ ◇ ◇ ■ ◇ ◇
+    ■ ■ □ □ □ ■ □ □
 
 - **one-dimensional**: the cells lie along a single dimension. from any cell
   you can only step one way or the other
 - **discrete**: it's made of separate cells, with no positions in between
-- **two states**: each cell is in exactly one of them, drawn here as ■ and ◇
+- **two states**: each cell is in exactly one of them, drawn here as ■ and □
 
 the picture runs left to right, but that's only one way to draw it: a strand
 isn't horizontal, or in time, or laid out in any particular way.
@@ -47,7 +47,7 @@ their states stay the same either way; what the type changes is which cells are
 neighbours. there are two **solid** types, each holding its form:
 
     cell   0 1 2 3 4 5 6 7
-           ■ ■ ◇ ◇ ◇ ■ ◇ ◇
+           ■ ■ □ □ □ ■ □ □
 
 - **circular**: the last cell is next to the first, so there are no ends, and
   between two cells there are two distances, one each way round. on its own, a
@@ -93,7 +93,7 @@ or the best one:
 
 | perspective | default names | other names that fit |
 | --- | --- | --- |
-| asymmetric | **true** (■) and **null** (◇) | present and absent, marked and unmarked |
+| asymmetric | **true** (■) and **null** (□) | present and absent, marked and unmarked |
 | symmetric | **true** and **false** | 1 and 0, yes and no |
 
 these docs prefer the asymmetric perspective, and call the states **true** and
@@ -124,7 +124,7 @@ perspective a world can take; the strand itself takes none of them.
 - **density**: how many of them are true
 - **sparsity**: how many are null
 
-      ■ ■ ◇ ◇ ◇ ■ ◇ ◇     resolution 8, density 3, sparsity 5
+      ■ ■ □ □ □ ■ □ □     resolution 8, density 3, sparsity 5
 
 density and sparsity always add up to the resolution.
 
@@ -132,10 +132,10 @@ these three say how many cells of each kind there are, not where they are,
 so many strands share the same three. with 4 cells, 2 of them true, there are
 six:
 
-    ■ ■ ◇ ◇    ■ ◇ ■ ◇    ■ ◇ ◇ ■    ◇ ■ ■ ◇    ◇ ■ ◇ ■    ◇ ◇ ■ ■
+    ■ ■ □ □    ■ □ ■ □    ■ □ □ ■    □ ■ ■ □    □ ■ □ ■    □ □ ■ ■
 
 what the counts leave out, the **points** give: the positions of a strand's
-true cells. for `■ ■ ◇ ◇ ◇ ■ ◇ ◇` they're 0, 1 and 5, and the density is how
+true cells. for `■ ■ □ □ □ ■ □ □` they're 0, 1 and 5, and the density is how
 many there are.
 
 swap every cell's state and you get the strand's **negative**: the same
@@ -150,9 +150,9 @@ a strand puts no condition on which of its cells are true: any
 arrangement/distribution of true and null cells is a strand, whether it
 follows a clear pattern, has some structure, or has no rhyme or reason.
 
-    ■ ■ ◇ ◇ ■ ■ ◇ ◇     a repeating pattern
-    ■ ■ ■ ◇ ◇ ◇ ◇ ◇     one block
-    ■ ■ ◇ ◇ ◇ ■ ◇ ◇     no particular pattern
+    ■ ■ □ □ ■ ■ □ □     a repeating pattern
+    ■ ■ ■ □ □ □ □ □     one block
+    ■ ■ □ □ □ ■ □ □     no particular pattern
 
 so two things need keeping apart:
 

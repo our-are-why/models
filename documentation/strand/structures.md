@@ -103,8 +103,8 @@ strand is a **layer**: it chooses among the first one's points. the first
 strand is the **root**, as with scopes.
 
     cell      0 1 2 3 4 5 6 7
-    root      ■ ■ ◇ ◇ ◇ ■ ◇ ◇      points 0, 1, 5
-    layer     ■ ◇       ■          its 3 cells are the root's 3 points; it keeps 0 and 5
+    root      ■ ■ □ □ □ ■ □ □      points 0, 1, 5
+    layer     ■ □       ■          its 3 cells are the root's 3 points; it keeps 0 and 5
 
 layers form a **cascade**, which can go deeper: a layer's points can carry a
 further layer, and so on.
@@ -155,8 +155,8 @@ layer:
 in the display form, the root sits at the top, whichever way the cascade is
 written, and each layer's cells sit under the points they stand for:
 
-    ■ ■ ◇ ◇ ◇ ■ ◇ ◇
-    ■ ◇       ■
+    ■ ■ □ □ □ ■ □ □
+    ■ □       ■
 
 ### cells that open into strands
 
@@ -226,9 +226,9 @@ circles one is the other started from a different cell.
 **builds on:** true, points, in "basics".
 
     cell      0 1 2 3 4 5 6 7
-    A         ■ ■ ◇ ◇ ◇ ■ ◇ ◇
-    B         ■ ◇ ◇ ■ ◇ ■ ◇ ◇
-    C         ◇ ■ ◇ ◇ ◇ ■ ■ ◇
+    A         ■ ■ □ □ □ ■ □ □
+    B         ■ □ □ ■ □ ■ □ □
+    C         □ ■ □ □ □ ■ ■ □
               ---------------
     weights   2 2 0 1 0 3 1 0
 

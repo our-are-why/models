@@ -62,7 +62,7 @@ even when they leave things out.
 
 ## one running example
 
-the strand chapters keep coming back to one strand, `■ ■ ◇ ◇ ◇ ■ ◇ ◇`, with
+the strand chapters keep coming back to one strand, `■ ■ □ □ □ ■ □ □`, with
 points 0, 1 and 5. it's counted, measured, scoped, stacked and rotated, so
 that each new idea is the only new thing on the page. new examples come in
 only when the running one can't show what's needed.
