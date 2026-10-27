@@ -4,10 +4,9 @@
 back. primitives each do one basic thing, such as rotate, join, commit or
 threshold; named composites are built from them, such as repeat, splice or
 flatten. lines and circles get their own functions, and a fluid strand can
-borrow a reading while a function works.
+borrow a type while a function works.
 
-**builds on:** strand, circular, linear, fluid, in "basics"; scope, in
-"structures".
+**builds on:** strand, in "basics"; scope, in "structures".
 
 the concepts here are listed, with stable IDs, in [concepts.md](../concepts.md).
 
@@ -47,23 +46,43 @@ window onto a strand, which changes what's looked at, not the strand itself.
 taking a scope, sliding it and lifting it are of this kind. detach and flatten
 are the bridges from a view, or a cascade, back to a strand of its own.
 
-what's allowed depends on the readings going in, by the same idea as stacks:
-writing a strand circular or linear says its reading is part of its structure;
-writing it fluid leaves the shape out, so it can take whichever one the
-function needs.
+## types in and out
 
-a function can borrow a reading while it works, as long as just one reading
-makes sense for it and its result doesn't depend on it afterwards, and **fluid
-in gives fluid out**: committing to a reading is left to whoever uses the
-result. a fluid strand can be rotated as a circle and then read as a line: with
-`N := |xx...x..|`, `Rotate(N, 5)` is `|x..xx...|`, and `<Rotate(N, 5)>` is
-`<x..xx...>`. the exceptions are the functions whose job is the reading
-itself: commit, unwind and wind, and melt, where a world allows it.
+**builds on:** type, circular, linear, fluid, in "basics".
 
-each function does one kind of thing to one kind of strand. when the same idea
-means different things for lines and circles, they get different functions,
-rather than one function that behaves differently depending on what it's
-given.
+every function has an opinion on the types it takes and gives, and three rules
+set it:
+
+1. **types are kept by default**: a function gives back the type it was given.
+   circle in, circle out; fluid in, fluid out; abstract in, abstract out. if it
+   needs a solid type to do its work, it borrows one for the move and keeps
+   nothing of it, as long as just one type makes sense for the move. committing
+   is left to whoever uses the result: with `N := /xx...x../`, `Rotate(N, 5)`
+   is `/x..xx.../`, and `<Rotate(N, 5)>` is `<x..xx...>`
+2. **changing type is a function's whole job, or no part of it**: the only
+   functions that give back a different type are the ones named for it.
+   commit, unwind and wind, melt where a world allows it, and detach
+3. **where a meaning doesn't apply, the function isn't defined**: each function
+   does one kind of thing to one kind of strand. when the same idea means
+   different things for lines and circles, they get different functions,
+   rather than one function that behaves differently depending on what it's
+   given
+
+| function | takes | gives |
+| --- | --- | --- |
+| Rotate, Mirror | circular, fluid, abstract | the same type |
+| Reverse | linear, fluid, abstract | the same type |
+| Join | lines, fluid or abstract | linear if either is linear, otherwise the same type |
+| Not, And, Or, Xor, Without | strands of one type | that type |
+| Weights, Threshold | a stack or row of one type | a row or strand of that type |
+| Commit | fluid or abstract | circular or linear |
+| Unwind / Wind | circular / linear | linear / circular |
+| Melt | circular or linear, for bidirectional fluid only | bidirectional fluid |
+| Detach | a scoped piece | linear |
+
+_from memory_: the first rule is close to parametric polymorphism, a function
+that works the same whatever type it's given, and Philip Wadler's "theorems
+for free" shows that such a function can't secretly depend on the type.
 
 ## combining strands
 
@@ -71,8 +90,8 @@ given.
 
 two strands with the same resolution can be combined cell by cell into a new
 strand. like stacking, this frames both strands, as written by default, and the
-same reading rules apply: both circular, both linear or both fluid, and the
-result takes their reading.
+same type rules apply: both circular, both linear or both fluid, and the
+result takes their type.
 
     A                ■ ■ ◇ ◇ ◇ ■ ◇ ◇
     B                ■ ◇ ◇ ■ ◇ ■ ◇ ◇
@@ -110,12 +129,12 @@ one is, and `And(A, B, C)` where all are. but `Xor(A, B, C)` doesn't mean
 
 **builds on:** fluid, commitment, in "basics"; edges, in "notation".
 
-committing gives a fluid strand a reading, by putting edges around it. it's
+committing gives a fluid strand a type, by putting edges around it. it's
 more than a way of looking at it: the cells stay as they are, but the result is
-a new strand, whose reading is part of what it is. the fluid one stays fluid.
+a new strand, whose type is part of what it is. the fluid one stays fluid.
 in programming terms, it's a cast: turning a value into a more specific type.
 
-    N := |xx...x..|
+    N := /xx...x../
     )N(                       →  )xx...x..(       committed circular
     <N>                       →  <xx...x..>       committed linear
 
@@ -131,36 +150,48 @@ there are two places to commit, and they say different things:
   part of the structure. using the result as a line afterwards takes a
   conversion: `Unwind(Rotate( )N(, 5))` gives `<x..xx...>`
 - **on what comes out**: `<Rotate(N, 5)>` keeps N fluid through the rotation,
-  which borrows a circular reading, and commits only the result, as a line:
+  which borrows the circular type, and commits only the result, as a line:
   `<x..xx...>`. this says the circle was only needed for the move
 
-both arrive at the same cells here. which to use depends on whether the reading
-is part of the structure, or a shape given later.
+both arrive at the same cells here. which to use depends on whether the type is
+part of the structure, or given later.
 
 commitment is one-way by default: nothing takes a committed strand back to
-fluid. that's how abstract strands and hierarchical fluid work (see "abstract
-and fluid", in "basics").
+fluid. what each allows (see "types", in "basics"):
+
+| model | committing | melting back |
+| --- | --- | --- |
+| abstract, `\|…\|` | available, not expected; one-way if it happens | no |
+| unidirectional fluid, `/…/` | one-way | no |
+| bidirectional fluid, `\…\` | yes | yes, by melt |
+
+abstract strands and unidirectional fluid allow exactly the same moves, and
+differ only in what the strand is taken to be, which is why the running text,
+written for unidirectional fluid, holds for abstract strands too. melt belongs
+to bidirectional fluid alone.
 
 ### melt, in some worlds
 
-**builds on:** world, in "approach"; sibling fluid, in "basics".
+**builds on:** world, in "approach"; bidirectional fluid, in "basics".
 
-for sibling fluid, a form beside circles and lines (see "abstract and fluid",
-in "basics"), `Melt(S)` forgets a committed strand's shape, and gives the
-fluid strand with the same cells:
+for bidirectional fluid, where change goes both ways (see "types", in
+"basics"), `Melt(S)` forgets a committed strand's type, and gives the fluid
+strand with the same cells:
 
-    Melt( )xx...x..( )      →  |xx...x..|
-    Melt(<xx...x..>)        →  |xx...x..|
+    Melt( )xx...x..( )      →  \xx...x..\
+    Melt(<xx...x..>)        →  \xx...x..\
 
 - the triangle closes: unwinding is melting and committing as a line,
   `Unwind(C)` is `<Melt(C)>`, and winding is `) Melt(L) (`
-- where the shape is essential, melting throws away meaning, and isn't valid:
-  a clock face is a circle in any world that cares about time
-- for abstract strands and hierarchical fluid, melt doesn't fit: a choice
-  isn't unmade, and the forms only come from fluid. a hierarchy read the other way,
-  as "a circle is a fluid strand with a shape added", would allow forgetting
-  the shape, but then fluid and the forms can each become the other, which is
-  sibling fluid under another name
+- where the type is essential, melting throws away meaning, and isn't valid: a
+  clock face is a circle in any world that cares about time
+- for abstract strands, there's no form to melt back into: setting a type aside
+  is a way of looking, not a function, and it's what `==` and `===` already do
+  (see "identity")
+- for unidirectional fluid, melt doesn't fit: change only goes one way, from
+  fluid to solid. a model that also allowed forgetting the type, as in "a
+  circle is a fluid strand with a type added", would let fluid and the solid
+  types each become the other, which is bidirectional fluid under another name
 
 ### rotate
 
@@ -176,7 +207,7 @@ two cells back from cell 0.
 
 - **circular**: yes. this is the rotating described in "writing a strand
   down", in "notation"
-- **fluid**: yes, read circularly for the move; the result stays fluid
+- **fluid**: yes, as a circle for the move; the result stays fluid
 - **linear**: no. a line has no way round to rotate along. a scoped piece can
   slide along its parent instead
 
@@ -206,7 +237,7 @@ part the window shows changes.
   asked for without saying so
 - **fluid parent**: within the ends, it slides as usual. crossing an end would
   only make sense if the parent were circular, and the window stays tied to its
-  parent afterwards, so the parent's reading has to be committed first: for a
+  parent afterwards, so the parent's type has to be committed first: for a
   fluid parent N, `)N(` to wrap round, `<N>` to stay bounded
 - a scope of a scope slides within its immediate parent. lifting it first lets
   it slide within the parent above (see lift)
@@ -222,9 +253,9 @@ part the window shows changes.
 
 - **linear**: yes
 - **circular**: no; a circle is mirrored instead
-- **fluid**: yes, read as a line for the move; the result stays fluid.
-  `Reverse(|xx...x..|)` is `|..x...xx|`, while `Mirror(|xx...x..|)` is
-  `|x..x...x|`: two different functions, so nothing is left ambiguous
+- **fluid**: yes, as a line for the move; the result stays fluid.
+  `Reverse(/xx...x../)` is `/..x...xx/`, while `Mirror(/xx...x../)` is
+  `/x..x...x/`: two different functions, so nothing is left ambiguous
 
 ### mirror
 
@@ -239,7 +270,7 @@ cell j goes to cell −j, so the other cells come round the other way.
 - **circular**: yes. whether the mirror line comes out at a cell or at a joint
   on the far side depends on whether the resolution is even or odd; the
   function is the same either way
-- **fluid**: yes, read circularly for the move; the result stays fluid
+- **fluid**: yes, as a circle for the move; the result stays fluid
 - **linear**: no; that's reverse
 - mirroring twice gives the circle back, and mirror and rotate combine the way
   reflections and turns do: `Mirror(Rotate(C, k))` is `Rotate(Mirror(C), -k)`
@@ -257,7 +288,7 @@ line.
 
     Join(<x.>, <.xx>)      →  <x..xx>
 
-- only something with free ends can be joined: a line, or a fluid strand read
+- only something with free ends can be joined: a line, or a fluid strand taken
   as one. joining two fluid strands gives a fluid one; joining a fluid strand
   to a line gives a line
 - a circle written circular says it has no ends, so there's nothing to attach.
@@ -271,9 +302,9 @@ line.
 
 **builds on:** circular, linear, commitment, in "basics".
 
-these two change a committed reading, so they're the only functions that turn
-a circle into a line, or a line into a circle, directly. (with sibling fluid,
-melting and then committing is another route: see melt.)
+these two change a committed type, so they're the only functions that turn a
+circle into a line, or a line into a circle, directly. (with bidirectional
+fluid, melting and then committing is another route: see melt.)
 
 `Unwind(C)` opens a circle into a line, starting from its frame's cell 0.
 `Wind(L)` joins a line's two ends into a circle.
@@ -288,7 +319,7 @@ melting and then committing is another route: see melt.)
 - the round trip loses nothing: winding an unwound circle gives it back, and
   unwinding a wound line gives the line back, since both start at cell 0
 - unwind takes a circle and wind takes a line: they're the conversions between
-  the two committed shapes. a fluid strand doesn't need them, since it commits
+  the two solid types. a fluid strand doesn't need them, since it commits
   directly, as `)N(` or `<N>`. this keeps the two moves apart, as the
   comparisons in "identity" do: committing is fitting (`~=`), and converting
   is unwind and wind (`<->`)
@@ -314,7 +345,7 @@ their own: the window's edges become free ends.
     Detach(A)              →  <x..xx>
 
 - the result is linear: a piece is already linear in its own terms, and by
-  default a reading only goes one way. `Wind(Detach(A))` makes it a circle
+  default commitment only goes one way. `Wind(Detach(A))` makes it a circle
 - detaching forgets the context: the parent, and where the piece sat in it. so
   `Detach(A) === A`, the same cells, but they aren't the same strand: one is
   whole, the other a part. there's no way back, except taking the scope from
@@ -357,7 +388,7 @@ upper layer's resolution, and shows the deepest choices on its cells.
     Press(Press(K))        →  |.....x.x|
 
 - a root with one layer presses to a single strand, with the root's
-  resolution and reading
+  resolution and type
 - it forgets one layer, the way lift forgets one parent: the result doesn't
   show that it was chosen in two steps
 - there's no way back: many cascades press to the same one
@@ -367,7 +398,7 @@ upper layer's resolution, and shows the deepest choices on its cells.
 **builds on:** cell weights, row of amounts, in "structures".
 
 `Weights(S)` counts a stack's true cells, column by column, and gives the row
-of amounts, with the stack's reading (see "weights", in "structures"):
+of amounts, with the stack's type (see "weights", in "structures"):
 
     Weights((A, B, C))          →  |2 2 0 1 0 3 1 0|
     Weights( )(A, B, C)( )      →  )2 2 0 1 0 3 1 0(
@@ -377,7 +408,7 @@ of amounts, with the stack's reading (see "weights", in "structures"):
 **builds on:** row of amounts, in "structures".
 
 `Threshold(W, k)` turns a row of amounts back into a strand: a cell is true
-where its amount is at least k, and the result keeps the row's reading. it's
+where its amount is at least k, and the result keeps the row's type. it's
 the bridge from amounts back to states, the way detach is the bridge from a
 view. with the stack A, B, C from "weights", in "structures":
 
@@ -407,8 +438,8 @@ the study of strings writes this as a power, and here `L^3` is shorthand for
 
 - **linear**: yes
 - **fluid**: yes, and the result stays fluid: the copies come out as the same
-  cells whichever way it's read, so nothing depends on a borrowed reading.
-  `|x..|^3` is `|x..x..x..|`
+  cells whichever type it's given, so nothing depends on a borrowed type.
+  `/x../^3` is `/x..x..x../`
 - **circular**: no. a circle traced round m times takes three moves, not one
   basic one, so it's written out when a use wants it:
   `Wind(Repeat(Unwind(C), m))`
@@ -466,7 +497,7 @@ shown on its root's cells.
     Flatten(|xx...x..| >> |x.x|)              →  |x....x..|
     Flatten(|xx...x.x| >> |x.xx| >> |.xx|)    →  |.....x.x|
 
-- the result has the root's resolution and reading
+- the result has the root's resolution and type
 - flattening forgets the layers, the way detach forgets a context: the
   flattened strand doesn't show that it was chosen in steps (see "layers", in
   "structures")

@@ -62,11 +62,11 @@ its own, and any combination can occur, with one exception noted below.
 **how strands relate as n grows**
 
 - **growth/extension**: earlier cells never change; new ones are added. it
-  reads like time passing, and fits the linear reading, where a line has an
+  reads like time passing, and fits the linear type, where a line has an
   end to grow from. making the cells whose number is prime true:
   `|..xx.x.x|` → `|..xx.x.x...x|`
 - **refinement/subdivision**: each strand describes the same whole at a finer
-  grain, in either reading. making cell j true when 2j is less than n:
+  grain, as either type. making cell j true when 2j is less than n:
   `|xx..|` → `|xxx..|` → `|xxx...|` → `|xxxx....|`. what counts as "the same
   whole" depends on the context; refinement is named here as one force in a
   strand's dynamics, not pinned down

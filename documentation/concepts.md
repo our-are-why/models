@@ -33,6 +33,7 @@ from [`meta/approach.md`](meta/approach.md)
 | C146 | basic level |  | the level where a thing is looked for and named; the docs organize there, and state the ancestry in words |  |
 | C152 | reduction |  | a simpler form taken on purpose, for a use, setting meaning aside; equal as a value, not as a meaning | C003 |
 | C166 | questions before answers |  | an answer depends on its question, not the other way round; questions move understanding forward and show it; bounded questioning catches edge cases |  |
+| C170 | explicit over inferred |  | a distinction that matters is carried where it's used, in the notation, name or definition, not left to be inferred from context |  |
 
 ## meta: semiotics
 
@@ -100,14 +101,15 @@ from [`strand/basics.md`](strand/basics.md)
 | C004 | strand | spacer | a one-dimensional, discrete space of cells, each in one of two states; a kind of discrete space |  |
 | C005 | cell | slot | one piece of a strand's space, with a position and a state | C004 |
 | C006 | state |  | what a cell holds: one of two states, named true and null by default | C005 |
-| C007 | reading | view | how a strand is read: which cells are neighbours, and what a position means | C004 |
-| C008 | circular |  | a reading where the last cell is next to the first, so there are no ends | C007 |
-| C009 | linear |  | a reading where the first and last cells are ends | C007 |
-| C010 | fluid | neutral, concrete fluid | a strand with no shape of its own, as a form in its own right: adaptable, like a liquid taking its container's shape | C007 |
-| C011 | commitment |  | once a strand is read circular or linear, that's part of what it is, and doesn't change on its own | C008, C009, C010 |
-| C012 | abstract | abstract fluid | a strand with no shape yet: a placeholder for a circle or a line, waiting to be made concrete; written `\|…\|` like fluid | C007 |
-| C014 | hierarchical fluid |  | fluid above circles and lines, which come from it, and only that way; allows the same moves as abstract; excludes sibling fluid; a world picks between them | C010, C011, C012, C002 |
-| C015 | sibling fluid |  | fluid as a third form beside circles and lines, any of the three becoming any other; excludes hierarchical fluid; a world picks between them | C010, C002 |
+| C007 | type | reading, view | whether a strand's last cell meets its first: settled by the solid types, circular and linear; left open by fluid and abstract | C004 |
+| C169 | solid type |  | a type that holds its form, settling whether the last cell meets the first: circular or linear | C007 |
+| C008 | circular |  | a solid type where the last cell is next to the first, so there are no ends | C169 |
+| C009 | linear |  | a solid type where the first and last cells are ends | C169 |
+| C010 | fluid | neutral, concrete fluid | a concrete type in its own right, adaptable: neither circular nor linear; a use that needs a solid type gives it one | C007 |
+| C011 | commitment |  | giving a fluid or abstract strand a solid type; one-way by default | C008, C009, C010, C012 |
+| C012 | abstract | abstract fluid | the strand apart from either solid type, only what both share; a solid type may never apply to it; written `\|…\|` | C007 |
+| C014 | unidirectional fluid | hierarchical fluid | written `/…/`; fluid that can become circular or linear, but not back; allows the same moves as abstract; a world says whether it uses it | C010, C011, C012, C002 |
+| C015 | bidirectional fluid | sibling fluid | written `\…\`; fluid where any of the three types can become any other; a world says whether it uses it | C010, C002 |
 | C016 | true | filled | the default name for one state: the one that holds something, read asymmetrically, or one of two equals, read symmetrically | C006, C018, C019 |
 | C017 | null | empty | the default name for the other state, read asymmetrically: the absence of true, not unknown | C006, C018 |
 | C018 | asymmetric perspective |  | one state is something, the other its absence; true and null by default, though other names fit (present and absent, marked and unmarked). the measures take this one | C006, C003 |
@@ -131,10 +133,10 @@ from [`strand/notation.md`](strand/notation.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
-| C029 | typed form |  | `x` for true and `.` for null, from cell 0, with edges. easy to enter by hand | C016, C017 |
-| C030 | display form |  | shapes, with a space between cells, that carry the reading: ● ⚬, ▲ ▽, ■ ◇ | C029, C007 |
+| C029 | keyboard form | typed form | `x` for true and `.` for null, from cell 0, with edges. easy to enter by hand | C016, C017 |
+| C030 | display form |  | shapes, with a space between cells, that carry the type: ● ⚬, ▲ ▽, ■ ◇ | C029, C007 |
 | C031 | symbol rules |  | the five rules any symbols follow: distinct states, separate cells, countable runs, minimize collisions, clear edges | C029 |
-| C032 | edges |  | the brackets that show a written strand's reading: `)…(` circular, `<…>` linear, `[…]` scoped, `\|…\|` fluid, and `\|><\|` for zero | C029, C007, C028 |
+| C032 | edges |  | the brackets that show a written strand's type: `)…(` circular, `<…>` linear, `/…/` unidirectional fluid, `\…\` bidirectional fluid, `\|…\|` abstract, `[…]` scoped, and `\|><\|` for zero | C029, C007, C028 |
 | C033 | point form |  | a strand written by its resolution and points: `\|8: 0,1,5\|` | C020, C023 |
 | C034 | label |  | a name for a strand, `S := …`, defined once; each example's labels are its own | C004 |
 | C035 | description |  | what's known about a strand, in braces with keys: `{r: 12, d: 7}`. it picks out every strand that fits | C020, C021 |
@@ -181,10 +183,10 @@ from [`strand/structures.md`](strand/structures.md)
 | C062 | multiset |  | a collection with no order, repeats allowed: `{#A, A, B#}`, or `⟅A, A, B⟆` in display | C060 |
 | C063 | sequence |  | a collection in order, repeats allowed: `(A, A, B)` | C060 |
 | C064 | ordered set |  | a collection in order, with no repeats | C060 |
-| C065 | stack |  | a collection lined up cell by cell, sharing one reading: `)(A, B)(`, `<(A, B)>`, `\|(A, B)\|` | C060, C007 |
-| C066 | frame |  | the fixed choices for how a member lines up in a stack: its cell 0, its direction, its reading | C065 |
+| C065 | stack |  | a collection lined up cell by cell, sharing one type: `)(A, B)(`, `<(A, B)>`, `\|(A, B)\|` | C060, C007 |
+| C066 | frame |  | the fixed choices for how a member lines up in a stack: its cell 0, its direction, its type | C065 |
 | C067 | cell weights |  | how many members are true in each column of a stack | C065, C016 |
-| C068 | row of amounts |  | numbers on a stack's cells, with its reading: `\|2 2 0 1 0 3 1 0\|`. not a strand | C067 |
+| C068 | row of amounts |  | numbers on a stack's cells, with its type: `\|2 2 0 1 0 3 1 0\|`. not a strand | C067 |
 | C069 | strand weight | spacer weight | a member's cell weights added up at its points (or score): how much it agrees with the whole | C067, C023 |
 | C070 | stages | build-up | an ordered stack's running weights, one row per member as it goes on | C067, C063 |
 | C071 | weak emergence |  | weights can show structure of the whole that no member shows on its own | C067 |
@@ -200,15 +202,16 @@ from [`strand/functions.md`](strand/functions.md)
 | C074 | primitive |  | a function that does one basic thing, whether or not others could build it | C072 |
 | C075 | named composite |  | a function defined by the primitives it's made of | C074 |
 | C076 | view |  | a window onto a strand: a view function changes what's looked at, not the strand | C051 |
-| C077 | borrowing a reading |  | a function can use a reading while it works if only one makes sense; fluid in gives fluid out | C010, C072 |
+| C077 | borrowing a type | borrowing a reading | a function can use a solid type while it works, if only one makes sense, and keep nothing of it | C010, C072 |
 | C078 | tailoring |  | each function does one kind of thing to one kind of strand; lines and circles get their own | C072, C008, C009 |
+| C171 | types in and out |  | a function keeps the type it's given, unless changing type is its whole job, and isn't defined where its meaning doesn't apply | C072, C007, C077, C078 |
 | C079 | Not | `not A` | true wherever A isn't: the negative | C024, C074 |
 | C080 | And | `A and B` | true where all of its strands are (intersection) | C074, C019 |
 | C081 | Or | `A or B` | true where at least one is (union) | C074, C019 |
 | C082 | Xor | `A xor B` | true where an odd number are; for two, where exactly one is (symmetric difference) | C074, C019 |
 | C083 | Without | but not | true where A is and B isn't (difference) | C074, C019 |
-| C084 | Commit |  | gives a fluid strand a reading, by putting edges round it: a cast | C010, C032, C011 |
-| C085 | Melt |  | in some worlds: forgets a committed strand's shape, giving the fluid strand with the same cells | C084, C015, C002 |
+| C084 | Commit |  | gives a fluid strand a type, by putting edges round it: a cast | C010, C032, C011 |
+| C085 | Melt |  | in some worlds: forgets a committed strand's type, giving the fluid strand with the same cells | C084, C015, C002 |
 | C086 | Rotate |  | starts a circle from its cell k: a rotation/phase | C008 |
 | C087 | Slide |  | moves a scoped piece along its parent; the window keeps its length | C052, C054, C076 |
 | C088 | Reverse |  | runs a line's numbering the other way: its ends swap | C009 |
@@ -258,13 +261,13 @@ from [`strand/identity.md`](strand/identity.md)
 | --- | --- | --- | --- | --- |
 | C118 | essence |  | essence/semantics: what two people drawing the same strand differently still agree on | C004 |
 | C119 | convention |  | choices made to write a strand down or talk about it, such as which cell is cell 0 | C118 |
-| C120 | identical |  | `=`, the default: the same resolution, reading and cells | C020, C007, C006 |
+| C120 | identical |  | `=`, the default: the same resolution, type and cells | C020, C007, C006 |
 | C121 | fits |  | `~=`: a commitment away; one fluid, the other committed, the same cells | C120, C084 |
 | C122 | converts |  | `<->`: a conversion away; one circle, one line, the same cells | C120, C091, C092 |
-| C123 | same up to reading |  | `==`: identical, fits or converts | C120, C121, C122 |
-| C124 | matches |  | `===`: the same number of cells and the same value in each, whatever the reading, context or origin | C120 |
+| C123 | same up to type | same up to reading | `==`: identical, fits or converts | C120, C121, C122 |
+| C124 | matches |  | `===`: the same number of cells and the same value in each, whatever the type, context or origin | C120 |
 | C125 | alike |  | the same in some respects; overriding the default is a way of asking it | C120 |
-| C126 | override |  | loosening or tightening the default: up to start, up to direction, up to reading | C120, C086, C088, C089 |
+| C126 | override |  | loosening or tightening the default: up to start, up to direction, up to type | C120, C086, C088, C089 |
 
 ## strand: space
 

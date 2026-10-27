@@ -21,14 +21,14 @@ to step in:
 like the numbering itself, which way is + is a convention, and so are right
 and clockwise: they're just how + is usually drawn.
 
-the readings differ at the ends:
+the types differ at the ends:
 
 - **circular**: there are no ends, so stepping wraps round. one step − from
   cell 0 is the last cell; one step + from the last cell is cell 0
 - **linear**: the ends stop you. there's no step − from the first cell, and no
   step + from the last
-- **fluid**: stepping works between the ends. going past them belongs to a
-  shape, and a fluid strand has none until a use gives it one
+- **fluid or abstract**: stepping works between the ends. going past them
+  belongs to a solid type, which neither has
 
 as far as a linear strand is concerned, nothing exists beyond its ends: it's
 **bounded**. sometimes, though, a linear strand is **scoped**: a piece of
@@ -38,13 +38,12 @@ cells don't record what lies beyond them; the larger whole is context, like an
 origin.
 
 the **distance** from one cell to another is how many steps it takes, and it's
-never negative; a sign only says which way the steps go. read linearly, there's
-one way to go: from cell 0 to cell 5 is +5, and back is −5. read circularly,
-you can go either way round: at resolution 8, from cell 0 to
-cell 5 is +5 or −3, and the two distances, 5 and 3, add up to the resolution.
-unless a sign or the word "shortest" says otherwise, the distance means the +
-one: 5 here. the shorter of the two is just as valid, but it has to be asked
-for.
+never negative; a sign only says which way the steps go. in a line, there's one
+way to go: from cell 0 to cell 5 is +5, and back is −5. in a circle, you can go
+either way round: at resolution 8, from cell 0 to cell 5 is +5 or −3, and the
+two distances, 5 and 3, add up to the resolution. unless a sign or the word
+"shortest" says otherwise, the distance means the + one: 5 here. the shorter of
+the two is just as valid, but it has to be asked for.
 
 ### intervals and gaps
 
@@ -116,6 +115,6 @@ everything counted or measured in a strand is a whole number. counts and
 distances are never negative; a sign only gives a direction. resolution is at
 least 1, density and sparsity run from 0 to the resolution, and cells are
 numbered from 0 to one less than the resolution. a number outside that range
-doesn't name a new cell: read circularly, it wraps round (cell −1 is the last
-cell); read linearly, there's no cell there. proportions, like "half the
-cells", only come in with generators.
+doesn't name a new cell: in a circle, it wraps round (cell −1 is the last
+cell); in a line, there's no cell there. proportions, like "half the cells",
+only come in with generators.

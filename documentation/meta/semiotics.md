@@ -48,8 +48,8 @@ some parts sit across layers, on purpose:
 a question asked at the wrong layer gets a confusing answer:
 
 - is `)x..(` the same as `<x..>`? as written, no: they're different strings. by
-  meaning, not by default, since their readings differ, but one converts to
-  the other. in use, it depends on the world, which may set the reading aside
+  meaning, not by default, since their types differ, but one converts to the
+  other. in use, it depends on the world, which may set the type aside
 - can a circle melt back into a fluid strand? that isn't a question of meaning
   in general. it's pragmatic, and a world settles it
 - a `|` that breaks a table in Markdown is a syntax problem, fixed by escaping,
@@ -69,7 +69,7 @@ better questions, not walls.
 ## related
 
 _from memory_: semiotics, from Charles Sanders Peirce and Ferdinand de Saussure
-on; the syntax and semantics of programming languages, where semantics is
-often split again into static (what can be checked before running) and
-dynamic (what happens when it runs); and linguistics, where phonology and
-morphology sit below syntax.
+on; the syntax and semantics of programming languages, where semantics is often
+split again into static (what can be checked before running) and dynamic (what
+happens when it runs); and linguistics, where phonology and morphology sit
+below syntax.

@@ -1,13 +1,13 @@
 # basics
 
 **in short.** a strand is a one-dimensional space of cells, each in one of two
-states. it can be read as a circle or a line, or have no shape: fluid, or
-abstract. this chapter covers the two shapes and the two ways of having none;
-the two states, the perspectives on them and the names each gives them, with
-the spacer as one asymmetric perspective among several; the counts (resolution,
-density and sparsity), the points and the negative; why any arrangement is a
-strand; and the smallest cases, down to zero, which isn't one. it ends with
-worlds: the settings that decide what the defaults leave open.
+states. its type says whether its last cell meets its first: circular or
+linear, or fluid or abstract, which leave that open. this chapter covers the
+types; the two states, the perspectives on them and the names each gives them,
+with the spacer as one asymmetric perspective among several; the counts
+(resolution, density and sparsity), the points and the negative; why any
+arrangement is a strand; and the smallest cases, down to zero, which isn't one.
+it ends with worlds: the settings that decide what the defaults leave open.
 
 the thinking behind it is in [the approach](../meta/approach.md).
 
@@ -38,65 +38,44 @@ obvious, and many ideas here may change shape. those paths are noted and
 deliberately left for later. one other kind of value comes up with weights (see
 "structures").
 
-## circular and linear
+## types
 
-a strand can be read in two ways. the cells and their states stay the same;
-what changes is which cells are neighbours, and what a cell's position means.
+**builds on:** world, in "approach".
+
+a strand has a **type**: whether its last cell meets its first. the cells and
+their states stay the same either way; what the type changes is which cells are
+neighbours. there are two **solid** types, each holding its form:
 
     cell   0 1 2 3 4 5 6 7
            ■ ■ ◇ ◇ ◇ ■ ◇ ◇
 
-- **circular**: the last cell is next to the first. there are no ends and
-  every cell is alike: cell 0 is just where we start counting. a position is
-  a place on the circle, and between two cells there are two distances, one
-  each way round. what makes it circular is that the last cell meets the
-  first; a circle is just the simplest shape that shows it, with every step
-  the same size
-- **linear**: the first and last cells are the ends. a position is an amount:
-  how far from the start. between two cells there is one distance
+- **circular**: the last cell is next to the first, so there are no ends, and
+  between two cells there are two distances, one each way round. on its own, a
+  circle has no special cell: cell 0 is chosen. set against anything else,
+  cell 0 is where it lines up, so the same circle started from a different
+  cell relates differently
+- **linear**: the first and last cells are the ends, and between two cells
+  there is one distance
 
-a strand can also have no shape: it has everything the two shapes share, its
-cells in order, each next to the one before it, but whether its last cell
-meets its first isn't part of it. that can mean two different things, and
-they get different names:
+a strand's type can also leave that open: it has everything the two solid types
+share, its cells in order, but not whether its last cell meets its first. that
+can mean two things, with two names:
 
-- **fluid**: a form in its own right, adaptable, the way a liquid has a
-  definite volume but takes the shape of its container. a use that needs a
-  shape gives it one
-- **abstract**: a placeholder for a shape that hasn't been chosen yet. it
-  stands in for a circle or a line, and is waiting to be made concrete
+- **fluid**: a concrete type in its own right, adaptable: neither circular nor
+  linear, but able to become either. it comes in two kinds: change goes one
+  way only, from fluid to solid (**unidirectional/hierarchical fluid**), or
+  both ways, with any of the three able to become any other
+  (**bidirectional/sibling fluid**)
+- **abstract**: the strand apart from either solid type: only what both share.
+  a solid type may never apply to it
 
-once a strand is read circular or linear, that becomes part of what it is: it
-doesn't go back to having no shape, fluid or abstract, or switch to the other
-reading, on its own. turning
-one into the other takes a function (see "functions"): unwinding a circle from
-its cell 0 gives a line, and winding a line, so its ends join, gives a circle.
+an abstract strand is also what identity reaches when it sets the type aside:
+circular, linear, unidirectional fluid and bidirectional fluid strands with
+the same cells are different strands, but share one abstract strand (see
+"identity").
 
-### abstract and fluid
-
-**builds on:** world, in "approach".
-
-the plain walls `|…|` are written the same way for both, so a world says which
-it means (see "worlds", below). and fluid itself can stand in either of two
-relations to circles and lines. that makes three models, and a world takes one:
-
-| model | a strand written `\|…\|` is | committing | melting back |
-| --- | --- | --- | --- |
-| **abstract** | a placeholder for a shape not yet chosen | one-way: the choice is made | no: a choice isn't unmade |
-| **hierarchical fluid** | a form in its own right, above circles and lines: they come from it, and only that way | one-way | no |
-| **sibling fluid** | a form in its own right, beside circles and lines: any of the three can become any other, a triangle | yes | yes (see melt, in "functions") |
-
-the three mostly exclude each other. a placeholder isn't a form in its own
-right, and a form that circles and lines only come from can't also be one they
-turn back into. where they overlap is in behaviour: abstract strands and
-hierarchical fluid allow exactly the same moves, since both keep commitment
-one-way, and differ only in what the strand is taken to be.
-
-so the running text is written for fluid, in the hierarchical model, and
-holds word for word in an abstract world: there, read "fluid" as "abstract",
-and every move is the same. melt belongs to sibling fluid alone. nobody calls
-a liquid a solid that hasn't decided yet, and the name "fluid" is kept for the
-form that's adaptable, not the one that's waiting.
+a strand's type, whichever it is, is part of what it is, and it stays that way
+unless a function changes it (see "types in and out", in "functions").
 
 ## two states
 
@@ -202,10 +181,10 @@ they're where the general rules reach their limits.
 
 - **all null** and **all true**: every cell in the same state. both are
   strands, and each is the other's negative
-- **one cell**: read circularly, the cell is its own neighbour, both ways
-  round; read linearly, it's both ends at once
-- **two cells**: read circularly, the two cells are neighbours twice, once
-  each way round. from three cells on, every cell has two different neighbours
+- **one cell**: as a circle, the cell is its own neighbour, both ways round; as
+  a line, it's both ends at once
+- **two cells**: as a circle, the two cells are neighbours twice, once each way
+  round. from three cells on, every cell has two different neighbours
 
 ### zero
 
@@ -218,9 +197,8 @@ nothing in it; zero is no space at all.
 
 a **world**, or semantic world, is the setting a strand is used in, with its
 own semantics. it settles what these chapters leave open: the perspective on
-the states; whether `|…|` is abstract or fluid, and if fluid, hierarchical or
-sibling, and with it whether melt is allowed; and what identity sets aside. by
-default, the running text takes the asymmetric perspective and hierarchical
-fluid, with commitment one-way and no melt, and holds just the same for
-abstract strands. worlds aren't specific to strands:
+the states, which of abstract, unidirectional fluid and bidirectional fluid it
+uses, and what identity sets aside. by default, the running text takes the
+asymmetric perspective and unidirectional fluid. in an abstract world, read
+"fluid" as "abstract", and `/…/` as `|…|`. worlds aren't specific to strands:
 they're part of [the approach](../meta/approach.md) behind all these docs.

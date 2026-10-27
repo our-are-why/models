@@ -1,9 +1,9 @@
 # notation
 
-**in short.** how strands are written: a typed form for keyboards (`x` and
-`.`) and a display form for reading (shapes), the five rules any symbols
-follow, edges that show the reading, the point form, labels, descriptions and
-repetition, and why a strand isn't called a binary string.
+**in short.** how strands are written: a keyboard form (`x` and `.`) and a
+display form for reading (shapes), the five rules any symbols follow, edges
+that show the type, the point form, labels, descriptions and repetition, and
+why a strand isn't called a binary string.
 
 the concepts here are listed, with stable IDs, in [concepts.md](../concepts.md).
 
@@ -13,12 +13,12 @@ the concepts here are listed, with stable IDs, in [concepts.md](../concepts.md).
 
 a strand is written in one of two forms, which map one to one:
 
-- **typed/keyboard**: `x` for true and `.` for null, with no spaces, in
+- **keyboard**: `x` for true and `.` for null, with no spaces, in
   order from cell 0. easy to enter by hand
 - **display/read-only**: shapes, with a space between cells. purer to read
 
-anyone, or any program, can write either; the typed form is simply easier on a
-keyboard.
+anyone, or any program, can write either; the keyboard form is simply easier to
+type.
 
 ### rules for the symbols
 
@@ -45,62 +45,75 @@ always means amounts.
 
 no pair of symbols is entirely free of other meanings: `x` is also a letter,
 and `.` a full stop. in a run they don't read as anything else, but a single
-`x` could. that's what rule 5 is for: in the typed form a strand always has its
-edges, so `|x|` is clearly a strand of one true cell. (in figures, where a
+`x` could. that's what rule 5 is for: in the keyboard form a strand always has
+its edges, so `|x|` is clearly a strand of one true cell. (in figures, where a
 strand sits on its own line with labels, the layout marks its edges.)
 
-### edges show the reading
+### edges show the type
 
-**builds on:** reading, zero, in "basics".
+**builds on:** type, zero, in "basics".
 
-in the typed form, the edges around a strand say how it's read:
+in the keyboard form, the edges around a strand say its type:
 
-    )xx...x..(    circular      round brackets turned outward: the edges open
-                                onto each other, as if the ends join round the back
-    <xx...x..>    linear        bounded: an end on each side, and nothing beyond
-    [xx...x..]    scoped        a piece of a larger strand: it has ends, but
-                                there's more beyond them
-    |xx...x..|    fluid or      plain walls: just the strand, with no shape;
-                  abstract      the world says which of the two it means
+    )xx...x..(    circular          round brackets turned outward: the edges open
+                                    onto each other, as if the ends join round the back
+    <xx...x..>    linear            pointing outward: an end on each side, and
+                                    nothing beyond
+    /xx...x../    unidirectional    leaning forward: change goes forward only, to a
+                  fluid             solid type
+    \xx...x..\    bidirectional     leaning back: change can come back too
+                  fluid
+    |xx...x..|    abstract          plain upright walls: no lean, no form, apart from
+                                    type
+    [xx...x..]    scoped            a piece of a larger strand: it has ends, but
+                                    there's more beyond them
 
-**zero** is `|><|`: the walls pushed together, with no space left between them.
-it only takes the plain walls, since with no cells there's nothing to read as a
-circle or a line, and nothing inside could be a cell, so it doesn't read as a
-strand. `>…<` isn't used, so zero's middle can't be mistaken for edges turned
-inward.
+each edge says what it is without the context: fluid leans, because it changes,
+forward if change only goes forward, back if it can come back; abstract stands
+upright and plain. the two kinds of fluid differ from the very first
+character, so a reader can tell them apart without scanning to the end. the
+backslash is the one cost: written inside a string, where a backslash escapes,
+it has to be doubled, `"\\xx...x..\\"`.
+
+**zero** is `|><|`: the plain walls pushed together, with no space left between
+them. it only takes the plain walls, since with no cells there's nothing to be
+a circle or a line, and nothing inside could be a cell, so it can't be taken
+for a strand. `>…<` isn't used, so zero's middle can't be mistaken for edges
+turned inward.
 
 ### the display form
 
-**builds on:** reading, in "basics".
+**builds on:** type, in "basics".
 
-in the display form, the shapes of the cells carry the reading, so no edges are
-needed. each shape is its typed edges closed up into every cell, and true and
-null always differ twice: solid or hollow, and in size, direction or turn:
+in the display form, the shapes of the cells carry the type, so no edges are
+needed. each shape is its keyboard edges closed up into every cell, and true and
+null always differ twice: full or hollow, and in size, direction or turn:
 
-    )xx...x..(    ● ● ⚬ ⚬ ⚬ ● ⚬ ⚬         circles, from round brackets: big solid
+    )xx...x..(    ● ● ⚬ ⚬ ⚬ ● ⚬ ⚬         circles, from round brackets: big full
                                           true, small hollow null
     <xx...x..>    ▲ ▲ ▽ ▽ ▽ ▲ ▽ ▽         triangles, from < and > turned upright:
                                           true up, null down
-    |xx...x..|    ■ ■ ◇ ◇ ◇ ■ ◇ ◇         squares, from straight walls: a solid
+    |xx...x..|    ■ ■ ◇ ◇ ◇ ■ ◇ ◇         squares, from straight walls: a full
                                           square, and a hollow one turned (a diamond)
+    /xx...x../    not chosen yet          fluid's shapes are still to be chosen; until
+    \xx...x..\                            then, fluid strands are written in the keyboard form
     [xx...x..]    [ ▲ ▲ ▽ ▽ ▽ ▲ ▽ ▽ ]     a piece is linear in its own terms;
                                           the brackets say there's more beyond
     |><|          |▶◀|                    zero
 
 a single ● can't be mistaken for anything else, so the shapes do the job the
-edges do in the typed form. most figures in these chapters use the fluid
-squares: they don't need a circle or a line. where no cells are drawn (in
-points and labels, below, and in scopes, in "structures"), the edges stay, with
-→ and − in place of -> and -. square brackets around cells get a space inside
-them, like the cells do: `[ ▲ ▽ ▲ ]`. ranges and other numbers stay as they
-are: `[5→8]`.
+edges do in the keyboard form. most figures in these chapters use the abstract
+squares: they don't need a type. where no cells are drawn (in points and
+labels, below, and in scopes, in "structures"), the edges stay, with → and − in
+place of -> and -. square brackets around cells get a space inside them, like
+the cells do: `[ ▲ ▽ ▲ ]`. ranges and other numbers stay as they are: `[5→8]`.
 
 the display form needs geometric shapes (● ⚬ ▲ ▽ ■ ◇), which most modern fonts
 include. some terminals give them two columns instead of one, which can upset
 alignment; ⚬ is drawn narrower than the others there, so circular rows are the
-first to go out of line. where they aren't available, write the typed form, or
-any other symbols that follow the five rules: the shapes are one read-optimized
-choice, not the only one.
+first to go out of line. where they aren't available, write the keyboard form,
+or any other symbols that follow the five rules: the shapes are one
+read-optimized choice, not the only one.
 
 (a tangent: having true and null differ twice spends a second visual
 difference, size, direction or turn, that could otherwise carry something
@@ -133,9 +146,9 @@ a strand can be given a name, a **label**, to refer to it later:
 `:=` means "is defined as", which keeps `=` free for saying two things are the
 same. labels start with an uppercase letter and are never `X`, so they can't be
 mistaken for cells; words work too, like `Primes` or `S1`. inside edges, a
-label stands for its cells: `)S(` is S read circularly. a reading can only be
-applied to a fluid label: if S is already circular, `)S(` just repeats its
-reading, and `<S>` isn't allowed. like the point form, a label can carry its
+label stands for its cells: `)S(` is S as a circle. a type can only be given to
+an abstract or fluid label: if S is already circular, `)S(` just repeats its
+type, and `<S>` isn't allowed. like the point form, a label can carry its
 resolution: `)6: S(`. a label is defined once: it names one value, and never
 changes to mean another. in these chapters, each example's labels belong to
 that example: the same letter can name a different strand in another one.
@@ -178,7 +191,7 @@ vanish as an HTML tag. inside code formatting, most of this goes away.
 
 ### rotating
 
-a written strand always has a first cell, even when it's read circularly,
+a written strand always has a first cell, even when it's circular,
 where it's simply cell 0. to start from another cell, rotate it so that cell
 comes first: starting `)xx...x..(` at cell 5 gives `)x..xx...(`; in points,
 `)8: 0,1,5(` gives `)8: 0,3,4(` (see rotate, in "functions").

@@ -309,22 +309,22 @@ spiral curricula, in teaching; worked examples and contrasting cases, in the
 study of learning; instrumental and relational understanding (Richard Skemp);
 the "deductivist" style that hides how mathematics is found, and the
 "heuristic" style that shows it (Imre Lakatos, *Proofs and Refutations*); Paul
-Lockhart's *A Mathematician's Lament*; George Pólya's *How to Solve It*;
-formal discipline and transfer of learning; habits of mind, as a way to
-organize what's taught; inert knowledge (Alfred North Whitehead); realistic
-mathematics education and guided reinvention (Hans Freudenthal); "Mathland",
-from Seymour Papert's *Mindstorms*; anchored instruction; writing across the
-curriculum; analogical encoding, where comparing two cases that share a
-structure shows the structure (Dedre Gentner; Mary Gick and Keith Holyoak);
-"hugging" and "bridging", in teaching for transfer (David Perkins and Gavriel
-Salomon); cognitive flexibility theory (Rand Spiro); experts sorting problems
-by deep structure rather than surface features (Michelene Chi and others);
-cognitive load (John Sweller); concreteness fading; interleaved practice
-(Doug Rohrer and others) and desirable difficulties (Robert Bjork);
-ill-structured problems (Herbert Simon; David Jonassen) and wicked problems
-(Horst Rittel and Melvin Webber); the hidden curriculum (Philip Jackson);
-metacognition (John Flavell); explicit teaching of critical thinking (Philip
-Abrami and others); project-based learning; the development of interest
-(Suzanne Hidi and K. Ann Renninger); self-determination theory, on autonomy,
-competence and relatedness (Edward Deci and Richard Ryan); constructionism,
-and "hard fun" (Seymour Papert).
+Lockhart's *A Mathematician's Lament*; George Pólya's *How to Solve It*; formal
+discipline and transfer of learning; habits of mind, as a way to organize
+what's taught; inert knowledge (Alfred North Whitehead); realistic mathematics
+education and guided reinvention (Hans Freudenthal); "Mathland", from Seymour
+Papert's *Mindstorms*; anchored instruction; writing across the curriculum;
+analogical encoding, where comparing two cases that share a structure shows the
+structure (Dedre Gentner; Mary Gick and Keith Holyoak); "hugging" and
+"bridging", in teaching for transfer (David Perkins and Gavriel Salomon);
+cognitive flexibility theory (Rand Spiro); experts sorting problems by deep
+structure rather than surface features (Michelene Chi and others); cognitive
+load (John Sweller); concreteness fading; interleaved practice (Doug Rohrer and
+others) and desirable difficulties (Robert Bjork); ill-structured problems
+(Herbert Simon; David Jonassen) and wicked problems (Horst Rittel and Melvin
+Webber); the hidden curriculum (Philip Jackson); metacognition (John Flavell);
+explicit teaching of critical thinking (Philip Abrami and others);
+project-based learning; the development of interest (Suzanne Hidi and K. Ann
+Renninger); self-determination theory, on autonomy, competence and relatedness
+(Edward Deci and Richard Ryan); constructionism, and "hard fun" (Seymour
+Papert).

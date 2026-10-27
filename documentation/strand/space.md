@@ -4,7 +4,7 @@
 discrete space, and a stack's row of amounts is a second case, built from
 strands. working with them shows what a discrete space is in general. this
 chapter names the general parts (cells, neighbours, values and
-dimension), shows readings as boundary conditions, generalizes the measures,
+dimension), shows types as boundary conditions, generalizes the measures,
 and sorts what in these chapters holds for any discrete space from what holds
 only in one dimension.
 
@@ -17,7 +17,7 @@ this one. but along the way, a more general idea kept showing through: a space
 made of separate cells, each holding a value, with some cells next to others.
 a strand is its simplest case: one dimension, two values. and it isn't the only
 case here: a stack's **row of amounts**, its weights, is a discrete space too,
-with the same cells, neighbours and readings as the stack, but whole numbers
+with the same cells, neighbours and type as the stack, but whole numbers
 for values (see "weights", in "structures").
 
 both cases come from strands, so this chapter writes the general idea down
@@ -38,8 +38,8 @@ a **discrete space**, in the sense used here, has three parts:
   cell's neighbours are the cells one step away either way, and the joints are
   where neighbours meet
 - **values**: each cell holds one value, from a set of values. a strand's set
-  has two states, true and null by default. a row of amounts holds whole numbers, from 0 up to
-  the number of members in its stack
+  has two states, true and null by default. a row of amounts holds whole
+  numbers, from 0 up to the number of members in its stack
 
 _from memory_: in topology, a discrete space is something else. this is closer
 to a graph whose vertices carry values: a labelled graph, the state of a
@@ -50,7 +50,7 @@ cellular automaton, or a lattice model in physics.
 the **dimension** of a discrete space is the shape of its neighbour relation:
 
 - **one dimension**: cells in a row, each with at most two neighbours. it's a
-  path, or a cycle when it's read circularly. that's a strand
+  path, or a cycle when it's circular. that's a strand
 - **two dimensions**: cells in a grid, with neighbours in two directions, such
   as a sheet
 - **more**: the same idea, with more directions
@@ -61,18 +61,17 @@ included (_from memory_: image processing calls these 4- and
 8-connectivity). one dimension has no such choice, which is part of why so
 much of these chapters reads as close to self-evident.
 
-## readings as boundary conditions
+## types as boundary conditions
 
-**builds on:** reading, circular, linear, in "basics".
+**builds on:** type, circular, linear, in "basics".
 
-a strand's readings say what happens at its edges: read circularly, the last
-cell meets the first; read linearly, the ends stop. _from memory_: physics and
-simulation call these **periodic** and **open** boundary conditions.
+a strand's type says what happens at its edges: circular, the last cell meets
+the first; linear, the ends stop. _from memory_: physics and simulation call
+these **periodic** and **open** boundary conditions.
 
-in more dimensions there's a reading per dimension. a grid read circularly one
-way and linearly the other is a cylinder; read circularly both ways, it's a
-torus. fluid and abstract carry over too: a space whose edges have no shape
-of their own, or none yet.
+in more dimensions there's a type per dimension. a grid that's circular one way
+and linear the other is a cylinder; circular both ways, it's a torus. fluid and
+abstract carry over too, for edges whose type is left open.
 
 ## measures, generalized
 
@@ -99,7 +98,7 @@ a first sort of these chapters:
 | resolution, and a count per value | intervals, gaps and end gaps: "the next point" |
 | the negative, for two values | |
 | any arrangement; the smallest cases; zero | seams, bands and runs; bands become regions |
-| readings, as one boundary condition per dimension | scopes as ranges; they become boxes or regions |
+| types, as one boundary condition per dimension | scopes as ranges; they become boxes or regions |
 | collections, stacks and weights; combining, cell by cell | layers, since points in a grid don't form a grid |
 | generators, labels, descriptions, the symbol rules | join, insert and splice, which work at ends |
 | essence and convention; identity's default | the notation as written: a row of symbols |
@@ -123,7 +122,7 @@ two dimensions, turns.
 
 generalizing from two examples, both one-dimensional and one built from the
 other, risks mistaking their quirks for the general case: a single direction,
-"the next point", two readings. the table above is a first sort, not a proof.
+"the next point", two types. the table above is a first sort, not a proof.
 the right-hand column may hide ideas that do carry over in another form, and
 the left may hide assumptions that only hold in one dimension.
 

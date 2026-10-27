@@ -42,9 +42,9 @@ move that's sound in one can be meaningless in another.
 for strands, a world settles:
 
 - which perspective on the states it takes: true/null or true/false
-- whether a strand with no shape is abstract or fluid, and if fluid,
-  hierarchical or sibling, and with it whether a committed strand can melt
-  back into a fluid one
+- whether a strand whose type is left open is abstract or fluid, and if fluid,
+  unidirectional or bidirectional, and with it whether a committed strand can
+  melt back into a fluid one
 - what identity sets aside, or adds
 
 by default, the strand chapters take the asymmetric perspective on the states,
@@ -57,7 +57,7 @@ time. rather than pick one answer and call it the truth, the docs name the
 choice, give a default, and leave the rest to the world. so whoever uses the
 model should know their world, and align with its semantics.
 
-**where.** "abstract and fluid", "two states" and "worlds", in the strand
+**where.** "types", "two states" and "worlds", in the strand
 basics; melt and commitment, in functions; the default and its overrides, in
 identity.
 
@@ -221,10 +221,10 @@ become.
 **where.** null means absence, not unknown, and fluid has everything the two
 shapes share, in the strand basics; zero is named, though it isn't a strand.
 
-**the case against.** some things really are undecided, and calling them
-adaptable would hide that. where both readings are real, the docs keep both,
-under different names: an abstract strand is waiting, and a fluid one is
-adaptable.
+**the case against.** some things really are undecided, or beyond any of the
+forms on offer, and calling them adaptable would hide that. where both
+readings are real, the docs keep both, under different names: an abstract
+strand is apart from shape, and a fluid one is adaptable.
 
 **related.** nothing close comes to mind as an established principle; it's
 near the writing advice to say what is, rather than what isn't.
@@ -353,6 +353,35 @@ spacer to strand) costs readers who learned the old name;
 **related.** the ubiquitous language of domain-driven design; affordance, in
 design and psychology.
 
+## explicit over inferred
+
+**what.** where a distinction matters, it's carried where it's used: in the
+notation, the name or the definition itself, not left for the reader to infer
+from context set up somewhere else. a strand's edges say its type, and fluid's
+edges lean to say which way it can change; a section says what it builds on,
+right where it builds on it.
+
+**why.** every inference a reader has to make is a place to go wrong: tracing
+back to an earlier section, holding a setting in mind, guessing what was meant.
+misreadings, and bugs, usually start there. a model reading the docs is even
+more likely to fill the gap with the most common meaning it knows.
+
+**where.** the edges, in the strand notation, where abstract and each kind of
+fluid are written differently; "builds on" lines, kept in the sections that
+need them; names chosen to say what they are, such as the two states and the
+solid types; and "reduce on purpose", above, which keeps meaning in the form.
+
+**the case against.** making everything explicit multiplies marks, and heavy
+notation is hard to read and to write. some context can't be avoided, and
+repeating it everywhere is noise. so explicitness goes where a distinction is
+easy to miss, and where inferring it would cost the reader more than reading
+it.
+
+**related.** "explicit is better than implicit", from the Zen of Python (Tim
+Peters); type annotations, which put in the code what a reader would otherwise
+infer; and the overdone form, packing everything into names (Hungarian
+notation).
+
 ## honesty about status
 
 **what.** say how something is known: established elsewhere, worked out here,
@@ -412,8 +441,8 @@ solution"; David Hilbert's 23 problems, which steered much of a century's
 mathematics; the question under discussion, in pragmatics (Craige Roberts);
 Socratic questioning.
 
-**seen from elsewhere.** teaching learners to ask, in
-[pedagogy](pedagogy.md); questions now that answers are cheap, in [ai](ai.md).
+**seen from elsewhere.** teaching learners to ask, in [pedagogy](pedagogy.md);
+questions now that answers are cheap, in [ai](ai.md).
 
 ## open to challenge
 

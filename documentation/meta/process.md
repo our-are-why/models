@@ -132,11 +132,10 @@ it's the idea of teaching both sides at once (see [pedagogy](pedagogy.md)) on
 another axis. there, the pure and the applied form are held together in one
 lesson; here, they take turns, across periods of work.
 
-**when to switch.** abstraction stops paying when its questions keep leading
-to more questions without bound, and nothing could be built from the answers
-yet. application
-stops paying when it keeps running into the same unexamined assumption. both
-are signs that it's time for the other kind of period.
+**when to switch.** abstraction stops paying when its questions keep leading to
+more questions without bound, and nothing could be built from the answers yet.
+application stops paying when it keeps running into the same unexamined
+assumption. both are signs that it's time for the other kind of period.
 
 **setting aside isn't losing.** a parked abstraction stays available: deferred
 lists and rough notes keep it findable, with enough written down to pick it up

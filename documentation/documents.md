@@ -104,6 +104,8 @@ flowchart LR
   approach -.- identity
   approach -.- pedagogy
   basics -.- functions
+  basics -.- identity
+  basics -.- notation
   basics -.- space
   basics -.- structures
   documentation -.- documents

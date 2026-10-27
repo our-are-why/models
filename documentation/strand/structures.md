@@ -21,8 +21,8 @@ how a scope behaves depends on both:
     )6: S([5+3]      →  [.x.x]      from cell 5, 3 steps +
     )6: S([5->8]     →  [.x.x]      from cell 5 to cell 8, written in full: the same cells
     )6: S(-[5+3]     →  [..xx]      a − in front walks the other way: cells 5, 4, 3, 2
-    <6: S>[2->5]     →  [xx..]      read linearly: cells 2 to 5
-    <6: S>[5+3]      →  no piece    read linearly, S is bounded, and this runs past its end
+    <6: S>[2->5]     →  [xx..]      as a line: cells 2 to 5
+    <6: S>[5+3]      →  no piece    as a line, S is bounded, and this runs past its end
 
 - **relative**, `[start+steps]`: the steps go +. the start and end cells are
   both included, so 3 steps cover 4 cells
@@ -31,16 +31,16 @@ how a scope behaves depends on both:
   round to cell 2
 - **direction**: a − in front of the brackets walks the other way, and the
   piece is written in the order it was walked. the direction sign only ever
-  sits outside the brackets, so a − inside them always means a position
-  counted back from cell 0 (circular only): `)8: S([-2->2]` runs from two
-  cells before cell 0 to two after it
+  sits outside the brackets, so a − inside them always means a position counted
+  back from cell 0 (circular only): `)8: S([-2->2]` runs from two cells before
+  cell 0 to two after it
 - **laps**: in a circular strand, `~3%` means three full laps, without having
   to state the resolution. `)6: S([2~3%+5]` starts at cell 2, goes round 3
   times, then 5 more steps: 23 steps in all, or `[2->25]` as an absolute range.
   `%` is the programmer's wrap-around (modulo), so read `3%` as "3 laps", not
   "3 percent"
-- **fluid**: in `|6: S|[…]`, what lies past the ends belongs to a shape,
-  which a fluid strand doesn't have, so a scope has to stay within them
+- **fluid or abstract**: what lies past the ends belongs to a solid type, which
+  neither has, so a scope has to stay within them
 - **the result** is a scoped piece, `[…]`, with its own numbering: its cell 0
   is where the scope started, and its + runs the way the scope walked
 
@@ -62,15 +62,15 @@ a piece of a piece follows a few rules:
 
 1. **it stays inside its parent**: it can't reach past the parent's first or
    last cell. `[5: A][3+4]` runs past A's end, so there's no piece
-2. **no laps**: a scoped piece has ends, so there's no way round it. `~3%`
-   only works on a circular strand
-3. **the edges stay square**: a piece is always read as `[…]`. joining its
-   ends to read it circularly would make a new strand, which is a change, not
-   a scope: `Wind(Detach(A))` (see "functions")
+2. **no laps**: a scoped piece has ends, so there's no way round it. `~3%` only
+   works on a circular strand
+3. **the edges stay square**: a piece is always written `[…]`. joining its ends
+   to make it circular would make a new strand, which is a change, not a scope:
+   `Wind(Detach(A))` (see "functions")
 4. **no repetition**: what lies beyond a piece is its parent, not copies of
    itself, so `~` doesn't apply
-5. **everything else works as usual**: relative and absolute ranges, as long
-   as the end stays inside the piece, and `-` for walking the other way
+5. **everything else works as usual**: relative and absolute ranges, as long as
+   the end stays inside the piece, and `-` for walking the other way
 
 **back to the root.** because each piece stays inside its parent, any piece of
 a piece is one unbroken stretch of the strand the chain was first taken from.
@@ -114,7 +114,7 @@ further layer, and so on.
 - **distance at two scales**: in the layer, its cells 0 and 2 are two steps
   apart, since its steps go from point to point. on the root, the same two
   cells are five steps apart
-- **one reading**: every layer is read the way its root is. points round a
+- **one type**: every layer has its root's type. points round a
   circle stay in circular order; points along a line stay in line order
 - **each layer's own conventions**: a layer has its own cell 0 and direction,
   like any strand
@@ -148,8 +148,8 @@ layer:
 - top-down reads as choosing: start from the root and pick points layer by
   layer. bottom-up reads as placing: start from a small strand and fit it into
   larger ones
-- every layer repeats the root's edges, so a circular cascade is `)…( >> )…(`. a
-  cascade can't mix readings
+- every layer repeats the root's edges, so a circular cascade is `)…( >> )…(`.
+  a cascade can't mix types
 - a chain goes one way only: `A >> B << C` isn't written
 
 in the display form, the root sits at the top, whichever way the cascade is
@@ -194,7 +194,7 @@ repeats, or an order.
 
 ### stacks
 
-**builds on:** reading, in "basics".
+**builds on:** type, in "basics".
 
 to count across a collection, its strands are **stacked**: lined up cell by
 cell. stacking is a device for working with strands, not a new kind of strand,
@@ -202,23 +202,24 @@ and it needs a few things settled:
 
 - every member has the same resolution
 - each member sits in a **frame**: the fixed choices that say how it lines up,
-  meaning which of its cells is cell 0, which way it runs, and how it's read.
+  meaning which of its cells is cell 0, which way it runs, and its type.
   by default, a strand is framed as written, with its cell 0 over the stack's
   cell 0
-- all members share one reading, and the edges around a stack say which:
+- all members share one type, and the edges around a stack say which:
 
       )(x.., .x.)(      circular
       <(x.., .x.)>      linear
-      |(x.., .x.)|      fluid
-      )(A, B)(          labels too: reads both A and B circularly
+      /(x.., .x.)/      unidirectional fluid
+      |(x.., .x.)|      abstract
+      )(A, B)(          labels too: makes both A and B circular
 
-  edges around anything apply a reading to it, the way `)S(` reads S
-  circularly, as long as what's inside is fluid or already reads that way.
-  so the members inside are written bare. for now, a stack can't mix readings
+  edges around anything give it a type, the way `)S(` makes S circular, as long
+  as what's inside is fluid or already of that type. so the members inside are
+  written bare. for now, a stack can't mix types
 
 framing is where identity gets decided: a stack takes each strand exactly as
-framed, so `)x.x..(` and `)x..x.(` add to different columns, although read
-circularly one is the other started from a different cell.
+framed, so `)x.x..(` and `)x..x.(` add to different columns, although as
+circles one is the other started from a different cell.
 
 ### weights
 
@@ -233,18 +234,21 @@ circularly one is the other started from a different cell.
 
 - the **cell weights** count the true cells in each column. they ignore order
   and count every repeat
-- the weights live in a space of their own: the same cells and reading as the
+- the weights live in a space of their own: the same cells and type as the
   stack, but each cell holds an amount instead of one of two states, so a row
-  of weights isn't a strand. it's another kind of discrete space (see
-  "space"). a circular or linear stack says the reading is part of the
-  structure; a fluid one has no shape, and a use can give it one
-- the weights add up to the members' densities together (9 here), and no
-  weight is more than the number of members
+  of weights isn't a strand. it's another kind of discrete space (see "space").
+  a circular or linear stack says the type is part of the structure; a fluid
+  one leaves it open, and a use can give it one
+- the weights add up to the members' densities together (9 here), and no weight
+  is more than the number of members
 - a member's **strand weight** (or score) is the weights added up at its
-  points: how much it agrees with the whole, itself included. A's is
-  2 + 2 + 3 = 7; B's and C's are 6
-- an ordered stack has **stages**: its running weights as each member goes
-  on. unlike the final weights, it depends on the order:
+  points: how much it agrees with the whole, itself included. A's is 2 + 2 + 3
+  = 7; B's and C's are 6
+- where a member starts matters: started from cell 1 instead of cell 0, A
+  becomes `x...x..x`, and in the same stack its strand weight is 4, not 7. the
+  same circle, rotated, relates differently to the others
+- an ordered stack has **stages**: its running weights as each member goes on.
+  unlike the final weights, it depends on the order:
 
       after A    1 1 0 0 0 1 0 0
       after B    2 1 0 1 0 2 0 0
@@ -262,10 +266,11 @@ weights are written as a row of numbers, which are amounts, not states (rule 4,
 in "notation"): `|2 2 0 1 0 3 1 0|`. `Weights((A, B, C))` gives a stack's
 weights as such a row.
 
-the row takes the stack's reading, written with the same edges: a circular
-stack gives `)2 2 0 1 0 3 1 0(`, a linear one `<2 2 0 1 0 3 1 0>`, and a fluid
-one `|2 2 0 1 0 3 1 0|`. the display form keeps the edges, since no cells are
-drawn. for example, `Weights( )(A, B, C)( )` gives `)2 2 0 1 0 3 1 0(`.
+the row takes the stack's type, written with the same edges: a circular stack
+gives `)2 2 0 1 0 3 1 0(`, a linear one `<2 2 0 1 0 3 1 0>`, a fluid one
+`/2 2 0 1 0 3 1 0/`, and an abstract one `|2 2 0 1 0 3 1 0|`. the display form
+keeps the edges, since no cells are drawn. for example,
+`Weights( )(A, B, C)( )` gives `)2 2 0 1 0 3 1 0(`.
 
 the stages are written as a sequence of rows, one per step: `Stages((A, B, C))`
 gives `(|1 1 0 0 0 1 0 0|, |2 1 0 1 0 2 0 0|, |2 2 0 1 0 3 1 0|)`. its last row

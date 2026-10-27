@@ -15,16 +15,16 @@ the concepts here are listed, with stable IDs, in
 the docs are written for people first. much of what helps people also helps a
 model load the perspective, and some of it matters more for a model:
 
-- **explicit semantics**: definitions say what a thing is and what it isn't,
-  so a model doesn't have to infer them from use
+- **explicit semantics**: definitions say what a thing is and what it isn't, so
+  a model doesn't have to infer them from use
 - **stable IDs**: a concept can be cited exactly, as C016, whatever it's called
   at the time
 - **dependency order**: no concept is used before it's defined, so a model
   reading from the top never has to guess a meaning
 - **status labels**: a model can tell checked results from recalled ones, and
   pass that on
-- **a typed form**: the notation has a plain-text form, `x` and `.`, alongside
-  the display shapes, so it survives being copied between tools
+- **a keyboard form**: the notation has a plain-text form, `x` and `.`,
+  alongside the display shapes, so it survives being copied between tools
 
 ## AI as a debugger
 
