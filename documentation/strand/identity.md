@@ -46,7 +46,8 @@ override, tightening or loosening it to fit what it's doing.
 **by default, two strands are the same strand when they have:**
 
 - the same resolution
-- the same reading: both fluid, both circular, or both linear
+- the same reading: both circular, both linear, or both written `|…|` (fluid
+  or abstract)
 - the same state in every numbered cell
 
 different encodings never make different strands: typed or display symbols,

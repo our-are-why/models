@@ -100,9 +100,9 @@ from [`strand/basics.md`](strand/basics.md)
 | C009 | linear |  | a reading where the first and last cells are ends | C007 |
 | C010 | fluid | neutral, concrete fluid | a strand with no shape of its own, as a form in its own right: adaptable, like a liquid taking its container's shape | C007 |
 | C011 | commitment |  | once a strand is read circular or linear, that's part of what it is, and doesn't change on its own | C008, C009, C010 |
-| C012 | abstract | abstract fluid | a strand with no shape yet: a placeholder for a circle or a line, waiting to be made concrete; written `\|…\|` like fluid | C007, C002 |
-| C014 | hierarchical fluid |  | fluid above circles and lines, which come from it, and only that way; allows the same moves as abstract; excludes sibling fluid | C010, C011, C012 |
-| C015 | sibling fluid |  | fluid as a third form beside circles and lines, any of the three becoming any other; excludes hierarchical fluid | C010 |
+| C012 | abstract | abstract fluid | a strand with no shape yet: a placeholder for a circle or a line, waiting to be made concrete; written `\|…\|` like fluid | C007 |
+| C014 | hierarchical fluid |  | fluid above circles and lines, which come from it, and only that way; allows the same moves as abstract; excludes sibling fluid; a world picks between them | C010, C011, C012, C002 |
+| C015 | sibling fluid |  | fluid as a third form beside circles and lines, any of the three becoming any other; excludes hierarchical fluid; a world picks between them | C010, C002 |
 | C016 | true | filled | the state of a cell that holds something | C006 |
 | C017 | null | empty | the state of a cell that holds nothing: the absence of true, not unknown | C006 |
 | C018 | asymmetric perspective |  | true/null: one state is a thing, the other its absence. the measures take this one | C016, C017, C003 |
@@ -237,12 +237,13 @@ from [`strand/dynamics.md`](strand/dynamics.md)
 | C109 | resolution dynamics |  | how a generator's strands change as the resolution grows | C108 |
 | C110 | infinity |  | following a generator without end; never reached, and not a strand | C108, C028 |
 | C111 | signature |  | a generator's or function's keys in order, so values can go without keys: `Block(r, d)` | C108, C035 |
-| C112 | growth/extension |  | facet: earlier cells never change, and new ones are added | C108 |
-| C113 | refinement/subdivision |  | facet: each strand describes the same whole at a finer grain | C108 |
-| C114 | rule/chance |  | facet: whether a rule fixes every cell, chance decides, or both | C108 |
-| C115 | transparent/opaque |  | facet: whether the rule can be read off and carried forward | C108 |
-| C116 | patterned/random-like |  | facet: whether the result shows a pattern, or passes for chance | C108 |
-| C117 | natural/designed |  | facet: whether it was found (natural/found) or built (made/designed) | C108 |
+| C163 | facet |  | one of the independent ways a generator is described: how its strands relate as n grows, how cells are decided, how clear the rule is, how the result looks, where it comes from | C108 |
+| C112 | growth/extension |  | facet: earlier cells never change, and new ones are added | C163 |
+| C113 | refinement/subdivision |  | facet: each strand describes the same whole at a finer grain | C163 |
+| C114 | rule/chance |  | facet: whether a rule fixes every cell, chance decides, or both | C163 |
+| C115 | transparent/opaque |  | facet: whether the rule can be read off and carried forward | C163 |
+| C116 | patterned/random-like |  | facet: whether the result shows a pattern, or passes for chance | C163 |
+| C117 | natural/designed |  | facet: whether it was found (natural/found) or built (made/designed); a designed rule that looks random is pseudo-random | C163 |
 
 ## strand: identity
 

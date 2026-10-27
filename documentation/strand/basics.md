@@ -68,7 +68,8 @@ they get different names:
   stands in for a circle or a line, and is waiting to be made concrete
 
 once a strand is read circular or linear, that becomes part of what it is: it
-doesn't go back to fluid, or switch to the other reading, on its own. turning
+doesn't go back to having no shape, fluid or abstract, or switch to the other
+reading, on its own. turning
 one into the other takes a function (see "functions"): unwinding a circle from
 its cell 0 gives a line, and winding a line, so its ends join, gives a circle.
 
