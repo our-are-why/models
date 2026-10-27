@@ -45,10 +45,10 @@ the two is just as valid, but it has to be asked for.
 
 ### intervals and gaps
 
-a strand's points are the positions of its true cells (see "basics"). the
+a strand's points are the positions of its true cells (see "readings"). the
 measures here read the strand as a spacer: its true cells as things, and its
-null cells as the space between them. between one point and the next, going +,
-there are two things to measure:
+null cells as the space between them (see "readings"). between one point and
+the next, going +, there are two things to measure:
 
 - the **interval**: the distance from one point to the next
 - the **gap**: how many null cells lie between them

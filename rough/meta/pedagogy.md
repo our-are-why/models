@@ -177,8 +177,8 @@ of them is labelled.
 **across the curriculum.** schools mostly divide teaching by subject, each in
 isolation: mathematics in the mathematics class, and hardly anywhere else. by
 the docs' own rule for topics that cut across domains (see "cross-cutting
-topics", in [documents](../../models/documents.md)), mathematics would keep its home,
-and other subjects would each carry a framing of it: physics, music, art,
+topics", in [documents](../../models/documents.md)), mathematics would keep its
+home, and other subjects would each carry a framing of it: physics, music, art,
 economics or a workshop, teaching the same forms from their side, entangled
 with their own concerns. that may be where learning that transfers, and
 critical thinking, come from.
@@ -186,8 +186,8 @@ critical thinking, come from.
 **in these docs.** strands were found this way. the work started in a noisy,
 meaningful setting, rhythms and evenly spread patterns, and the pure form came
 out of it: first the strand, then discrete space (see
-[space](../../models/strand/space.md), in strand). both are kept: the chapters, and the
-path that led to them.
+[space](../../models/strand/space.md), in strand). both are kept: the chapters,
+and the path that led to them.
 
 **the case against.** noise can swamp a beginner, who learns better with the
 irrelevant cut away. camouflage only teaches if the form can eventually be

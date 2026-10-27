@@ -18,8 +18,8 @@ files are its **stripe**:
       documents.md        this file
       concepts.md
       strand/             the strand domain
-        basics.md  notation.md  measures.md  structures.md
-        functions.md  dynamics.md  identity.md  space.md
+        basics.md  types.md  notation.md  readings.md  measures.md
+        structures.md  functions.md  dynamics.md  identity.md  space.md
         spacer_v0.md      frozen
     rough/
       meta/               the approach behind the docs, while it's still forming
@@ -41,7 +41,8 @@ file names carry no numbers. a number would say "this comes before that" and
 nothing else, but chapters relate in richer ways: some lean on others, some
 lean on each other, and some can be read in any order. a **suggested path**
 through the strand domain, one good way through and not the only one: basics,
-notation, measures, structures, functions, dynamics, identity, space.
+types, notation, readings, measures, structures, functions, dynamics, identity,
+space.
 
 ## cross-cutting topics
 

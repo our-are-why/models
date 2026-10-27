@@ -2,8 +2,8 @@
 
 **in short.** how strands are written: a keyboard form (`x` and `.`) and a
 display form for reading (shapes), the five rules any symbols follow, edges
-that show the type, the point form, labels, descriptions and repetition, and
-why a strand isn't called a binary string.
+that show the type, the point form, labels, descriptions and repetition, why a
+strand isn't called a binary string, and the names the two states can take.
 
 the concepts here are listed, with stable IDs, in [concepts.md](../concepts.md).
 
@@ -238,3 +238,18 @@ numbers. a 0 would also read as zero (no cells at all).
 
 here a cell is only this: one piece/slot of a strand's space, with a position
 and one of two states.
+
+## a note on the states' names
+
+the two states can be named in more than one way, and no pair of names is the
+only or the best one. each perspective has its default names (see "two states",
+in "basics"):
+
+| perspective | default names | other names that fit |
+| --- | --- | --- |
+| asymmetric | **true** (■) and **null** (□) | present and absent, marked and unmarked, figure and ground |
+| symmetric | **true** and **false** | 1 and 0, yes and no |
+
+true is the same in both default pairs; only the other name changes. so where
+the functions that combine strands cell by cell take logic's symmetric
+perspective, null reads as false (see "functions").

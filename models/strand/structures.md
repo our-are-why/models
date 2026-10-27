@@ -94,8 +94,8 @@ different parents (see lift and collapse, in "functions").
 ## layers
 
 a strand's true cells can become the cells of another strand. that second
-strand is a **layer**: it chooses among the first one's points. the first
-strand is the **root**, as with scopes.
+strand is a **layer**: it chooses among the first one's points, reading them as
+a selection (see "readings"). the first strand is the **root**, as with scopes.
 
     cell      0 1 2 3 4 5 6 7
     root      ■ ■ □ □ □ ■ □ □      points 0, 1, 5

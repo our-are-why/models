@@ -83,8 +83,8 @@ the top, not three folders down. structure is added once it's earned: a
 subdomain starts as one file, and becomes a folder when it grows chapters. and
 where it helps, one thing is reached from more than one place, the way a
 database denormalizes a record for access (see "cross-cutting topics", in
-[documents](../../models/documents.md)). the structure follows the use, not the other way
-round.
+[documents](../../models/documents.md)). the structure follows the use, not the
+other way round.
 
 **why.** a hierarchy mirrored exactly makes every path long, and fixes a
 taxonomy before it's understood. placing things where they're used keeps the
@@ -136,10 +136,10 @@ side, and say which one the running text uses, and why.
 of the states is what makes spacing meaningful; the symmetric view is what
 makes logic work. both are needed.
 
-**where.** true/null and true/false, and abstract and fluid, in the strand
-basics; cascades written top-down or bottom-up, in structures; a row of
-amounts and a cascade as two views of one structure, in functions (levels and
-depths).
+**where.** asymmetric and symmetric, in the strand basics; abstract and fluid,
+in types; true/null and true/false, in notation; the readings; cascades written
+top-down or bottom-up, in structures; a row of amounts and a cascade as two
+views of one structure, in functions (levels and depths).
 
 **the case against.** too many perspectives make a model slippery: a reader
 can't tell what's being claimed. so each perspective gets a name, and one of
@@ -183,7 +183,7 @@ means. meaning lives outside it, in what's known about its origin and its use.
 **why.** it keeps structures simple and general: the same strand can come from
 a careful rule or a coin toss, and nothing in it shows which.
 
-**where.** any arrangement, in the strand basics; generators, in dynamics; a
+**where.** arrangement, in the strand basics; generators, in dynamics; a
 flattened cascade, which doesn't show that it was chosen in steps.
 
 **the case against.** some uses need the origin to travel with the object.
@@ -218,8 +218,8 @@ become.
 **why.** a definition by lack invites the reader to fill the gap with a guess:
 "null" read as "unknown", "fluid" as "undecided".
 
-**where.** null means absence, not unknown, and fluid has everything the two
-shapes share, in the strand basics; zero is named, though it isn't a strand.
+**where.** null means absence, not unknown, in readings; fluid has everything
+the solid types share, in types; zero is named, though it isn't a strand.
 
 **the case against.** some things really are undecided, or beyond any of the
 forms on offer, and calling them adaptable would hide that. where both
@@ -240,8 +240,8 @@ reader needs both, and a model that can't say what something isn't hasn't
 pinned it down.
 
 **where.** why not "binary string", in notation; layers aren't scopes, in
-structures; zero isn't the all-null strand, in the strand basics; fitting
-isn't identity, in identity; functions rather than operations, in functions.
+structures; zero isn't the all-null strand, in readings; fitting isn't
+identity, in identity; functions rather than operations, in functions.
 
 **the case against.** contrasts can multiply without end, and a thing defined
 mostly by what it isn't stays vague. so a contrast comes after a positive
@@ -283,7 +283,7 @@ defined once. when information is lost, a named function loses it, on purpose.
 losses visible.
 
 **where.** functions, which never change a strand in place; labels, in
-notation; commitment, in the strand basics.
+notation; commitment, in functions.
 
 **the case against.** working this way makes many values where one changing
 value would do, which can be costly for large structures in software. that's

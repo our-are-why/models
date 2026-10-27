@@ -29,10 +29,10 @@ against other strands, cell 0 is where it lines up with them, so where it
 starts is part of how they relate.
 
 some things sit in between. how the states are written is convention (■ or
-`x` here, 1 elsewhere), and so is which one is called true. whether one state
-is the thing and the other its absence isn't a convention but a perspective:
-the asymmetric perspective sees a thing and its absence, and the symmetric one
-sees two equals (see "two states", in "basics").
+`x` here, 1 elsewhere), and so is which one is called true. whether the two
+states play different roles isn't a convention but a perspective: the
+asymmetric perspective gives them different roles, and the symmetric one sees
+two equals (see "two states", in "basics").
 
 ## identity
 
@@ -100,8 +100,8 @@ the more `=` signs, the more is set aside: `=` sets aside nothing, `==` the
 type, and `===` the type and the context. (this runs opposite to javascript,
 where `===` is the strictest.)
 
-setting the type aside is also what makes a strand abstract (see "abstract
-and fluid", in "basics"): strands that are the same up to type are the same
+setting the type aside is also what makes a strand abstract (see "abstract",
+in "types"): strands that are the same up to type are the same
 abstract strand.
 
 `==` is whichever of `=`, `~=` and `<->` applies. `=`, `==` and `===` chain: if

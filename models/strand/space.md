@@ -1,12 +1,12 @@
 # space
 
 **in short.** looking up from strands. a strand is the simplest case of a
-discrete space, and a stack's row of amounts is a second case, built from
-strands. working with them shows what a discrete space is in general. this
-chapter names the general parts (cells, neighbours, values and
-dimension), shows types as boundary conditions, generalizes the measures,
-and sorts what in these chapters holds for any discrete space from what holds
-only in one dimension.
+discrete space with a value in each cell, and a stack's row of amounts is a
+second case, built from strands. working with them shows what a discrete space
+is in general. this chapter names the general parts (cells and neighbours, the
+values they hold, and dimension), shows types as boundary conditions,
+generalizes the measures, and sorts what in these chapters holds for any
+discrete space from what holds only in one dimension.
 
 the concepts here are listed, with stable IDs, in [concepts.md](../concepts.md).
 
@@ -14,11 +14,11 @@ the concepts here are listed, with stable IDs, in [concepts.md](../concepts.md).
 
 these chapters were worked out for strands, and nothing in them depends on
 this one. but along the way, a more general idea kept showing through: a space
-made of separate cells, each holding a value, with some cells next to others.
-a strand is its simplest case: one dimension, two values. and it isn't the only
-case here: a stack's **row of amounts**, its weights, is a discrete space too,
-with the same cells, neighbours and type as the stack, but whole numbers
-for values (see "weights", in "structures").
+made of separate cells, some next to others, with a value in each cell. a
+strand is its simplest case: one dimension, two values. and it isn't the only
+case here: a stack's **row of amounts**, its weights, has the same space and
+type as the stack, with whole numbers for values (see "weights", in
+"structures").
 
 both cases come from strands, so this chapter writes the general idea down
 where it was found. if a kind of space comes along that doesn't come from
@@ -28,19 +28,20 @@ becomes a view of it from strands (see "cross-cutting topics", in
 
 ## a discrete space
 
-a **discrete space**, in the sense used here, has three parts:
+a **discrete space**, in the sense used here, has two parts:
 
 - **cells**: separate places, with nothing in between
 - a **neighbour relation**: which cells are next to which. in a strand, a
   cell's neighbours are the cells one step away either way, and the joints are
   where neighbours meet
-- **values**: each cell holds one value, from a set of values. a strand's set
-  has two states, true and null by default. a row of amounts holds whole
-  numbers, from 0 up to the number of members in its stack
+
+a discrete space can hold a **value** in each cell, from a set of values. a
+strand holds one of two states, true and null by default. a row of amounts
+holds whole numbers, from 0 up to the number of members in its stack.
 
 _from memory_: in topology, a discrete space is something else. this is closer
-to a graph whose vertices carry values: a labelled graph, the state of a
-cellular automaton, or a lattice model in physics.
+to a graph, and, with values, to a labelled graph, the state of a cellular
+automaton, or a lattice model in physics.
 
 ## dimension
 

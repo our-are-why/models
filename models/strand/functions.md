@@ -94,8 +94,12 @@ result takes their type.
     Xor(A, B)        □ ■ □ ■ □ □ □ □      true where exactly one is
     Without(A, B)    □ ■ □ □ □ □ □ □      true where A is and B isn't
 
-the negative is the same idea for one strand: `Not(A)` is true wherever A
-isn't.
+the same idea for one strand gives its **negative**: the same
+arrangement/distribution, with every state swapped. `Not(A)` is true wherever A
+isn't. one determines the other, but they aren't the same thing: a strand and
+its negative are two different strands. the negative's counts are the
+original's, swapped, and the two strands with every cell in one state are each
+other's negative.
 
 each of these applies one rule to every cell, so all five are primitives. some
 could be built from others, `Without(A, B)` is `And(A, Not(B))`, but each does
@@ -103,7 +107,7 @@ one basic thing. they're the familiar operations of logic, and of sets read on
 the points: `And` is intersection (∩), `Or` is union (∪), `Xor` is symmetric
 difference (△), `Without` is difference (∖), and `Not` is the complement.
 these functions take logic's symmetric perspective, where null reads as false
-(see "two states", in "basics").
+(see "a note on the states' names", in "notation").
 
 they're also thresholds on weights: stack A and B, and `And(A, B)` is where the
 weight is 2, `Or(A, B)` where it's at least 1, and `Xor(A, B)` where it's
@@ -149,7 +153,7 @@ both arrive at the same cells here. which to use depends on whether the type is
 part of the structure, or given later.
 
 commitment is one-way by default: nothing takes a committed strand back to
-fluid. what each allows (see "types", in "basics"):
+fluid. what each allows (see "types"):
 
 | model | committing | melting back |
 | --- | --- | --- |
@@ -164,8 +168,8 @@ to bidirectional fluid alone.
 
 ### melt, in some worlds
 
-for bidirectional fluid, where change goes both ways (see "types", in
-"basics"), `Melt(S)` forgets a committed strand's type, and gives the fluid
+for bidirectional fluid, where change goes both ways (see "fluid", in
+"types"), `Melt(S)` forgets a committed strand's type, and gives the fluid
 strand with the same cells:
 
     Melt( )xx...x..( )      →  \xx...x..\

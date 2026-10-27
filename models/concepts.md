@@ -29,7 +29,7 @@ from [`rough/meta/approach.md`](../rough/meta/approach.md)
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
 | C001 | default |  | the choice the docs make where one has to be made, stated so that it can be overridden |  |
-| C002 | world |  | a semantic world: the setting something is used in, with its own semantics; it settles what the defaults leave open | C001 |
+| C002 | world | semantic world | a crystallization/realization of a framework, tailored to a use: every open choice made, so its semantics are communicated precisely | C001 |
 | C003 | perspective |  | one of several valid ways of seeing the same thing, none the hidden truth behind the others |  |
 | C146 | basic level |  | the level where a thing is looked for and named; the docs organize there, and state the ancestry in words |  |
 | C152 | reduction |  | a simpler form taken on purpose, for a use, setting meaning aside; equal as a value, not as a meaning | C003 |
@@ -99,34 +99,34 @@ from [`strand/basics.md`](strand/basics.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
-| C004 | strand | spacer | a one-dimensional, discrete space of cells, each in one of two states; a kind of discrete space |  |
+| C004 | strand | spacer | a one-dimensional, discrete space of cells, with one of two states in each cell |  |
 | C005 | cell | slot | one piece of a strand's space, with a position and a state | C004 |
-| C006 | state |  | what a cell holds: one of two states, named true and null by default | C005 |
-| C007 | type | reading, view | whether a strand's last cell meets its first: settled by the solid types, circular and linear; left open by fluid and abstract | C004 |
-| C169 | solid type |  | a type that holds its form, settling whether the last cell meets the first: circular or linear | C007 |
+| C175 | space |  | a strand's cells in order, apart from their states: where each is, and which are next to each other | C005 |
+| C020 | resolution |  | how many cells a strand has: the size of its space | C175 |
+| C006 | state |  | what a cell holds: one of two states | C005 |
+| C018 | asymmetric perspective |  | the two states play different roles, which a reading says; by default, true and null, read as presence and absence. the measures take this one | C006, C003 |
+| C019 | symmetric perspective |  | the two states play the same role: swapping them changes nothing but the names; true and false by default (others: 1 and 0, yes and no) | C006, C003 |
+| C025 | arrangement/distribution |  | which cell is in which state; any arrangement is a strand | C006 |
+| C026 | origin |  | where an arrangement came from. the cells don't record it; it lives outside the strand | C025 |
+| C176 | counts |  | how many of a strand's cells are in each state, adding up to the resolution; the most universal thing to say about its states, the same whatever the type or perspective | C006, C020, C025 |
+| C028 | zero |  | no cells at all: no space, so not a strand | C004, C175 |
+
+## strand: types
+
+from [`strand/types.md`](strand/types.md)
+
+| id | concept | was | in plain words | builds on |
+| --- | --- | --- | --- | --- |
+| C007 | type | reading, view | what a strand's space is, beyond its cells in order: whether its last cell meets its first; concrete (circular, linear or fluid) or abstract | C004 |
+| C174 | concrete type |  | a definite type, distinct from the others: circular, linear or fluid | C007 |
+| C169 | solid type |  | a concrete type that holds its form, settling whether the last cell meets the first: circular or linear | C174 |
 | C008 | circular |  | a solid type where the last cell is next to the first, so there are no ends | C169 |
 | C009 | linear |  | a solid type where the first and last cells are ends | C169 |
-| C010 | fluid | neutral, concrete fluid | a concrete type in its own right, adaptable: neither circular nor linear; a use that needs a solid type gives it one | C007 |
-| C011 | commitment |  | giving a fluid or abstract strand a solid type; one-way by default | C008, C009, C010, C012 |
-| C012 | abstract | abstract fluid | the strand apart from either solid type, only what both share; a solid type may never apply to it; written `\|…\|` | C007 |
+| C010 | fluid | neutral, concrete fluid | a concrete type in its own right, adaptable: neither circular nor linear; a use that needs a solid type gives it one | C174 |
 | C014 | unidirectional fluid | hierarchical fluid | written `/…/`; fluid that can become circular or linear, but not back; allows the same moves as abstract; a world says whether it uses it | C010, C011, C012, C002 |
 | C015 | bidirectional fluid | sibling fluid | written `\…\`; fluid where any of the three types can become any other; a world says whether it uses it | C010, C002 |
-| C016 | true | filled | the default name for one state: the one that holds something, read asymmetrically, or one of two equals, read symmetrically | C006, C018, C019 |
-| C017 | null | empty | the default name for the other state, read asymmetrically: the absence of true, not unknown | C006, C018 |
-| C018 | asymmetric perspective |  | one state is something, the other its absence; true and null by default, though other names fit (present and absent, marked and unmarked). the measures take this one | C006, C003 |
-| C019 | symmetric perspective |  | neither state is special, each the other's negation; true and false by default, logic's names (others: 1 and 0, yes and no) | C006, C003 |
-| C143 | spacer |  | an asymmetric perspective on a strand: true cells as things, null cells as the space between them | C004, C018 |
-| C144 | selection |  | an asymmetric perspective on a strand: which positions are chosen; named, not developed | C004, C018 |
-| C145 | rhythm |  | an asymmetric perspective on a strand: onsets in time; named, not developed | C004, C018 |
-| C020 | resolution |  | how many cells a strand has | C005 |
-| C021 | density |  | how many cells are true | C005, C016 |
-| C022 | sparsity |  | how many cells are null | C005, C017 |
-| C023 | points |  | the positions of a strand's true cells; density is how many there are | C016, C021 |
-| C024 | negative |  | the strand with every cell's state swapped | C006 |
-| C025 | arrangement/distribution |  | which cells are true and which null; any arrangement is a strand | C016, C017 |
-| C026 | origin |  | where an arrangement came from. the cells don't record it; it lives outside the strand | C025 |
-| C027 | all null, all true | all empty, all filled | every cell in the same state; each is the other's negative | C024 |
-| C028 | zero |  | no cells at all: no space, so not a strand | C004 |
+| C012 | abstract | abstract fluid | a general type: what the concrete types share, and no more; a solid type may never apply to it; written `\|…\|` | C007, C174 |
+| C011 | commitment |  | giving a fluid or abstract strand a solid type; one-way by default | C008, C009, C010, C012 |
 
 ## strand: notation
 
@@ -143,6 +143,24 @@ from [`strand/notation.md`](strand/notation.md)
 | C035 | description |  | what's known about a strand, in braces with keys: `{r: 12, d: 7}`. it picks out every strand that fits | C020, C021 |
 | C036 | repetition |  | `~` after the edges: the strand repeats in its surroundings, and stays as it is | C032 |
 | C037 | escaping |  | inside another format, the notation is escaped the way that format asks, never changed to suit it | C029 |
+
+## strand: readings
+
+from [`strand/readings.md`](strand/readings.md)
+
+| id | concept | was | in plain words | builds on |
+| --- | --- | --- | --- | --- |
+| C173 | reading |  | what the two states mean: the two roles, in the asymmetric perspective, or the two equals, in the symmetric one; a world can take one, the strand itself takes none | C018, C019, C002 |
+| C172 | marked and unmarked |  | linguistics' names for the two sides of an asymmetry: the member singled out, and the default; a side note | C018 |
+| C016 | true | filled | the default name for one state: the one that holds something, read asymmetrically, or one of two equals, read symmetrically | C006, C018, C019 |
+| C017 | null | empty | the default name for the other state, read asymmetrically: the absence of true, not unknown | C006, C018 |
+| C021 | density |  | how many cells are true | C005, C016 |
+| C022 | sparsity |  | how many cells are null | C005, C017 |
+| C023 | points |  | the positions of a strand's true cells; density is how many there are | C016, C021 |
+| C027 | all null, all true | all empty, all filled | every cell in the same state, read as presence and absence; each is the other's negative | C016, C017, C024 |
+| C143 | spacer |  | a reading: true cells as things, null cells as the space between them; the measures of intervals and gaps take it | C004, C173 |
+| C145 | rhythm |  | a spacer across time: the cells are beats, the true cells onsets | C143 |
+| C144 | selection |  | a reading: which positions are chosen; how a layer reads its root | C023, C173 |
 
 ## strand: measures
 
@@ -206,6 +224,7 @@ from [`strand/functions.md`](strand/functions.md)
 | C077 | borrowing a type | borrowing a reading | a function can use a solid type while it works, if only one makes sense, and keep nothing of it | C010, C072 |
 | C078 | tailoring |  | each function does one kind of thing to one kind of strand; lines and circles get their own | C072, C008, C009 |
 | C171 | types in and out |  | a function keeps the type it's given, unless changing type is its whole job, and isn't defined where its meaning doesn't apply | C072, C007, C077, C078 |
+| C024 | negative |  | the strand with every cell's state swapped | C006 |
 | C079 | Not | `not A` | true wherever A isn't: the negative | C024, C074 |
 | C080 | And | `A and B` | true where all of its strands are (intersection) | C074, C019 |
 | C081 | Or | `A or B` | true where at least one is (union) | C074, C019 |
@@ -276,8 +295,8 @@ from [`strand/space.md`](strand/space.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
-| C147 | discrete space |  | cells, a neighbour relation, and a value in each cell; strands and rows of amounts are its cases so far | C004, C005, C068 |
+| C147 | discrete space |  | cells and a neighbour relation; with a value in each cell, strands and rows of amounts are its cases so far | C004, C005, C068 |
 | C148 | neighbour relation |  | which cells are next to which; in a strand, one step either way | C005, C046 |
-| C149 | value |  | what a cell of a discrete space holds, from a set of values: two states in a strand, whole numbers in a row of amounts | C006, C068 |
+| C149 | value |  | what a cell of a discrete space can hold, from a set of values: two states in a strand, whole numbers in a row of amounts | C006, C068 |
 | C150 | dimension |  | the shape of the neighbour relation: a row, a grid, or more | C148 |
 | C151 | boundary condition |  | what happens at a space's edges: periodic (circular) or open (linear), one per dimension | C007, C008, C009, C150 |
