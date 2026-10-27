@@ -78,6 +78,8 @@ flowchart LR
   approach --> documentation
   documents --> documentation
   documents --> process
+  documents --> pedagogy
+  approach --> pedagogy
   approach --> basics
   basics --> notation
   basics --> measures
@@ -103,6 +105,7 @@ flowchart LR
   basics -.- space
   basics -.- structures
   documentation -.- documents
+  documents -.- pedagogy
   documentation -.- personal
   functions -.- identity
   functions -.- notation

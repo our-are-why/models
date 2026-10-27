@@ -148,6 +148,9 @@ the docs apply the same idea to themselves: a topic that cuts across domains
 has one home and several framings (see "cross-cutting topics", in
 "documents").
 
+**seen from elsewhere.** more than one valid answer, in
+[pedagogy](pedagogy.md).
+
 **related.** figure and ground, in perception; duality, in mathematics, where
 one structure has two descriptions that carry the same information.
 

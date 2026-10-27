@@ -2,8 +2,9 @@
 
 **in short.** AI as a reader of these docs, and as a collaborator in debugging
 them: what makes the docs loadable by a model, how to ask one for help, what
-to trust in what it says back, and what teaching looks like when the reader
-is an AI.
+to trust in what it says back, what teaching looks like when the reader is an
+AI, and AI in teaching, where it may let a teacher be a shepherd rather than
+the source of every piece of expertise.
 
 the concepts here are listed, with stable IDs, in
 [concepts.md](../concepts.md).
@@ -62,8 +63,29 @@ side of a reader that's a model.
 denser, more formal, more hedged. the aim is that a model is helped by the
 same clarity that helps a person, not by writing for it separately.
 
+## AI in teaching
+
+this is another framing of pedagogy, from AI's side. much of what pedagogy
+proposes asks more of teachers than they can give: framings of mathematics in
+every subject, a meta thread few are trained for, and each learner's own
+thread, related to everything they're learning. with AI to hand, a teacher no
+longer has to be the source of every piece of expertise. they can be a
+**shepherd**: guiding, choosing what to look at next, and judging what's been
+understood, while AI ties ideas from one subject into the concrete setting of
+another, a learner's own interest included.
+
+**the case against.** AI is fallible, and a learner may not catch its
+mistakes. it can do the thinking the learner was meant to do, which defeats
+the point of teaching thought. and access to it isn't even. so AI's part is to
+connect and explain, the learner's is to think, and the shepherd's is to make
+sure the second still happens. _from memory_: one-to-one tutoring has long been
+known to help a great deal (Benjamin Bloom's "two sigma" finding, 1984), which
+is the hope behind AI tutors; the evidence on AI tutors themselves is still
+new.
+
 ## related
 
 _from memory_: retrieval and grounding, in AI, where a model is given the
 source text to answer from rather than its recall; documentation written to
-be read by tools as well as people.
+be read by tools as well as people; the teacher as "guide on the side" rather
+than "sage on the stage" (Alison King); Bloom's two sigma problem.

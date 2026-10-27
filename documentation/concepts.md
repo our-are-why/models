@@ -52,6 +52,13 @@ from [`meta/pedagogy.md`](meta/pedagogy.md)
 | C135 | running example |  | one example the docs keep coming back to, so that each new idea is the only new thing |  |
 | C153 | vehicle |  | a subject taught as a place to exercise general mechanisms of thought, not only for itself |  |
 | C154 | transfer |  | learning in one field carrying over to another: near transfer holds up well, far transfer is contested | C153 |
+| C155 | both sides at once |  | teaching a form both pure and hidden in another domain's noise: neither is the real one | C138, C153 |
+| C156 | interleaving |  | mixing kinds of problems, so that each starts with choosing the tool; feels harder, teaches better |  |
+| C157 | ill-structured problem |  | a problem with more than one valid answer, depending on what's wanted | C003, C002 |
+| C158 | hidden curriculum |  | the lessons school teaches without saying so |  |
+| C159 | metacognition |  | thinking about one's own thinking; best taught explicitly, inside a subject |  |
+| C160 | meta thread |  | the meta (abstraction, modelling, semantics, learning how to learn) as a subject of its own, with framings in every other | C137, C138 |
+| C161 | passion thread |  | something a learner chooses and keeps coming back to, with what they learn related to it as they go | C155 |
 
 ## meta: documentation
 
@@ -61,6 +68,14 @@ from [`meta/documentation.md`](meta/documentation.md)
 | --- | --- | --- | --- | --- |
 | C141 | documentarian |  | someone who records how ideas look from a particular place, openly, without claiming the only view | C003 |
 | C142 | living document |  | a document revised as the thinking moves, with its history kept but not part of it | C133 |
+
+## meta: ai
+
+from [`meta/ai.md`](meta/ai.md)
+
+| id | concept | was | in plain words | builds on |
+| --- | --- | --- | --- | --- |
+| C162 | shepherd |  | a teacher who guides, chooses what to look at next and judges what's understood, without being the source of every piece of expertise |  |
 
 ## meta: process
 
