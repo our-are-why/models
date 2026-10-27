@@ -85,6 +85,7 @@ from [`meta/process.md`](meta/process.md)
 | --- | --- | --- | --- | --- |
 | C139 | open question |  | a question that can't be settled straight away: listed, then resolved or deferred, with the reason |  |
 | C140 | consistency pass |  | reading a whole domain again for contradictions and leftovers, reporting first, then fixing | C130 |
+| C164 | oscillation |  | the work moving back and forth between abstract periods and applied ones, each feeding the other |  |
 
 ## strand: basics
 
