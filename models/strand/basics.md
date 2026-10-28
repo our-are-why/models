@@ -5,8 +5,7 @@ states in each cell.
 
     ■ ■ □ □ □ ■ □ □
 
-- **one-dimensional**: the cells lie along a single dimension. from any cell
-  you can only step one way or the other
+- **one-dimensional**: from any cell you can only step one way or the other
 - **discrete**: it's made of separate cells, with no positions in between
 - **two states**: each cell is in exactly one of them, drawn here as ■ and □
 
@@ -15,15 +14,21 @@ way.
 
 ## space
 
-a strand's **space** is its cells in order, apart from their states: where each
-cell is, and which cells are next to each other. how many cells it has is its
-**resolution**.
+a strand's **space** is its cells, apart from their states, and which of them
+are next to each other. how many cells it has is its **resolution**.
 
 a strand's space is one kind of **discrete space**, which is one kind of space.
 
+## frame
+
+a strand has no first cell and no direction of its own. a **frame** gives it
+both: a cell to call cell 0, and a way for the numbers to run from there. set
+against other strands, cell by cell, frames decide which cells line up: cell 0
+with cell 0, cell 1 with cell 1, and so on.
+
 ## types
 
-a strand has a **type**: what its space is, beyond its cells in order.
+a strand has a **type**: the kind of strand it is.
 
 - **concrete**: a definite type, distinct from the others:
   - **circular**: a loop, with no ends
@@ -75,8 +80,7 @@ aside, such as the type.
 
 ## zero
 
-with no cells at all there's no space, and so no strand. it still has a name,
-**zero**, because a function or a structure can arrive at no cells.
+**zero** is no cells at all: no space, and so no strand.
 
 ## worlds
 
