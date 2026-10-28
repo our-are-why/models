@@ -1,130 +1,115 @@
 # identity
 
-**in short.** what about a strand is essence and what is convention, and when
-two strands count as the same. the default is strict (the same resolution, type
-and cells), and the comparisons `=`, `~=`, `<->`, `==` and `===` loosen it in
-stated ways.
+## comparisons
 
-the concepts here are listed, with stable IDs, in [concepts.md](../concepts.md).
-
-## essence and convention
-
-some things about a strand belong to the strand itself; others are choices we
-make to write it down or talk about it. to tell them apart, imagine two people
-drawing the same strand differently: starting at a different cell, counting
-the other way round, using other symbols. what they still agree on is
-essence/semantics; what they don't is convention. (the general idea, beyond
-strands, is in [the approach](../../rough/meta/approach.md).)
-
-- **essence**: the resolution, the density and the sparsity; the distances
-  between cells; in a line, what sits at the ends. these are found in
-  the strand, not made up
-- **convention**: which cell is cell 0, counting from 0, which way the
-  numbering runs, the symbols for the two states, and so the written form
-  itself. these are chosen, so that everyone starts from the same place
-
-a strand's frame is convention on its own: a circle has no start, and neither
-end of a line comes first. set against other strands, it's how they line up:
-read from another cell, or the other way, the same strand relates differently
-to the rest.
-
-some things sit in between. how the states are written is convention (■ or
-`x` here, 1 elsewhere), and so is which one is called true. whether the two
-states play different roles isn't a convention but a perspective: the
-asymmetric perspective gives them different roles, and the symmetric one sees
-two equals (see "two states", in "basics").
-
-## identity
-
-these chapters give identity a **default**: a starting point that any use can
-override, tightening or loosening it to fit what it's doing.
-
-**by default, two strands are the same strand when they have:**
+two strands can be compared in more than one way. the strictest is
+**identical**, and it's the default: two strands are identical when they have
 
 - the same resolution
 - the same type: both circular, both linear, both abstract, or both the same
   kind of fluid
-- the same state in every numbered cell
+- the same state in every pair of cells their frames line up
+- the same surroundings: what lies beyond their ends, if anything, is the same
 
-different encodings never make different strands: typed or display symbols,
-cells or points, or any other symbols that follow the rules. what the encoding
-says does matter: the resolution, the type and the cells. where a strand
-came from isn't part of the default, but a use can add it.
+how a strand is written doesn't matter, only what the writing says about these.
 
-so by default, `|8: 0,1,5|` is the same strand as `|xx...x..|`. but `)x.x..(`
-and `)x..x.(` are different (one is the other rotated), and so are `/x../` and
-`<x..>` (one is fluid, the other committed to linear).
+two circles can have the same pattern round the loop and still not be
+identical:
 
-a scoped piece and a whole linear strand with the same cells, like `[x..]` and
-`<x..>`, aren't the same strand by default: one is a piece of something larger,
-the other is the whole thing. they are alike, though: the same cells, behaving
-the same way within their ends, so a use that only cares about the cells can
-set the context aside and treat them as the same, written `[x..] === <x..>`
-(see below). likewise, two cascades that flatten to the same strand are alike,
-giving the same cells, but whether they're the same cascade, layer by layer, is
-a higher-level question, left to the uses that need it.
+    ● ○ ● ○ ○
+    ● ○ ○ ● ○
 
-comparing cell by cell includes cell 0 and the direction. for a strand on its
-own, those are conventions; for strands set against each other, they're how
-the strands relate: rotations of the same strand score differently in a stack
-(see "weights", in "structures"). that's why the default compares them, and a
-use that only cares about a strand on its own can loosen it to "up to start".
+lined up cell by cell, their states differ.
 
-a fluid strand **fits** a circular or linear strand with the same resolution
-and cells: it could become it, just by committing to a type. fitting isn't
-identity, and by default it runs one way only, from fluid to committed: `/x../`
-fits both `)x..(` and `<x..>`, but those two are still different strands.
-between them, unwind and wind convert either way, losing nothing. with
-bidirectional fluid, where melting is allowed, fitting runs both ways too. the
-comparisons themselves don't depend on the world: they say how two strands
-relate, not which moves a world allows.
+the other way round, a fluid strand and a line whose states agree cell by cell
+aren't identical either: their types differ.
+
+a scoped piece and a whole line with the same arrangement aren't identical
+either: one is a piece of something larger, the other is the whole thing. yet
+they're alike: the same states, behaving the same way within their ends.
+setting their surroundings aside, they match.
+
+the types run from general to specific: abstract, then fluid, then circular and
+linear, side by side. a strand **fits** another with the same arrangement when
+its type is more general: an abstract strand fits every concrete one, and a
+fluid strand fits the circle and the line. circular and linear are equally
+specific, so they **convert** instead: each is the other closed or opened.
+
+these comparisons say how two strands relate, not which changes a world allows:
+whether a solid strand can return to fluid, or a circle become a line directly,
+doesn't change them.
 
 that gives five ways of comparing:
 
-| comparison                 | means                                                     | typed | display |
-| -------------------------- | --------------------------------------------------------- | ----- | ------- |
-| **identical**              | the same resolution, type and cells (the default)         | `=`   | `=`     |
-| **fits**                   | a commitment away: one fluid, the other committed         | `~=`  | `≃`     |
-| **converts**               | a conversion away: one circle, one line, the same cells   | `<->` | `⇄`     |
-| **the same up to type**    | any of the three above                                    | `==`  | `≈`     |
-| **matches**                | the same number of cells and the same value in every numbered cell, whatever the type, context or origin | `===` | `≍` |
+- **identical**: the same resolution, type, arrangement and surroundings
+- **fits**: one type more general than the other, with the same arrangement
+- **converts**: two types equally specific, neither more general than the
+  other, with the same arrangement
+- **the same up to type**: identical, once the type is set aside: as abstract
+  strands, they're identical. the three above are cases of it
+- **matches**: the same up to type and up to surroundings: their states agree
+  cell by cell
 
-    /x../ ~= )x..(        fits
-    )x..( <-> <x..>       converts
-    /x../ == <x..>        the same up to type: here, because it fits
-    )x..( == <x..>        the same up to type: here, because it converts
-    [x..] === <x..>       matches: a piece and a whole line, with the same cells
-    [x..] === )x..(       matches: a piece and a whole circle; only the cells count
+identical, the same up to type and matches chain: if A is the same as B, and B
+as C, then A is the same as C. fits chains too, in its own direction, from
+general to specific: an abstract strand fits a fluid one, which fits a circle,
+so the abstract strand fits the circle. converts doesn't: if a circle and a
+line convert, and the line and another circle convert, the two circles share a
+type, so they're identical, not converts.
 
-the more `=` signs, the more is set aside: `=` sets aside nothing, `==` the
-type, and `===` the type and the context. (this runs opposite to javascript,
-where `===` is the strictest.)
+## essence and convention
 
-setting the type aside is also what makes a strand abstract: circular, linear,
-unidirectional fluid and bidirectional fluid strands with the same cells are
-different strands, but the same abstract strand.
+some things about a strand belong to the strand itself; others are choices made
+to write it down or talk about it. to tell them apart, imagine two people
+drawing the same strand differently: starting at a different cell, counting the
+other way round, using other symbols. what they still agree on is essence; what
+they don't is convention.
 
-`==` is whichever of `=`, `~=` and `<->` applies. `=`, `==` and `===` chain: if
-A is the same as B, and B as C, then A is the same as C. `~=` and `<->` don't:
-two fittings from the same fluid strand give a conversion, and two conversions
-come back to the same type, which is identity. `<->` needs spaces around it,
-so it's never read as edges.
+- **essence**: the resolution and the counts; the type; which cells are
+  neighbours, and the distances between them; the pattern the states make,
+  whichever cell it starts from and whichever way it runs; in a line, what sits
+  at the ends. these are found in the strand, not made up
+- **convention**: the frame, which cell is cell 0 and which way the numbers
+  run; counting from 0; the symbols and names for the two states, and so the
+  written form itself. these are chosen, so that everyone starts from the same
+  place
 
-`===` compares values, so it works for rows of weights too, where the values
-are amounts rather than states. the numbering still counts: `)x..( === ).x.(`
-is false, since setting the start aside is a separate loosening.
+a strand's frame is convention on its own: a circle has no start, and neither
+end of a line comes first. set against other strands, it's how they line up:
+with cell 0 elsewhere, or numbered the other way, the same strand relates
+differently to the rest. comparing strands cell by cell needs frames, to say
+which cells line up: the strictest comparison takes each strand's frame as it
+is, and a looser one can try every frame.
 
-**overriding the default.** the default asks whether the entire thing is the
-same. being alike, matching in some respects and behaving similarly, is a
-looser question, and the overrides below are ways of asking it. a use can
-loosen the default by setting something aside, or tighten it by adding
-something. the usual loosenings have exact forms through the functions:
+some things sit in between. how the states are written and named is convention:
+■ and □ here, other symbols and names elsewhere. whether the two states play
+different roles isn't a convention, and the strand alone doesn't make it
+essence either: it's a perspective, which the strand leaves open and a world
+can settle. once a world settles it, it's essence there: everyone drawing a
+strand in that world agrees on it.
 
-- **up to start**: for circles, the same when one is a rotation of the other
-- **up to direction**: the same when one is a reversal of the other (lines),
-  or a mirror of the other (circles)
-- **up to type**: `==`, the same cells whatever the type
+## comparisons, continued: loosening and tightening
 
-tightening adds what the default leaves out, like where a strand came from, or
-its frame in a stack. a use that overrides the default should say what it
+being **alike**, the same in some respects, is the general question, and each
+comparison asks it about particular respects. a comparison looser than
+identical sets something aside. "the same **up to** something" means the same
+once that something is allowed to differ. what's set aside can be a convention,
+part of the essence, or the surroundings:
+
+- **the frame**, a convention: up to start, for circles; up to direction; up
+  to frame, both at once
+- **the type**, part of the essence: up to type, the same arrangement whatever
+  the type
+- **the surroundings**, what lies beyond the ends: up to surroundings, a piece
+  and a whole strand with the same arrangement are the same
+
+loosenings combine. matching sets aside the type and the surroundings, but
+still lines cells up by their frames, so the two circles above don't match. set
+the frame aside as well, and they do.
+
+loosest of all, a comparison can set aside where the cells are, and keep only
+the counts: the same up to a reshuffle.
+
+a tighter comparison adds something identical leaves out, like where a strand
+came from, or where it sits in a stack. any comparison should say what it
 compares and what it sets aside.
