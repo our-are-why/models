@@ -33,8 +33,8 @@ a strand has a **type**: the kind of strand it is.
 - **concrete**: a definite type, distinct from the others:
   - **circular**: a loop, with no ends
   - **linear**: a line, with two ends
-  - **fluid**: neither yet, but able to become either
-- **abstract**: a general type: what the concrete types share, and no more
+  - **fluid**: neither, but can take on the form of either
+- **abstract**: a free type: what the concrete types share, and no more
 
 ## two states
 
