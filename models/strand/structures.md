@@ -192,10 +192,9 @@ cell. stacking is a device for working with strands, not a new kind of strand,
 and it needs a few things settled:
 
 - every member has the same resolution
-- each member sits in a **frame**: the fixed choices that say how it lines up,
-  meaning which of its cells is cell 0, which way it runs, and its type.
-  by default, a strand is framed as written, with its cell 0 over the stack's
-  cell 0
+- each member lines up by its frame, which cell is its cell 0 and which way
+  it runs, and a stack fixes its type too. by default, a strand is framed as
+  written, with its cell 0 over the stack's cell 0
 - all members share one type, and the edges around a stack say which:
 
       )(x.., .x.)(      circular

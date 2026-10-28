@@ -101,8 +101,9 @@ from [`strand/basics.md`](strand/basics.md)
 | --- | --- | --- | --- | --- |
 | C004 | strand | spacer | a one-dimensional, discrete space of cells, with one of two states in each cell |  |
 | C005 | cell | slot | one piece of a strand's space, with a position and a state | C004 |
-| C175 | space |  | a strand's cells in order, apart from their states: where each is, and which are next to each other | C005 |
+| C175 | space |  | a strand's cells, apart from their states, and which of them are next to each other | C005 |
 | C020 | resolution |  | how many cells a strand has: the size of its space | C175 |
+| C066 | frame |  | what gives a strand a cell 0 and a direction, which it has none of on its own; set against others, cell by cell, frames decide which cells line up | C005, C175 |
 | C006 | state |  | what a cell holds: one of two states | C005 |
 | C018 | asymmetric perspective |  | the two states play different roles, which a reading says; by default, true and null, read as presence and absence. the measures take this one | C006, C003 |
 | C019 | symmetric perspective |  | the two states play the same role: swapping them changes nothing but the names; true and false by default (others: 1 and 0, yes and no) | C006, C003 |
@@ -117,15 +118,15 @@ from [`strand/types.md`](strand/types.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
-| C007 | type | reading, view | what a strand's space is, beyond its cells in order: whether its last cell meets its first; concrete (circular, linear or fluid) or abstract | C004 |
+| C007 | type | reading, view | the kind of strand it is; any arrangement can have any type; concrete (circular, linear or fluid) or abstract | C004 |
 | C174 | concrete type |  | a definite type, distinct from the others: circular, linear or fluid | C007 |
-| C169 | solid type |  | a concrete type that holds its form, settling whether the last cell meets the first: circular or linear | C174 |
-| C008 | circular |  | a solid type where the last cell is next to the first, so there are no ends | C169 |
-| C009 | linear |  | a solid type where the first and last cells are ends | C169 |
-| C010 | fluid | neutral, concrete fluid | a concrete type in its own right, adaptable: neither circular nor linear; a use that needs a solid type gives it one | C174 |
+| C169 | solid type |  | a concrete type that holds its form: circular or linear | C174 |
+| C008 | circular |  | a solid type: a loop, with no ends | C169 |
+| C009 | linear |  | a solid type: a line, with two ends | C169 |
+| C010 | fluid | neutral, concrete fluid | a concrete type in its own right, adaptable: neither circular nor linear, but able to take on the form of either, for a move or for good | C174 |
 | C014 | unidirectional fluid | hierarchical fluid | written `/…/`; fluid that can become circular or linear, but not back; allows the same moves as abstract; a world says whether it uses it | C010, C011, C012, C002 |
-| C015 | bidirectional fluid | sibling fluid | written `\…\`; fluid where any of the three types can become any other; a world says whether it uses it | C010, C002 |
-| C012 | abstract | abstract fluid | a general type: what the concrete types share, and no more; a solid type may never apply to it; written `\|…\|` | C007, C174 |
+| C015 | bidirectional fluid | sibling fluid | written `\…\`; fluid where any of the three concrete types can become any other; a world says whether it uses it | C010, C002 |
+| C012 | abstract | abstract fluid | a free type: what the concrete types share, and no more, tied to no particular semantics or use; written `\|…\|` | C007, C174 |
 | C011 | commitment |  | giving a fluid or abstract strand a solid type; one-way by default | C008, C009, C010, C012 |
 
 ## strand: notation
@@ -203,7 +204,6 @@ from [`strand/structures.md`](strand/structures.md)
 | C063 | sequence |  | a collection in order, repeats allowed: `(A, A, B)` | C060 |
 | C064 | ordered set |  | a collection in order, with no repeats | C060 |
 | C065 | stack |  | a collection lined up cell by cell, sharing one type: `)(A, B)(`, `<(A, B)>`, `\|(A, B)\|` | C060, C007 |
-| C066 | frame |  | the fixed choices for how a member lines up in a stack: its cell 0, its direction, its type | C065 |
 | C067 | cell weights |  | how many members are true in each column of a stack | C065, C016 |
 | C068 | row of amounts |  | numbers on a stack's cells, with its type: `\|2 2 0 1 0 3 1 0\|`. not a strand | C067 |
 | C069 | strand weight | spacer weight | a member's cell weights added up at its points (or score): how much it agrees with the whole | C067, C023 |

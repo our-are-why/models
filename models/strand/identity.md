@@ -23,10 +23,10 @@ strands, is in [the approach](../../rough/meta/approach.md).)
   numbering runs, the symbols for the two states, and so the written form
   itself. these are chosen, so that everyone starts from the same place
 
-a line has two ends, so the ends are essence, but which end comes first is
-convention. a circle has no start: on its own, its cell 0 is convention. set
-against other strands, cell 0 is where it lines up with them, so where it
-starts is part of how they relate.
+a strand's frame is convention on its own: a circle has no start, and neither
+end of a line comes first. set against other strands, it's how they line up:
+read from another cell, or the other way, the same strand relates differently
+to the rest.
 
 some things sit in between. how the states are written is convention (■ or
 `x` here, 1 elsewhere), and so is which one is called true. whether the two
@@ -100,9 +100,9 @@ the more `=` signs, the more is set aside: `=` sets aside nothing, `==` the
 type, and `===` the type and the context. (this runs opposite to javascript,
 where `===` is the strictest.)
 
-setting the type aside is also what makes a strand abstract (see "abstract",
-in "types"): strands that are the same up to type are the same
-abstract strand.
+setting the type aside is also what makes a strand abstract: circular, linear,
+unidirectional fluid and bidirectional fluid strands with the same cells are
+different strands, but the same abstract strand.
 
 `==` is whichever of `=`, `~=` and `<->` applies. `=`, `==` and `===` chain: if
 A is the same as B, and B as C, then A is the same as C. `~=` and `<->` don't:

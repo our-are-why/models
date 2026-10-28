@@ -47,7 +47,7 @@ automaton, or a lattice model in physics.
 
 the **dimension** of a discrete space is the shape of its neighbour relation:
 
-- **one dimension**: cells in a row, each with at most two neighbours. it's a
+- **one dimension**: each cell has at most two neighbours, one each way. it's a
   path, or a cycle when it's circular. that's a strand
 - **two dimensions**: cells in a grid, with neighbours in two directions, such
   as a sheet
@@ -59,10 +59,37 @@ included (_from memory_: image processing calls these 4- and
 8-connectivity). one dimension has no such choice, which is part of why so
 much of these chapters reads as close to self-evident.
 
+## a strand's space
+
+put plainly: from any cell of a strand you can step one way or the other, and
+nowhere else. keep stepping one way, and either you come back round to where
+you started, or you reach an end. so a strand's space is a loop or a line, and
+there's nothing else it can be.
+
+precisely, in graph theory's terms (_from memory_): take the cells as vertices,
+with an edge between each pair of neighbours. a strand's space is then a
+finite, connected graph in which no vertex has more than two neighbours, and
+every such graph is a path or a cycle:
+
+- **linear** is the path: an edge between each cell and the next
+- **circular** is the cycle: the path, plus an edge between its two ends. a
+  circle of one cell has an edge from the cell to itself, and a circle of two
+  cells has two edges between them
+
+fluid and abstract strands have the path's edges. the edge between the two ends
+is undecided for fluid, and set aside for abstract.
+
+the frame isn't part of the graph: it's a choice of which cell is cell 0 and
+which way the numbers run. a line of two or more cells allows 2 such choices,
+and a circle of three or more allows 2n, for n cells. they match the graph's
+symmetries: reversal for a line, and rotations and mirrors for a circle.
+
+a strand is its space with a state on each cell.
+
 ## types as boundary conditions
 
-a strand's type says what happens at its edges: circular, the last cell meets
-the first; linear, the ends stop. _from memory_: physics and simulation call
+a strand's type says what happens at its edges: circular, the ends meet;
+linear, they stop. _from memory_: physics and simulation call
 these **periodic** and **open** boundary conditions.
 
 in more dimensions there's a type per dimension. a grid that's circular one way

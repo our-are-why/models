@@ -115,6 +115,6 @@ its 1st, 3rd and 5th), and flattens to the triad (see "flatten", in
 ## symmetric readings
 
 in the symmetric perspective, a reading says what the two equals are. read as
-truth values, true and false, a strand is a row of logical values, and the
+truth values, true and false, a strand's cells hold logical values, and the
 cell-by-cell functions apply to it (see "combining strands", in "functions").
 there are likely others.

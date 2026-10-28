@@ -20,6 +20,7 @@ files are its **stripe**:
       strand/             the strand domain
         basics.md  types.md  notation.md  readings.md  measures.md
         structures.md  functions.md  dynamics.md  identity.md  space.md
+        worlds.md
         spacer_v0.md      frozen
     rough/
       meta/               the approach behind the docs, while it's still forming
@@ -42,7 +43,7 @@ nothing else, but chapters relate in richer ways: some lean on others, some
 lean on each other, and some can be read in any order. a **suggested path**
 through the strand domain, one good way through and not the only one: basics,
 types, notation, readings, measures, structures, functions, dynamics, identity,
-space.
+space, worlds.
 
 ## cross-cutting topics
 
