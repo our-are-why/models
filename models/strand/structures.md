@@ -118,7 +118,9 @@ further layer, and so on.
 - **flattening**: the deepest layer's choices can be shown on the root's
   cells: here, `|x....x..|`. the flattened strand doesn't show it was chosen in
   steps; like any origin, the cascade lives outside the cells (see press and
-  flatten, in "functions")
+  flatten, in "functions"). two cascades that flatten to the same strand are
+  alike, giving the same cells, but whether they're the same cascade, layer by
+  layer, is a higher-level question, left to the uses that need it
 
 layers aren't scopes. a scope takes a stretch of neighbouring cells; a layer
 chooses among points, skipping the cells in between. both nest and both chain,

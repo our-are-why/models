@@ -144,6 +144,7 @@ from [`strand/notation.md`](strand/notation.md)
 | C035 | description |  | what's known about a strand, in braces with keys: `{r: 12, d: 7}`. it picks out every strand that fits | C020, C021 |
 | C036 | repetition |  | `~` after the edges: the strand repeats in its surroundings, and stays as it is | C032 |
 | C037 | escaping |  | inside another format, the notation is escaped the way that format asks, never changed to suit it | C029 |
+| C177 | comparison symbols |  | `=`, `~=`, `<->`, `==` and `===` (display: = ≃ ⇄ ≈ ≍) for identical, fits, converts, the same up to type and matches; the more `=` signs, the more is set aside | C120, C121, C122, C123, C124 |
 
 ## strand: readings
 
@@ -279,15 +280,15 @@ from [`strand/identity.md`](strand/identity.md)
 
 | id | concept | was | in plain words | builds on |
 | --- | --- | --- | --- | --- |
-| C118 | essence |  | essence/semantics: what two people drawing the same strand differently still agree on | C004 |
-| C119 | convention |  | choices made to write a strand down or talk about it, such as which cell is cell 0 | C118 |
-| C120 | identical |  | `=`, the default: the same resolution, type and cells | C020, C007, C006 |
-| C121 | fits |  | `~=`: a commitment away; one fluid, the other committed, the same cells | C120, C084 |
-| C122 | converts |  | `<->`: a conversion away; one circle, one line, the same cells | C120, C091, C092 |
-| C123 | same up to type | same up to reading | `==`: identical, fits or converts | C120, C121, C122 |
-| C124 | matches |  | `===`: the same number of cells and the same value in each, whatever the type, context or origin | C120 |
-| C125 | alike |  | the same in some respects; overriding the default is a way of asking it | C120 |
-| C126 | override |  | loosening or tightening the default: up to start, up to direction, up to type | C120, C086, C088, C089 |
+| C118 | essence |  | what two people drawing the same strand differently still agree on | C004 |
+| C119 | convention |  | any choice in representing a strand that changes nothing, on its own or among others, such as the symbols, or names that keep the same roles; it's chosen, not found; the frame is a perspective | C118, C066 |
+| C120 | identical |  | the default: the same resolution, type, arrangement and surroundings | C020, C007, C025 |
+| C121 | fits |  | one type more general than the other, with the same arrangement: abstract, then fluid, then circular and linear | C120, C012, C010, C169 |
+| C122 | converts |  | two equally specific types, neither more general, with the same arrangement; circular and linear, each the other closed or opened | C120, C007, C008, C009 |
+| C123 | same up to type | same up to reading | identical once the type is set aside: as abstract strands, identical; identical, fits and converts are cases of it | C120, C121, C122 |
+| C124 | matches |  | the same up to type and up to surroundings: states agree cell by cell | C123 |
+| C125 | alike |  | the same in some respects; each comparison asks it about particular respects | C120 |
+| C126 | loosening and tightening | override | comparisons that set something aside (up to start, direction, frame, type or surroundings) or add something (origin, place in a stack) | C120, C066, C007 |
 
 ## strand: space
 

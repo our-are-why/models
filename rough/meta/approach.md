@@ -57,9 +57,9 @@ time. rather than pick one answer and call it the truth, the docs name the
 choice, give a default, and leave the rest to the world. so whoever uses the
 model should know their world, and align with its semantics.
 
-**where.** "types", "two states" and "worlds", in the strand
-basics; melt and commitment, in functions; the default and its overrides, in
-identity.
+**where.** "types", "two states" and "worlds", in the strand basics; melt and
+commitment, in functions; the default comparison, and loosening and tightening
+it, in identity; the defaults gathered, in worlds.
 
 **the case against.** worlds can become an escape hatch: if every conflict is
 answered with "it depends on the world", the model can never be wrong. the
@@ -165,8 +165,9 @@ they don't is convention.
 **why.** without the line, conventions harden into facts: "cell 0" starts to
 feel like part of a circle.
 
-**where.** the essence and convention section, in identity; the symbol rules,
-in notation, where any symbols will do; + as a convention, in measures.
+**where.** the essence, perspective and convention section, in identity; the
+symbol rules, in notation, where any symbols will do; + as a convention, in
+measures.
 
 **the case against.** the line isn't always sharp. which state is "the thing"
 turned out to be neither essence nor convention, but a perspective. a third
@@ -453,4 +454,6 @@ where the approach is least sure of itself:
   renamed from spacer to strand partly for this reason, but the running text
   still takes the asymmetric perspective by default
 - whether essence and convention need a third category, for perspectives
+  (2026-10-28: proposed in the strand identity chapter: a perspective is open
+  in the framework, and a world settles it, turning it into essence there)
 - where the line between a primitive and a composite should fall

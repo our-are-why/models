@@ -184,6 +184,30 @@ where it's simply cell 0. to start from another cell, rotate it so that cell
 comes first: starting `)xx...x..(` at cell 5 gives `)x..xx...(`; in points,
 `)8: 0,1,5(` gives `)8: 0,3,4(` (see rotate, in "functions").
 
+### comparisons
+
+identity's comparisons have symbols of their own:
+
+| comparison | keyboard | display |
+| --- | --- | --- |
+| identical | `=` | `=` |
+| fits | `~=` | `≃` |
+| converts | `<->` | `⇄` |
+| the same up to type | `==` | `≈` |
+| matches | `===` | `≍` |
+
+    /x../ ~= )x..(        fits
+    )x..( <-> <x..>       converts
+    /x../ == <x..>        the same up to type: here, because it fits
+    )x..( == <x..>        the same up to type: here, because it converts
+    [x..] === <x..>       matches: a piece and a whole line, with the same cells
+    [x..] === )x..(       matches: a piece and a whole circle; only the cells count
+
+the more `=` signs, the more is set aside: `=` sets aside nothing, `==` the
+type, and `===` the type and the context. (this runs opposite to javascript,
+where `===` is the strictest.) `<->` needs spaces around it, so it's never read
+as edges.
+
 ## why not "binary string"
 
 write each cell's state as 1 for true and 0 for null and you get a binary

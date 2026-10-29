@@ -11,6 +11,9 @@ have had their first pass.
   chapters, even what counts as a strand
 - why it matters: a world communicates its semantics precisely, with as little
   room as possible for miscommunication/misrepresentation
+- a world turns perspectives into essence: what the chapters leave open, such
+  as whether the two states play different roles, a world settles, and within
+  it everyone agrees
 
 ## the defaults the running text takes
 
@@ -22,10 +25,11 @@ row per choice:
 | perspective on the states | asymmetric | symmetric |
 | reading | presence and absence: true and null | a spacer, a selection, truth values, others |
 | type | unidirectional fluid | abstract, bidirectional fluid, solid only |
+| fluid's standing | above the solids, more general | alongside them, as a sibling |
 | how a type changes | only through a function named for it | through context, not at all, or freely |
 | identity | identical | up to start, up to direction, up to type, matches |
 | distance | the + way round | the − way, the shortest way |
-| framing, when strands are set side by side | as written | any frame |
+| frames, when strands are set side by side | as written | any frame |
 | commitment | one-way | melting back, with bidirectional fluid |
 
 ## reading the chapters from another world
