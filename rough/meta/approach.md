@@ -165,7 +165,7 @@ they don't is convention.
 **why.** without the line, conventions harden into facts: "cell 0" starts to
 feel like part of a circle.
 
-**where.** the essence, perspective and convention section, in identity; the
+**where.** the essence, parameters and convention section, in worlds; the
 symbol rules, in notation, where any symbols will do; + as a convention, in
 measures.
 

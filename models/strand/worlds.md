@@ -11,9 +11,37 @@ have had their first pass.
   chapters, even what counts as a strand
 - why it matters: a world communicates its semantics precisely, with as little
   room as possible for miscommunication/misrepresentation
-- a world turns perspectives into essence: what the chapters leave open, such
-  as whether the two states play different roles, a world settles, and within
-  it everyone agrees
+- a world turns parameters into essence: what the chapters leave open, such
+  as whether the two states play different roles, a world fixes, and within it
+  everyone agrees
+
+## essence, parameters and convention
+
+two people can write/represent the same strand differently and still agree
+about it. what they agree on is essence; what they can vary freely is
+convention; between the two are parameters.
+
+- **essence**: the resolution; the type; the arrangement, whatever its frame;
+  and what lies beyond the ends, if anything. the rest of the essence follows
+  from these, and like them, is found, not made up
+- **parameter**: what a strand on its own leaves open, and its use can fix.
+  it's fixed, not found
+- **convention**: any choice in representing a strand that changes nothing, on
+  its own or among others. it's chosen, not found
+
+### parameters
+
+a parameter is something a strand on its own leaves open: nothing in the
+strand decides it, and every way of fixing it is as valid as another, but
+unlike a convention, they don't all give the same results. it becomes definite
+where the strand is used, and different uses can fix it differently. once
+fixed, it holds like essence for that use: everyone sharing the use agrees on
+it.
+
+comparing strands depends on one parameter in particular: the frame. on its
+own, a strand has no first cell and no direction. set side by side, strands
+share a frame, cell 0 with cell 0: moving it changes nothing, but placing a
+strand in it differently can change how they compare.
 
 ## the defaults the running text takes
 
@@ -22,7 +50,7 @@ row per choice:
 
 | choice | default | alternatives |
 | --- | --- | --- |
-| perspective on the states | asymmetric | symmetric |
+| how the two states relate | asymmetric | symmetric |
 | reading | presence and absence: true and null | a spacer, a selection, truth values, others |
 | type | unidirectional fluid | abstract, bidirectional fluid, solid only |
 | fluid's standing | above the solids, more general | alongside them, as a sibling |

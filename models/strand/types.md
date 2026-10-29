@@ -10,7 +10,7 @@ three: two solid types, and fluid.
 
 ### solid
 
-a **solid** type holds its form. there are two:
+a **solid** type has a form: its ends meet, or they don't. there are two:
 
     cell   0 1 2 3 4 5 6 7
            ■ ■ □ □ □ ■ □ □
@@ -34,13 +34,8 @@ the smallest solid strands are where the general rules reach their limits:
 
 ### fluid
 
-**fluid** is adaptable: neither circular nor linear, but can take on the form
-of either. it comes in two kinds:
-
-- **unidirectional/hierarchical fluid**: change goes one way only, from fluid
-  to solid
-- **bidirectional/sibling fluid**: change goes both ways: any of the three
-  concrete types can become any other
+**fluid** is undecided: neither circular nor linear yet, but it can come to
+either. it says less than a solid: it leaves open what a solid settles.
 
 ## abstract
 
@@ -57,3 +52,24 @@ own way:
 - **linear**: they don't, so there are two
 - **fluid**: neither answer, but it can come to either
 - **abstract**: it sets the question aside
+
+## change
+
+a type says what a strand is, not what it can become. which changes between
+types are possible is a separate matter, and a world settles it. fluid can
+always come to circular or linear: that's what being undecided means. two
+questions stay open:
+
+- **returning**: can a solid strand go back to fluid?
+- **between the solids**: can circular and linear become each other directly,
+  by joining or parting the ends?
+
+if nothing returns, change between fluid and the solids is
+**unidirectional/hierarchical**: it goes one way only, from fluid to solid, so
+fluid sits above the solids by movement as well as by what it says. if solids
+can return, it's **bidirectional**: it goes both ways and orders nothing by
+itself, though fluid still sits above the solids, because it still says less.
+
+a strand whose ends can part and meet again isn't a type of its own: at any
+moment, its ends meet or they don't. that it can open and close is change,
+between circular and linear.
