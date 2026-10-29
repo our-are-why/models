@@ -57,51 +57,49 @@ so the abstract strand fits the circle. converts doesn't: if a circle and a
 line convert, and the line and another circle convert, the two circles share a
 type, so they're identical, not converts.
 
-## essence and convention
+## essence, perspective and convention
 
-some things about a strand belong to the strand itself; others are choices made
-to write it down or talk about it. to tell them apart, imagine two people
-drawing the same strand differently: starting at a different cell, counting the
-other way round, using other symbols. what they still agree on is essence; what
-they don't is convention.
+two people can write/represent the same strand differently and still agree
+about it. what they agree on is essence; what they can vary freely is
+convention; between the two is perspective.
 
-- **essence**: the resolution and the counts; the type; which cells are
-  neighbours, and the distances between them; the pattern the states make,
-  whichever cell it starts from and whichever way it runs; in a line, what sits
-  at the ends. these are found in the strand, not made up
-- **convention**: the frame, which cell is cell 0 and which way the numbers
-  run; counting from 0; the symbols and names for the two states, and so the
-  written form itself. these are chosen, so that everyone starts from the same
-  place
+- **essence**: the resolution; the type; the arrangement, whatever its frame;
+  and what lies beyond the ends, if anything. the rest of the essence follows
+  from these, and like them, is found, not made up
+- **perspective**: what a strand on its own leaves open, and its use can
+  settle. it's settled, not found
+- **convention**: any choice in representing a strand that changes nothing, on
+  its own or among others. it's chosen, not found
 
-a strand's frame is convention on its own: a circle has no start, and neither
-end of a line comes first. set against other strands, it's how they line up:
-with cell 0 elsewhere, or numbered the other way, the same strand relates
-differently to the rest. comparing strands cell by cell needs frames, to say
-which cells line up: the strictest comparison takes each strand's frame as it
-is, and a looser one can try every frame.
+### perspective
 
-some things sit in between. how the states are written and named is convention:
-■ and □ here, other symbols and names elsewhere. whether the two states play
-different roles isn't a convention, and the strand alone doesn't make it
-essence either: it's a perspective, which the strand leaves open and a world
-can settle. once a world settles it, it's essence there: everyone drawing a
-strand in that world agrees on it.
+a perspective is something a strand on its own leaves open: nothing in the
+strand decides it, and every way of settling it is as valid as another. it
+becomes definite where the strand is used, and different uses can settle it
+differently. once settled, it holds like essence for that use: everyone sharing
+the use agrees on it.
+
+the comparisons here depend on one perspective in particular: the frame. on its
+own, a strand has no first cell and no direction. set side by side, strands
+share a frame, cell 0 with cell 0: moving it changes nothing, but placing a
+strand in it differently can change how they compare.
 
 ## comparisons, continued: loosening and tightening
 
 being **alike**, the same in some respects, is the general question, and each
 comparison asks it about particular respects. a comparison looser than
 identical sets something aside. "the same **up to** something" means the same
-once that something is allowed to differ. what's set aside can be a convention,
-part of the essence, or the surroundings:
+once that something is allowed to differ. what's set aside can be a perspective
+or part of the essence:
 
-- **the frame**, a convention: up to start, for circles; up to direction; up
-  to frame, both at once
+- **the frame**, a perspective: up to start, up to direction, or up to frame
+  (both at once): the same arrangement, whatever the start, the direction, or
+  both. the two circles above are the same up to start
 - **the type**, part of the essence: up to type, the same arrangement whatever
   the type
-- **the surroundings**, what lies beyond the ends: up to surroundings, a piece
-  and a whole strand with the same arrangement are the same
+- **the surroundings**, part of the essence: what lies beyond the ends. up to
+  surroundings, a piece and a whole strand with the same arrangement are the
+  same
 
 loosenings combine. matching sets aside the type and the surroundings, but
 still lines cells up by their frames, so the two circles above don't match. set
