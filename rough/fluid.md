@@ -51,6 +51,37 @@ has to be stated separately. so "unidirectional/hierarchical" holds up, and
 
 which angle a world takes is part of what it settles.
 
+## perspective and movement
+
+(2026-10-29) the two angles and the direction of change are independent:
+
+| | one way | both ways |
+| --- | --- | --- |
+| **deferred** (fluid): says less than a solid, so it sits above | unidirectional fluid | bidirectional fluid: a solid can go back to undecided |
+| **flexible**: as definite as a solid, a peer | unnamed | the necklace |
+
+the angle decides standing: deferred puts fluid above the solids, flexible
+alongside them. the direction decides whether change orders the types. so
+unidirectional implies a hierarchy, of movement; a hierarchy of standing comes
+from deferral, not from the direction. bidirectional implies neither a
+hierarchy nor a sibling: bidirectional fluid is still deferred, still above.
+
+the unnamed square: something as definite as a circle or a line that can take
+one of their forms only once, and then stays. a hierarchy of movement, with a
+peer's standing. it isn't a necklace, which reopens.
+
+movement has three patterns, not two:
+
+| movement | hierarchy? |
+| --- | --- |
+| one way, with no way back | yes: unidirectional fluid |
+| both ways | no |
+| one way, round a cycle | no: each step has a direction, but every type reaches every other |
+
+so "unidirectional implies hierarchy" needs "and no way back round". a cycle,
+such as linear, then necklace, then circular, then linear again, orders
+nothing. it's a possibility a world could choose, like ends that bounce.
+
 ## necklace
 
 a necklace: clasped, it's a circle; unclasped, a loose thread; and it can be
@@ -66,6 +97,31 @@ questions:
   opening a circle (unwinding, melting) always needs a place to open it, which
   the frame's start currently supplies; a necklace carries that place in
   itself. is the clasp part of the strand, or part of its frame?
+
+## states and transitions
+
+(2026-10-29) in the cycle above, the necklace behaves like a transition, not a
+final state: somewhere passed through, not somewhere stopped. that points to
+two kinds of thing:
+
+- **states**: forms a strand rests in, like circular and linear
+- **transitions**: changes between them, like closing a line into a loop, or
+  opening a loop into a line
+
+read this way, the necklace may be neither a kind of fluid, nor a kind of
+circle, nor a type of its own, but a transition with a place: a circle and a
+line that become each other, opening and closing at one joint, the clasp.
+fluid, deferred, is a state: the state of having no form yet. a state and a
+transition aren't the same kind of thing, which is part of why folding both
+into "fluid" strains.
+
+or the necklace is almost a world: one where circular and linear are two
+sub-states of one thing, with the clasp where it moves between them. the
+necklace is what persists, and its form is its state.
+
+an identity thread: a clasped and an unclasped necklace differ in type, so
+they aren't identical, but they're the same necklace, the same thing through a
+change. that's tightening by origin, like the move in identity.
 
 ## ends that bounce
 
@@ -132,10 +188,16 @@ the best candidate so far.
 
 ## to decide later
 
-- define fluid's two kinds by return to fluid only, and state standing
-  separately
+- ~~define fluid's two kinds by return to fluid only, and state standing
+  separately~~ done (2026-10-29): types' "change" part. fluid is one type,
+  deferred; unidirectional and bidirectional are kinds of change, by
+  returning; standing comes from fluid saying less
 - worlds rows: change between circular and linear; return to fluid; fluid's
   standing, and which angle it takes
 - whether necklace gets its own name, or its own type
-- whether the slash pairs "unidirectional/hierarchical" and
-  "bidirectional/sibling" survive
+- whether the necklace is a type, a transition, or almost a world, with
+  circular and linear as its two states
+- whether the unnamed square (flexible, one way) is needed
+- ~~whether the slash pairs "unidirectional/hierarchical" and
+  "bidirectional/sibling" survive~~ done (2026-10-29): "/hierarchical" stays,
+  "/sibling" goes, since bidirectional orders nothing by itself
